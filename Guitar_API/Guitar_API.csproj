@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <AssemblyName>guitar_web</AssemblyName>
+        <RootNamespace>guitar_web</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Guitar_Core\Guitar_Core.csproj" />
+      <ProjectReference Include="..\Guitar_Data\Guitar_Data.csproj" />
+    </ItemGroup>
+
+</Project>

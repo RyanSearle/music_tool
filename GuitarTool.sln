@@ -1,8 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "react_guitar_tool", "guitar_web\react_guitar_tool.csproj", "{D63F53D1-F014-4314-9929-C511744D8EBD}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Distribution", "1 - Distribution", "{270F610B-09D5-4EE1-B168-ACBEA82186A3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Service", "2 - Service", "{C9FF6018-C8C6-4156-92F1-700F8F5E1FA2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Business", "3 - Business", "{B8EBA967-F476-4D15-B9B2-39BB729A31FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Data", "4 - Data", "{325DDF39-F309-46F2-9D9A-D901A13713E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guitar_Web", "guitar_web\Guitar_Web.csproj", "{1BB7EDA4-482E-412A-B24B-915E3AB5E238}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guitar_API", "guitar_API\Guitar_API.csproj", "{1CAB6613-A97B-48DA-B2B0-D64BFB34D808}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guitar_Core", "Guitar_Core\Guitar_Core.csproj", "{DA3D0A57-5BAC-4BC8-8ABD-E15054849735}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guitar_Data", "Guitar_Data\Guitar_Data.csproj", "{CE385AD3-2554-473A-8FEC-FC5B55781808}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,9 +22,27 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D63F53D1-F014-4314-9929-C511744D8EBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D63F53D1-F014-4314-9929-C511744D8EBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D63F53D1-F014-4314-9929-C511744D8EBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D63F53D1-F014-4314-9929-C511744D8EBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BB7EDA4-482E-412A-B24B-915E3AB5E238}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BB7EDA4-482E-412A-B24B-915E3AB5E238}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BB7EDA4-482E-412A-B24B-915E3AB5E238}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BB7EDA4-482E-412A-B24B-915E3AB5E238}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CAB6613-A97B-48DA-B2B0-D64BFB34D808}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CAB6613-A97B-48DA-B2B0-D64BFB34D808}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CAB6613-A97B-48DA-B2B0-D64BFB34D808}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CAB6613-A97B-48DA-B2B0-D64BFB34D808}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA3D0A57-5BAC-4BC8-8ABD-E15054849735}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA3D0A57-5BAC-4BC8-8ABD-E15054849735}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA3D0A57-5BAC-4BC8-8ABD-E15054849735}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA3D0A57-5BAC-4BC8-8ABD-E15054849735}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE385AD3-2554-473A-8FEC-FC5B55781808}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE385AD3-2554-473A-8FEC-FC5B55781808}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE385AD3-2554-473A-8FEC-FC5B55781808}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE385AD3-2554-473A-8FEC-FC5B55781808}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1BB7EDA4-482E-412A-B24B-915E3AB5E238} = {270F610B-09D5-4EE1-B168-ACBEA82186A3}
+		{1CAB6613-A97B-48DA-B2B0-D64BFB34D808} = {C9FF6018-C8C6-4156-92F1-700F8F5E1FA2}
+		{DA3D0A57-5BAC-4BC8-8ABD-E15054849735} = {B8EBA967-F476-4D15-B9B2-39BB729A31FA}
+		{CE385AD3-2554-473A-8FEC-FC5B55781808} = {325DDF39-F309-46F2-9D9A-D901A13713E0}
 	EndGlobalSection
 EndGlobal

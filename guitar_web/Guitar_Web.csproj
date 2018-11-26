@@ -7,6 +7,8 @@
     <IsPackable>false</IsPackable>
     <SpaRoot>ClientApp\</SpaRoot>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
+    <AssemblyName>Guitar_Web</AssemblyName>
+    <RootNamespace>Guitar_Web</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,6 +21,12 @@
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
     <Content Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\guitar_API\Guitar_API.csproj" />
+    <ProjectReference Include="..\Guitar_Core\Guitar_Core.csproj" />
+    <ProjectReference Include="..\Guitar_Data\Guitar_Data.csproj" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
