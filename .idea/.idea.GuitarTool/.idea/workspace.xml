@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e7fa4b01-ed8e-442b-9770-c25665e54eb0" name="Default Changelist" comment="" />
+    <list default="true" id="e7fa4b01-ed8e-442b-9770-c25665e54eb0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GuitarTool/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GuitarTool/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/components/instruments/guitar/fret.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/components/instruments/guitar/fret.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/components/instruments/guitar/guitar.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/components/instruments/guitar/guitar.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/components/instruments/guitar/string.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/components/instruments/guitar/string.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/pages/guitar.page.js" beforeDir="false" afterPath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/pages/guitar.page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/store/guitar.store.js" beforeDir="false" afterPath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/store/guitar.store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/store/instruments/guitar/guitar-string.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/store/instruments/guitar/guitar-string.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/store/instruments/guitar/tuning.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/store/instruments/guitar/tuning.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/store/music/scale.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/store/music/scale.model.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,12 +222,12 @@
       <option name="presentableId" value="Default" />
       <updated>1543232927932</updated>
       <workItem from="1543232929111" duration="2962000" />
-      <workItem from="1543310697997" duration="744000" />
+      <workItem from="1543310697997" duration="1012000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3706000" />
+    <option name="totallyTimeSpent" value="3974000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">

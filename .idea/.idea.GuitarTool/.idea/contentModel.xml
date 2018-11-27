@@ -82,6 +82,9 @@
                   <e p="string.component.js" t="Include" />
                 </e>
               </e>
+              <e p="interface" t="Include">
+                <e p="control-panel.js" t="Include" />
+              </e>
               <e p="structure" t="Include">
                 <e p="Layout.js" t="Include" />
               </e>
