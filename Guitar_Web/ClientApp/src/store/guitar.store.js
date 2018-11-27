@@ -15,7 +15,7 @@ const aKey = KeyUtilities.createFromChar('A'),
     gKey = KeyUtilities.createFromChar('G'),
     gSKey = KeyUtilities.createFromChar('G#')
 
-const standardTuning = new Tuning([
+const standardTuning = new Tuning('Standard', [
     KeyUtilities.createFromChar('E', 2),
     KeyUtilities.createFromChar('B', 2),
     KeyUtilities.createFromChar('G', 1),
@@ -24,11 +24,23 @@ const standardTuning = new Tuning([
     KeyUtilities.createFromChar('E', 0)
 ])
 
-const minor = new Scale('Minor', ['W', 'H', 'W', 'W', 'H', 'W', 'W'])
-const major = new Scale('Major', ['W', 'W', 'H', 'W', 'W', 'W', 'H'])
+const dropDTuning = new Tuning('Drop D', [
+    KeyUtilities.createFromChar('E', 2),
+    KeyUtilities.createFromChar('B', 2),
+    KeyUtilities.createFromChar('G', 1),
+    KeyUtilities.createFromChar('D', 1),
+    KeyUtilities.createFromChar('A', 1),
+    KeyUtilities.createFromChar('D', 0)
+])
 
-const minorPentatonic = new Scale('Minor Pentatonic', [3, 2, 2, 3, 2])
-const majorPentatonic = new Scale('Major Pentatonic', [2, 2, 1, 4, 2])
+const minorSpacing = ['W', 'H', 'W', 'W', 'H', 'W', 'W'];
+const majorSpacing = ['W', 'W', 'H', 'W', 'W', 'W', 'H'];
+
+const minor = new Scale('Minor', minorSpacing)
+const major = new Scale('Major', majorSpacing)
+
+const minorPentatonic = new Scale('Minor Pentatonic', minorSpacing, [2, 6])
+const majorPentatonic = new Scale('Major Pentatonic', majorSpacing, [4, 7])
 
 const initialState = {
     active: {
@@ -38,7 +50,8 @@ const initialState = {
     },
     collections: {
         tunings: [
-            standardTuning
+            standardTuning,
+            dropDTuning
         ],
         scales: [
             major,
@@ -63,13 +76,40 @@ const initialState = {
     }
 };
 
-export const actionCreators = {
+const CHANGE_KEY_TYPE = 'CHANGE_KEY_TYPE';
+const CHANGE_SCALE_TYPE = 'CHANGE_SCALE_TYPE';
+const CHANGE_TUNING_TYPE = 'CHANGE_TUNING_TYPE';
 
+export const actionCreators = {
+    changeKey: (key) => ({type: CHANGE_KEY_TYPE, key}),
+    changeScale: (scale) => ({type: CHANGE_SCALE_TYPE, scale}),
+    changeTuning: (tuning) => ({type: CHANGE_TUNING_TYPE, tuning})
 };
 
 export const reducer = (state, action) => {
     state = state || initialState;
     console.log('Guitar store: ', state);
+
+    // CHANGE_KEY_TYPE
+    if(action.type === CHANGE_KEY_TYPE) {
+        return {...state, active: {
+            ...state.active, key: action.key
+        }}
+    }
+
+    // CHANGE_SCALE_TYPE
+    if(action.type === CHANGE_SCALE_TYPE) {
+        return {...state, active: {
+            ...state.active, scale: action.scale
+        }}
+    }
+
+    // CHANGE_TUNING_TYPE
+    if(action.type === CHANGE_TUNING_TYPE) {
+        return {...state, active: {
+            ...state.active, tuning: action.tuning
+        }}
+    }
 
     return state;
 };

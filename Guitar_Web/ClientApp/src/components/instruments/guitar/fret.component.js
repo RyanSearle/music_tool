@@ -7,15 +7,21 @@ const FretComponent = props => {
 
     const activeScale = props.active.scale;
     const inScale = activeScale.isInScale(props.fret, props.active.key)
-
-    let highlight = inScale;
-    
+    const isRoot = activeScale.isRoot(props.fret, props.active.key)
+    const interval = activeScale.getInterval(props.fret, props.active.key);
 
     const log = () => {
         console.log(props.fret);
     }
 
-    return (<span onClick={log} style={{color: highlight ? 'red' : 'black'}}>----{props.fret.note}----</span>
+    const style = {
+        display: 'inline-block',
+        width: props.width + '%',
+        color: inScale ? 'red' : 'black',
+        //backgroundColor: isRoot ? 'cyan' : interval === 3 ? 'coral' : interval === 5 ? 'blueviolet' : 'transparent'
+    };
+
+    return (<span tooltip={interval} onClick={log} style={style}>----{props.fret.note}----</span>
 )}
 
 export default connect(

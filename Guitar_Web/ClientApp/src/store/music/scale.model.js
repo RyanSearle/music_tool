@@ -1,7 +1,8 @@
 export const Scale = (function () {
 
-    const Scale = function (name, distances) {
+    const Scale = function (name, distances, gaps) {
         this.name = name;
+        this.gaps = gaps;
 
         this.distances = distances.map(distance => {
             if (distance === 'H') return 1;
@@ -20,20 +21,25 @@ export const Scale = (function () {
     }
 
     Scale.prototype.isInScale = function (key, rootKey) {
-        return this.accumilativeDistances.reduce((acc, next) => {
+        return this.accumilativeDistances.reduce((acc, next, index) => {
+
+            // Check if in gap
+            if(this.gaps && this.gaps.includes(index + 1)){
+                return acc;
+            }
+
             return acc || rootKey.getDistanceAbsolute(key) % 12 === next;
         },  null)
     }
 
     Scale.prototype.getInterval = function (key, rootKey) {
-
-        if(!this.isInScale(key, rootKey)){
-            return null;
-        }
-
         return this.accumilativeDistances.reduce((acc, next, index) => {
             return acc ? acc : rootKey.getDistanceAbsolute(key) % 12 === next ? index + 1 : null;
         }, null)
+    }
+
+    Scale.prototype.isRoot = function (key, rootKey) {
+        return Boolean(this.getInterval(key, rootKey) === 1);
     }
 
     return Scale;

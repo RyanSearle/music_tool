@@ -1,7 +1,8 @@
 import { GuitarString } from './guitar-string.model'
 
 export const Tuning = (function() {
-    let Tuning = function(stringTunings) {
+    let Tuning = function(name, stringTunings) {
+        this.name = name;
         this.stringTunings = stringTunings;
     }
 
