@@ -1,7 +1,7 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { actionCreators } from '../../store/guitar.store'
+import { actionCreators } from '../../../store/guitar.store'
 
 const FretComponent = props => {
 
@@ -10,7 +10,12 @@ const FretComponent = props => {
 
     let highlight = inScale;
     
-    return (<span style={{color: highlight ? 'red' : 'black'}}>----{props.fret.note}----</span>
+
+    const log = () => {
+        console.log(props.fret);
+    }
+
+    return (<span onClick={log} style={{color: highlight ? 'red' : 'black'}}>----{props.fret.note}----</span>
 )}
 
 export default connect(

@@ -1,6 +1,6 @@
 ﻿import React from 'react';
 import { Route } from 'react-router';
-import Layout from './components/Layout';
+import Layout from './components/structure/Layout';
 import GuitarPage from "./pages/guitar.page";
 
 export default () => (

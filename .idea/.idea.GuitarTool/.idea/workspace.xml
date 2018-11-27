@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7fa4b01-ed8e-442b-9770-c25665e54eb0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GuitarTool/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GuitarTool/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GuitarTool/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GuitarTool/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Guitar_API/Guitar_API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Guitar_API/Guitar_API.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guitar_web/ClientApp/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/guitar_web/ClientApp/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guitar_web/ClientApp/src/components/Counter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/guitar_web/ClientApp/src/components/FetchData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/guitar_web/ClientApp/src/components/Home.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/guitar_web/ClientApp/src/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/guitar_web/ClientApp/src/components/Layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guitar_web/ClientApp/src/components/NavMenu.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/guitar_web/ClientApp/src/components/NavMenu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/guitar_web/ClientApp/src/store/Counter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/guitar_web/ClientApp/src/store/WeatherForecasts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/guitar_web/ClientApp/src/store/configureStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/guitar_web/ClientApp/src/store/configureStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guitar_web/Controllers/SampleDataController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/guitar_web/Guitar_Web.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/guitar_web/Guitar_Web.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guitar_web/Pages/Error.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/guitar_web/Pages/Error.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guitar_web/Pages/_ViewImports.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/guitar_web/Pages/_ViewImports.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guitar_web/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/guitar_web/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guitar_web/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/guitar_web/Startup.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +16,8 @@
         <counts>
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -51,36 +34,36 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="2" />
+          <entry key="cs" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="2" />
+          <entry key="C#" value="4" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Guitar_Web/Startup.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="256">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
               <folding>
-                <marker date="1543233757516" expanded="false" signature="6:256" ph="..." />
-                <marker date="1543233757516" expanded="true" signature="278:2021" ph="{...}" />
-                <marker date="1543233757516" expanded="true" signature="305:2019" ph="{...}" />
-                <marker date="1543233757516" expanded="true" signature="364:427" ph="{...}" />
-                <marker date="1543233757516" expanded="true" signature="650:987" ph="{...}" />
-                <marker date="1543233757516" expanded="true" signature="887:975" ph="{...}" />
-                <marker date="1543233757516" expanded="true" signature="1175:2013" ph="{...}" />
-                <marker date="1543233757516" expanded="true" signature="1222:1299" ph="{...}" />
-                <marker date="1543233757516" expanded="true" signature="1316:1426" ph="{...}" />
-                <marker date="1543233757516" expanded="true" signature="1571:1737" ph="{...}" />
-                <marker date="1543233757516" expanded="true" signature="1770:2001" ph="{...}" />
-                <marker date="1543233757516" expanded="true" signature="1880:1987" ph="{...}" />
+                <marker date="1543310713285" expanded="false" signature="6:256" ph="..." />
+                <marker date="1543310713285" expanded="true" signature="278:2026" ph="{...}" />
+                <marker date="1543310713285" expanded="true" signature="305:2024" ph="{...}" />
+                <marker date="1543310713285" expanded="true" signature="364:427" ph="{...}" />
+                <marker date="1543310713285" expanded="true" signature="650:987" ph="{...}" />
+                <marker date="1543310713285" expanded="true" signature="887:975" ph="{...}" />
+                <marker date="1543310713285" expanded="true" signature="1180:2018" ph="{...}" />
+                <marker date="1543310713285" expanded="true" signature="1227:1304" ph="{...}" />
+                <marker date="1543310713285" expanded="true" signature="1321:1431" ph="{...}" />
+                <marker date="1543310713285" expanded="true" signature="1576:1742" ph="{...}" />
+                <marker date="1543310713285" expanded="true" signature="1775:2006" ph="{...}" />
+                <marker date="1543310713285" expanded="true" signature="1885:1992" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -89,7 +72,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Guitar_Web/Guitar_Web.csproj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="390">
               <caret line="26" column="66" selection-start-line="26" selection-start-column="66" selection-end-line="26" selection-end-column="66" />
             </state>
           </provider>
@@ -116,6 +99,7 @@
         <option value="$PROJECT_DIR$/Guitar_Core/Class1.cs" />
         <option value="$PROJECT_DIR$/Guitar_Data/Class1.cs" />
         <option value="$PROJECT_DIR$/Guitar_web/Controllers/SampleDataController.cs" />
+        <option value="$PROJECT_DIR$/Guitar_Web/Startup.cs" />
       </list>
     </option>
   </component>
@@ -127,6 +111,11 @@
   </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/Guitar_Web/ClientApp/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/Guitar_Web/ClientApp/package.json" />
+    </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="1440" />
@@ -156,34 +145,7 @@
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="GuitarTool" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="1 - Distribution" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Guitar_Web" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="GuitarTool" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="1 - Distribution" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Guitar_Web" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Dependencies" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="GuitarTool" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="1 - Distribution" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Guitar_Web" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Dependencies" type="24d0babc:SolutionExplorerModelNode" />
-              <item name=".NETCoreApp 2.1" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="GuitarTool" type="24d0babc:SolutionExplorerModelNode" />
               <item name="2 - Service" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="GuitarTool" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="2 - Service" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Guitar_API" type="24d0babc:SolutionExplorerModelNode" />
             </path>
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
@@ -193,19 +155,7 @@
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="GuitarTool" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="3 - Business" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Guitar_Core" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="GuitarTool" type="24d0babc:SolutionExplorerModelNode" />
               <item name="4 - Data" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="GuitarTool" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="4 - Data" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Guitar_Data" type="24d0babc:SolutionExplorerModelNode" />
             </path>
           </expand>
           <select />
@@ -264,11 +214,12 @@
       <option name="presentableId" value="Default" />
       <updated>1543232927932</updated>
       <workItem from="1543232929111" duration="2962000" />
+      <workItem from="1543310697997" duration="369000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2962000" />
+    <option name="totallyTimeSpent" value="3331000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -280,20 +231,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1440" y="-157" width="1920" height="1008" extended-state="6" />
-    <editor active="true" />
+    <frame x="1440" y="-157" width="1920" height="1057" extended-state="6" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973376" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25239617" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="NuGet" weight="0.32969433" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Unit Tests" />
-      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.49946752" visible="true" weight="0.32969433" />
-      <window_info anchor="bottom" id="Event Log" sideWeight="0.5005325" side_tool="true" visible="true" weight="0.32969433" />
-      <window_info anchor="bottom" id="Build" sideWeight="0.49946752" weight="0.32969433" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="REST Client" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -301,11 +244,19 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Errors In Solution" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="NuGet" order="7" weight="0.32969433" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unit Tests" order="11" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.49893504" visible="true" weight="0.32953367" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50106496" side_tool="true" visible="true" weight="0.32953367" />
+      <window_info anchor="bottom" id="Build" order="14" sideWeight="0.49946752" weight="0.32969433" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,67 +276,41 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/guitar_API/Class1.cs">
+    <entry file="file://$PROJECT_DIR$/guitar_API/Class1.cs" />
+    <entry file="file://$PROJECT_DIR$/guitar_web/react_guitar_tool.csproj" />
+    <entry file="file://$PROJECT_DIR$/Guitar_Core/Class1.cs" />
+    <entry file="file://$PROJECT_DIR$/Guitar_Data/Class1.cs" />
+    <entry file="file://$PROJECT_DIR$/Guitar_web/Controllers/SampleDataController.cs" />
+    <entry file="file://$PROJECT_DIR$/Guitar_Web/Startup.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        <state relative-caret-position="256">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <marker date="1543310713285" expanded="false" signature="6:256" ph="..." />
+            <marker date="1543310713285" expanded="true" signature="278:2026" ph="{...}" />
+            <marker date="1543310713285" expanded="true" signature="305:2024" ph="{...}" />
+            <marker date="1543310713285" expanded="true" signature="364:427" ph="{...}" />
+            <marker date="1543310713285" expanded="true" signature="650:987" ph="{...}" />
+            <marker date="1543310713285" expanded="true" signature="887:975" ph="{...}" />
+            <marker date="1543310713285" expanded="true" signature="1180:2018" ph="{...}" />
+            <marker date="1543310713285" expanded="true" signature="1227:1304" ph="{...}" />
+            <marker date="1543310713285" expanded="true" signature="1321:1431" ph="{...}" />
+            <marker date="1543310713285" expanded="true" signature="1576:1742" ph="{...}" />
+            <marker date="1543310713285" expanded="true" signature="1775:2006" ph="{...}" />
+            <marker date="1543310713285" expanded="true" signature="1885:1992" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/guitar_web/react_guitar_tool.csproj">
+    <entry file="file://$PROJECT_DIR$/Guitar_Web/Guitar_Web.csproj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="59" lean-forward="true" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Guitar_Core/Class1.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Guitar_Data/Class1.cs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Guitar_web/Controllers/SampleDataController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="37" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="37" />
+        <state relative-caret-position="390">
+          <caret line="26" column="66" selection-start-line="26" selection-start-column="66" selection-end-line="26" selection-end-column="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Guitar_Web/Program.cs">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Guitar_Web/Guitar_Web.csproj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="26" column="66" selection-start-line="26" selection-start-column="66" selection-end-line="26" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Guitar_Web/Startup.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <marker date="1543233757516" expanded="false" signature="6:256" ph="..." />
-            <marker date="1543233757516" expanded="true" signature="278:2021" ph="{...}" />
-            <marker date="1543233757516" expanded="true" signature="305:2019" ph="{...}" />
-            <marker date="1543233757516" expanded="true" signature="364:427" ph="{...}" />
-            <marker date="1543233757516" expanded="true" signature="650:987" ph="{...}" />
-            <marker date="1543233757516" expanded="true" signature="887:975" ph="{...}" />
-            <marker date="1543233757516" expanded="true" signature="1175:2013" ph="{...}" />
-            <marker date="1543233757516" expanded="true" signature="1222:1299" ph="{...}" />
-            <marker date="1543233757516" expanded="true" signature="1316:1426" ph="{...}" />
-            <marker date="1543233757516" expanded="true" signature="1571:1737" ph="{...}" />
-            <marker date="1543233757516" expanded="true" signature="1770:2001" ph="{...}" />
-            <marker date="1543233757516" expanded="true" signature="1880:1987" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
     </entry>
   </component>
 </project>

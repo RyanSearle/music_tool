@@ -1,5 +1,5 @@
 import React from 'react';
-import Guitar from "../components/guitar/guitar.component";
+import Guitar from "../components/instruments/guitar/guitar.component";
 
 const GuitarPage = (props) => (
     <div>

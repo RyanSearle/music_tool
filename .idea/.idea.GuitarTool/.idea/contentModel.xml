@@ -75,12 +75,16 @@
             <e p="App.js" t="Include" />
             <e p="App.test.js" t="Include" />
             <e p="components" t="Include">
-              <e p="guitar" t="Include">
-                <e p="fret.component.js" t="Include" />
-                <e p="guitar.component.js" t="Include" />
-                <e p="string.component.js" t="Include" />
+              <e p="instruments" t="Include">
+                <e p="guitar" t="Include">
+                  <e p="fret.component.js" t="Include" />
+                  <e p="guitar.component.js" t="Include" />
+                  <e p="string.component.js" t="Include" />
+                </e>
               </e>
-              <e p="Layout.js" t="Include" />
+              <e p="structure" t="Include">
+                <e p="Layout.js" t="Include" />
+              </e>
             </e>
             <e p="index.css" t="Include" />
             <e p="index.js" t="Include" />
@@ -97,9 +101,6 @@
                   <e p="guitar.model.js" t="Include" />
                   <e p="tuning.model.js" t="Include" />
                 </e>
-              </e>
-              <e p="interface" t="Include">
-                <e p="filter.model.js" t="Include" />
               </e>
               <e p="music" t="Include">
                 <e p="key.model.js" t="Include" />

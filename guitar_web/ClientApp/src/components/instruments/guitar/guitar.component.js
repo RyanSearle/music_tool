@@ -2,8 +2,8 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import GuitarString from './string.component';
-import { actionCreators } from '../../store/guitar.store';
-import { Guitar } from '../../store/instruments/guitar/guitar.model';
+import { actionCreators } from '../../../store/guitar.store'
+import { Guitar } from '../../../store/instruments/guitar/guitar.model';
 
 const GuitarComponent = props => {
 
