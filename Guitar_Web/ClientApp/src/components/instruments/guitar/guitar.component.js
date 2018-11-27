@@ -29,7 +29,7 @@ const GuitarComponent = props => {
     return (
         <div className="guitar">
             <div className="fret-count-row">
-                {guitar.strings[0].frets.map((_fret, i) => {
+                {new Array(fretCount).fill().map((_fret, i) => {
                     return <span className="fret-indicator" key={i} style={fretCountStyle}>{i}</span>
                 })}
             </div>

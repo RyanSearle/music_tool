@@ -53,7 +53,7 @@
   },
   "scripts": {
     "start": "rimraf ./build && node scripts/start.js",
-    "build": "node scripts/build.js",
+    "build": "npm rebuild node-sass && node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
   },
   "devDependencies": {
