@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7fa4b01-ed8e-442b-9770-c25665e54eb0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GuitarTool/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GuitarTool/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GuitarTool/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GuitarTool/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/components/instruments/guitar/fret.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/components/instruments/guitar/fret.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/components/instruments/guitar/guitar.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/components/instruments/guitar/guitar.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/components/instruments/guitar/string.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/components/instruments/guitar/string.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/pages/guitar.page.js" beforeDir="false" afterPath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/pages/guitar.page.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/store/guitar.store.js" beforeDir="false" afterPath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/store/guitar.store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/store/instruments/guitar/guitar-string.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/store/instruments/guitar/guitar-string.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/store/instruments/guitar/tuning.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/store/instruments/guitar/tuning.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/store/music/scale.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/store/music/scale.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guitar_Web/ClientApp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Guitar_Web/ClientApp/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guitar_Web/ClientApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Guitar_Web/ClientApp/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +53,7 @@
         <entry file="file://$PROJECT_DIR$/Guitar_Web/Startup.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="286">
-              <caret line="31" column="78" lean-forward="true" selection-start-line="31" selection-start-column="78" selection-end-line="31" selection-end-column="78" />
+              <caret line="31" column="78" selection-start-line="31" selection-start-column="78" selection-end-line="31" selection-end-column="78" />
               <folding>
                 <marker date="1543310713285" expanded="false" signature="6:256" ph="..." />
                 <marker date="1543310713285" expanded="true" signature="278:2026" ph="{...}" />
@@ -222,12 +217,12 @@
       <option name="presentableId" value="Default" />
       <updated>1543232927932</updated>
       <workItem from="1543232929111" duration="2962000" />
-      <workItem from="1543310697997" duration="1012000" />
+      <workItem from="1543310697997" duration="1194000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3974000" />
+    <option name="totallyTimeSpent" value="4156000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -292,7 +287,7 @@
     <entry file="file://$PROJECT_DIR$/Guitar_Web/Startup.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
-          <caret line="31" column="78" lean-forward="true" selection-start-line="31" selection-start-column="78" selection-end-line="31" selection-end-column="78" />
+          <caret line="31" column="78" selection-start-line="31" selection-start-column="78" selection-end-line="31" selection-end-column="78" />
           <folding>
             <marker date="1543310713285" expanded="false" signature="6:256" ph="..." />
             <marker date="1543310713285" expanded="true" signature="278:2026" ph="{...}" />

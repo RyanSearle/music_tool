@@ -51,6 +51,7 @@
           <e p=".gitignore" t="Include" />
           <e p="node_modules" t="ExcludeRecursive">
             <e p="bootstrap" t="IncludeRecursive" />
+            <e p="node-sass" t="IncludeRecursive" />
             <e p="react" t="IncludeRecursive" />
             <e p="react-bootstrap" t="IncludeRecursive" />
             <e p="react-dom" t="IncludeRecursive" />
@@ -62,6 +63,7 @@
             <e p="redux" t="IncludeRecursive" />
             <e p="redux-thunk" t="IncludeRecursive" />
             <e p="rimraf" t="IncludeRecursive" />
+            <e p="sass-loader" t="IncludeRecursive" />
           </e>
           <e p="package-lock.json" t="Include" />
           <e p="package.json" t="Include" />
