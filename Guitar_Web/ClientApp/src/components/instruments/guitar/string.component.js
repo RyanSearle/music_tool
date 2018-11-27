@@ -6,11 +6,12 @@ const StringComponent = props => {
     const fretCount = props.str.frets.length;
     const width = 100 / fretCount;
 
-    return (<div>
-        {props.str.frets.map((fret, i) => {
-            return <Fret width={width} key={i} fret={fret}></Fret>
-        })}
-    </div>
+    return (
+        <div className="guitar-string">
+            {props.str.frets.map((fret, i) => {
+                return <Fret width={width} key={i} fret={fret}></Fret>
+            })}
+        </div>
     )
 }
 

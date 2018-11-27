@@ -42,11 +42,14 @@ const major = new Scale('Major', majorSpacing)
 const minorPentatonic = new Scale('Minor Pentatonic', minorSpacing, [2, 6])
 const majorPentatonic = new Scale('Major Pentatonic', majorSpacing, [4, 7])
 
+const fretCount = 25;
+
 const initialState = {
     active: {
         tuning: standardTuning,
         scale: minorPentatonic,
-        key: eKey
+        key: eKey,
+        fretCount: fretCount
     },
     collections: {
         tunings: [

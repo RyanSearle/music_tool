@@ -1,0 +1,27 @@
+.guitar {
+    .fret-count-row {
+        white-space: nowrap;
+        text-align: center;
+        .fret-indicator {
+            border-bottom: 1px solid #444;
+        }
+    }
+    .fret-board {
+        .guitar-string {
+            white-space: nowrap;
+            .fret {
+                display: inline-block;
+                text-align: center;
+                border-bottom: 1px dashed #444;
+
+                &.in-scale {
+                    background: lightgreen;
+                }
+
+                &.root {
+                    color: red;
+                }
+            }
+        }
+    }
+}

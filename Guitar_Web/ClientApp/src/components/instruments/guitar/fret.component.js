@@ -10,18 +10,23 @@ const FretComponent = props => {
     const isRoot = activeScale.isRoot(props.fret, props.active.key)
     const interval = activeScale.getInterval(props.fret, props.active.key);
 
-    const log = () => {
+    const onClick = () => {
         console.log(props.fret);
     }
 
-    const style = {
-        display: 'inline-block',
+    const style = {        
         width: props.width + '%',
-        color: inScale ? 'red' : 'black',
-        //backgroundColor: isRoot ? 'cyan' : interval === 3 ? 'coral' : interval === 5 ? 'blueviolet' : 'transparent'
     };
 
-    return (<span tooltip={interval} onClick={log} style={style}>----{props.fret.note}----</span>
+    const classes = [
+        {cName: 'fret', condition: true},
+        {cName: 'in-scale', condition: inScale},
+        {cName: 'root', condition: isRoot},
+        {cName: 'third', condition: interval === 3},
+        {cName: 'thith', condition: interval === 5},
+    ].filter(cl => cl.condition).map(cl => cl.cName).join(' ');
+
+    return (<span className={classes} tooltip={interval} onClick={onClick} style={style}>{props.fret.note}</span>
 )}
 
 export default connect(

@@ -6,9 +6,9 @@ export const Tuning = (function() {
         this.stringTunings = stringTunings;
     }
 
-    Tuning.prototype.getStrings = function() {
+    Tuning.prototype.getStrings = function(fretCount) {
         return this.stringTunings.map(key => {
-            return new GuitarString(key);
+            return new GuitarString(key, fretCount);
         })
     }
     return Tuning;

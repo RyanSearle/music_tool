@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e7fa4b01-ed8e-442b-9770-c25665e54eb0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GuitarTool/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GuitarTool/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GuitarTool/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GuitarTool/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Guitar_Web/ClientApp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Guitar_Web/ClientApp/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Guitar_Web/ClientApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Guitar_Web/ClientApp/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -217,12 +218,12 @@
       <option name="presentableId" value="Default" />
       <updated>1543232927932</updated>
       <workItem from="1543232929111" duration="2962000" />
-      <workItem from="1543310697997" duration="1194000" />
+      <workItem from="1543310697997" duration="1516000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4156000" />
+    <option name="totallyTimeSpent" value="4478000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
