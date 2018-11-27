@@ -5,18 +5,15 @@ import { actionCreators } from '../../store/guitar.store'
 
 const FretComponent = props => {
 
-    props.filters.forEach(filter => {
-        console.log(filter);
-        
-        // Fix filter to use scales rule
-        //filter.dispatch(props.fret, null);
-    })
-    
+    const activeScale = props.active.scale;
+    const inScale = activeScale.isInScale(props.fret, props.active.key)
 
-    return (<span>----{props.fret.note}----</span>
+    let highlight = inScale;
+    
+    return (<span style={{color: highlight ? 'red' : 'black'}}>----{props.fret.note}----</span>
 )}
 
 export default connect(
-    state => state.guitar.interface,
+    state => state.guitar,
     dispatch => bindActionCreators(actionCreators, dispatch)
 )(FretComponent);

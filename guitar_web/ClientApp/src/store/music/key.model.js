@@ -60,11 +60,23 @@ export const KeyUtilities = (function () {
 
 export const Key = (function () {
     const Key = function (pitch, octave) {
+
+        octave = octave || 0;
+
         this.note = KeyUtilities.getCharFromValue(pitch);
         this.octave = octave;
         this.pitch = pitch;
 
         this.base12Pitch = octave + pitch.toString(12);
     }
+
+    Key.prototype.getDistance = function(key) {
+        return parseInt(this.base12Pitch, 12) - parseInt(key.base12Pitch, 12);
+    }
+
+    Key.prototype.getDistanceAbsolute = function(key) {
+        return Math.abs(this.getDistance(key))
+    }
+
     return Key;
 })();

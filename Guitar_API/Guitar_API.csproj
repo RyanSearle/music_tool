@@ -2,8 +2,6 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <AssemblyName>guitar_web</AssemblyName>
-        <RootNamespace>guitar_web</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

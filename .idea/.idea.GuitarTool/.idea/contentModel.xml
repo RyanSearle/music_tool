@@ -49,6 +49,20 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="ClientApp" t="Include">
           <e p=".gitignore" t="Include" />
+          <e p="node_modules" t="ExcludeRecursive">
+            <e p="bootstrap" t="IncludeRecursive" />
+            <e p="react" t="IncludeRecursive" />
+            <e p="react-bootstrap" t="IncludeRecursive" />
+            <e p="react-dom" t="IncludeRecursive" />
+            <e p="react-redux" t="IncludeRecursive" />
+            <e p="react-router-bootstrap" t="IncludeRecursive" />
+            <e p="react-router-dom" t="IncludeRecursive" />
+            <e p="react-router-redux" t="IncludeRecursive" />
+            <e p="react-scripts" t="IncludeRecursive" />
+            <e p="redux" t="IncludeRecursive" />
+            <e p="redux-thunk" t="IncludeRecursive" />
+            <e p="rimraf" t="IncludeRecursive" />
+          </e>
           <e p="package-lock.json" t="Include" />
           <e p="package.json" t="Include" />
           <e p="public" t="Include">
@@ -61,26 +75,40 @@
             <e p="App.js" t="Include" />
             <e p="App.test.js" t="Include" />
             <e p="components" t="Include">
-              <e p="Counter.js" t="Include" />
-              <e p="FetchData.js" t="Include" />
-              <e p="Home.js" t="Include" />
+              <e p="guitar" t="Include">
+                <e p="fret.component.js" t="Include" />
+                <e p="guitar.component.js" t="Include" />
+                <e p="string.component.js" t="Include" />
+              </e>
               <e p="Layout.js" t="Include" />
-              <e p="NavMenu.css" t="Include" />
-              <e p="NavMenu.js" t="Include" />
             </e>
             <e p="index.css" t="Include" />
             <e p="index.js" t="Include" />
+            <e p="Pages" t="Include">
+              <e p="guitar.page.js" t="Include" />
+            </e>
             <e p="registerServiceWorker.js" t="Include" />
             <e p="store" t="Include">
               <e p="configureStore.js" t="Include" />
-              <e p="Counter.js" t="Include" />
-              <e p="WeatherForecasts.js" t="Include" />
+              <e p="guitar.store.js" t="Include" />
+              <e p="instruments" t="Include">
+                <e p="guitar" t="Include">
+                  <e p="guitar-string.model.js" t="Include" />
+                  <e p="guitar.model.js" t="Include" />
+                  <e p="tuning.model.js" t="Include" />
+                </e>
+              </e>
+              <e p="interface" t="Include">
+                <e p="filter.model.js" t="Include" />
+              </e>
+              <e p="music" t="Include">
+                <e p="key.model.js" t="Include" />
+                <e p="scale.model.js" t="Include" />
+              </e>
             </e>
           </e>
         </e>
-        <e p="Controllers" t="Include">
-          <e p="SampleDataController.cs" t="Include" />
-        </e>
+        <e p="Controllers" t="Include" />
         <e p="guitar_web.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
