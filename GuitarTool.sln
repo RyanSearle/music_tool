@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Distribution", "1 - Distribution", "{270F610B-09D5-4EE1-B168-ACBEA82186A3}"
 EndProject
@@ -8,9 +8,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Business", "3 - Busines
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Data", "4 - Data", "{325DDF39-F309-46F2-9D9A-D901A13713E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guitar_Web", "guitar_web\Guitar_Web.csproj", "{1BB7EDA4-482E-412A-B24B-915E3AB5E238}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guitar_Web", "Guitar_Web\Guitar_Web.csproj", "{1BB7EDA4-482E-412A-B24B-915E3AB5E238}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guitar_API", "guitar_API\Guitar_API.csproj", "{1CAB6613-A97B-48DA-B2B0-D64BFB34D808}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guitar_API", "Guitar_API\Guitar_API.csproj", "{1CAB6613-A97B-48DA-B2B0-D64BFB34D808}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guitar_Core", "Guitar_Core\Guitar_Core.csproj", "{DA3D0A57-5BAC-4BC8-8ABD-E15054849735}"
 EndProject

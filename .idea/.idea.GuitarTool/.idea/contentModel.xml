@@ -65,7 +65,6 @@
         </e>
       </e>
       <e p="guitar_web" t="IncludeRecursive">
-        <e p=".dockerignore" t="Include" />
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
@@ -214,7 +213,6 @@
           </e>
         </e>
         <e p="Controllers" t="Include" />
-        <e p="Dockerfile" t="Include" />
         <e p="guitar_web.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -223,7 +221,16 @@
             </e>
           </e>
         </e>
-        <e p="out" t="Include">
+        <e p="Pages" t="Include">
+          <e p="_ViewImports.cshtml" t="Include" />
+          <e p="Error.cshtml" t="Include" />
+          <e p="Error.cshtml.cs" t="Include" />
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="publish" t="Include">
           <e p="appsettings.Development.json" t="Include" />
           <e p="appsettings.json" t="Include" />
           <e p="ClientApp" t="Include">
@@ -264,29 +271,7 @@
           <e p="Guitar_Web.runtimeconfig.json" t="Include" />
           <e p="Guitar_Web.Views.dll" t="Include" />
           <e p="Guitar_Web.Views.pdb" t="Include" />
-          <e p="out" t="Include">
-            <e p="appsettings.Development.json" t="Include" />
-            <e p="appsettings.json" t="Include" />
-            <e p="ClientApp" t="Include">
-              <e p="build" t="Include">
-                <e p="asset-manifest.json" t="Include" />
-                <e p="manifest.json" t="Include" />
-              </e>
-            </e>
-            <e p="Guitar_Web.deps.json" t="Include" />
-            <e p="Guitar_Web.runtimeconfig.json" t="Include" />
-            <e p="web.config" t="Include" />
-          </e>
           <e p="web.config" t="Include" />
-        </e>
-        <e p="Pages" t="Include">
-          <e p="_ViewImports.cshtml" t="Include" />
-          <e p="Error.cshtml" t="Include" />
-          <e p="Error.cshtml.cs" t="Include" />
-        </e>
-        <e p="Program.cs" t="Include" />
-        <e p="Properties" t="Include">
-          <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
       </e>

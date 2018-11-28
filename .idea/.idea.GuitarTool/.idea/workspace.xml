@@ -2,15 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7fa4b01-ed8e-442b-9770-c25665e54eb0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Guitar_Web/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Guitar_Web/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GuitarTool/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GuitarTool/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GuitarTool/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GuitarTool/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Guitar_Web/ClientApp/config/webpack.config.prod.js" beforeDir="false" afterPath="$PROJECT_DIR$/Guitar_Web/ClientApp/config/webpack.config.prod.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Guitar_Web/ClientApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Guitar_Web/ClientApp/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/components/instruments/guitar/fret.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/components/instruments/guitar/fret.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/components/instruments/guitar/guitar.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/components/instruments/guitar/guitar.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/store/guitar.store.js" beforeDir="false" afterPath="$PROJECT_DIR$/Guitar_Web/ClientApp/src/store/guitar.store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GuitarTool.sln" beforeDir="false" afterPath="$PROJECT_DIR$/GuitarTool.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guitar_Web/.dockerignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guitar_Web/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guitar_Web/Guitar_Web.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Guitar_Web/Guitar_Web.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guitar_Web/out/Guitar_API.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guitar_Web/out/Guitar_Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guitar_Web/out/Guitar_Data.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guitar_Web/out/Guitar_Web.Views.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guitar_Web/out/Guitar_Web.deps.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guitar_Web/out/Guitar_Web.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guitar_Web/out/Guitar_Web.runtimeconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guitar_Web/out/appsettings.Development.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guitar_Web/out/appsettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guitar_Web/out/out/Guitar_Web.deps.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guitar_Web/out/out/Guitar_Web.runtimeconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guitar_Web/out/out/appsettings.Development.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guitar_Web/out/out/appsettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guitar_Web/out/out/web.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Guitar_Web/out/web.config" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +43,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Dockerfile" value="2" />
+          <entry key="Dockerfile2" value="1" />
           <entry key="cs" value="7" />
           <entry key="cshtml" value="2" />
           <entry key="csproj" value="3" />
@@ -44,13 +57,13 @@
           <entry key="Csproj" value="3" />
           <entry key="Dockerfile" value="2" />
           <entry key="JSON" value="2" />
-          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="PLAIN_TEXT" value="3" />
           <entry key="Razor" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Dockerfile" value="82" />
+          <entry key="Dockerfile" value="132" />
           <entry key="cs" value="4" />
           <entry key="dockerignore" value="1" />
         </counts>
@@ -58,7 +71,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="C#" value="4" />
-          <entry key="Dockerfile" value="82" />
+          <entry key="Dockerfile" value="132" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -70,7 +83,7 @@
         <entry file="file://$PROJECT_DIR$/Guitar_Web/Startup.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="24" column="44" lean-forward="true" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+              <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
               <folding>
                 <marker date="1543310713285" expanded="false" signature="6:256" ph="..." />
                 <marker date="1543310713285" expanded="true" signature="278:2026" ph="{...}" />
@@ -108,11 +121,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Guitar_Web/Pages/Error.cshtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="105">
+              <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
               <folding>
                 <marker date="1543232708107" expanded="true" signature="24:61" ph="@..." />
                 <marker date="1543232708107" expanded="true" signature="178:291" ph="@..." />
@@ -125,27 +138,9 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Guitar_Web/Dockerfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Guitar_Web/Properties/launchSettings.json">
           <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Guitar_Web/.dockerignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -201,11 +196,10 @@
       <path value="$PROJECT_DIR$/Guitar_Web/ClientApp/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1440" />
-    <option name="y" value="-157" />
-    <option name="width" value="1920" />
-    <option name="height" value="1057" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="828" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -231,20 +225,6 @@
               <item name="GuitarTool" type="24d0babc:SolutionExplorerModelNode" />
               <item name="1 - Distribution" type="24d0babc:SolutionExplorerModelNode" />
               <item name="Guitar_Web" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="GuitarTool" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="1 - Distribution" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Guitar_Web" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Properties" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="GuitarTool" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="1 - Distribution" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Guitar_Web" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Pages" type="24d0babc:SolutionExplorerModelNode" />
             </path>
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
@@ -287,7 +267,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Docker.Docker Image">
     <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -306,6 +286,43 @@
         <option name="Build" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Docker Image" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
+      <deployment type="docker-image">
+        <settings>
+          <option name="JSONFilePath" value="" />
+          <option name="command" value="" />
+          <option name="commandLineOptions" value="" />
+          <option name="containerName" value="music_tool_test" />
+          <option name="entrypoint" value="" />
+          <option name="imageTag" value="musictool:latest" />
+          <option name="portBindings">
+            <list>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="80" />
+                <option name="hostPort" value="8080" />
+              </DockerPortBindingImpl>
+            </list>
+          </option>
+          <option name="startBrowserSettings">
+            <browser url="http://127.0.0.1" />
+          </option>
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue=".NET Project.Default" />
+      <item itemvalue="Docker.Docker Image" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.Docker Image" />
+        <item itemvalue="Docker.Docker Image" />
+        <item itemvalue="Docker.Docker Image" />
+        <item itemvalue="Docker.Docker Image" />
+        <item itemvalue="Docker.Docker Image" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -318,12 +335,12 @@
       <option name="presentableId" value="Default" />
       <updated>1543232927932</updated>
       <workItem from="1543232929111" duration="2962000" />
-      <workItem from="1543310697997" duration="6357000" />
+      <workItem from="1543310697997" duration="11081000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9319000" />
+    <option name="totallyTimeSpent" value="14043000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -335,9 +352,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1440" y="-157" width="1920" height="1057" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="828" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2593184" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3483548" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="REST Client" />
@@ -349,14 +366,14 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="NuGet" order="7" weight="0.32969433" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Docker" order="8" sideWeight="0.7718169" weight="0.5027174" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unit Tests" order="11" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.90841323" visible="true" weight="0.32953367" />
-      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.09158679" side_tool="true" visible="true" weight="0.32953367" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.87339056" visible="true" weight="0.43206522" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.12660944" side_tool="true" visible="true" weight="0.43206522" />
       <window_info anchor="bottom" id="Build" order="14" sideWeight="0.49946752" weight="0.32969433" />
-      <window_info anchor="right" x="0" y="0" width="430" height="857" id="Documentation" side_tool="true" visible="true" weight="0.32960597" />
+      <window_info anchor="right" x="0" y="0" width="430" height="857" id="Documentation" side_tool="true" visible="true" weight="0.21459228" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -403,9 +420,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Guitar_Web/Pages/_ViewImports.cshtml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Guitar_Web/Pages/Error.cshtml.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -418,25 +432,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Guitar_Web/Pages/Error.cshtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <marker date="1543232708107" expanded="true" signature="24:61" ph="@..." />
-            <marker date="1543232708107" expanded="true" signature="178:291" ph="@..." />
-            <marker date="1543232708107" expanded="true" signature="203:291" ph="{...}" />
-            <marker date="1543232708107" expanded="true" signature="210:289" ph="&lt;p.../&gt;" />
-            <marker date="1543232708107" expanded="true" signature="319:454" ph="&lt;p.../&gt;" />
-            <marker date="1543232708107" expanded="true" signature="455:845" ph="&lt;p.../&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Guitar_Web/.dockerignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
@@ -446,7 +445,7 @@
     <entry file="file://$PROJECT_DIR$/Guitar_Web/Startup.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="24" column="44" lean-forward="true" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+          <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
           <folding>
             <marker date="1543310713285" expanded="false" signature="6:256" ph="..." />
             <marker date="1543310713285" expanded="true" signature="278:2026" ph="{...}" />
@@ -464,10 +463,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Guitar_Web/Pages/_ViewImports.cshtml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Guitar_Web/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Guitar_Web/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+        <state relative-caret-position="90">
+          <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Guitar_Web/Pages/Error.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+          <folding>
+            <marker date="1543232708107" expanded="true" signature="24:61" ph="@..." />
+            <marker date="1543232708107" expanded="true" signature="178:291" ph="@..." />
+            <marker date="1543232708107" expanded="true" signature="203:291" ph="{...}" />
+            <marker date="1543232708107" expanded="true" signature="210:289" ph="&lt;p.../&gt;" />
+            <marker date="1543232708107" expanded="true" signature="319:454" ph="&lt;p.../&gt;" />
+            <marker date="1543232708107" expanded="true" signature="455:845" ph="&lt;p.../&gt;" />
+          </folding>
         </state>
       </provider>
     </entry>
