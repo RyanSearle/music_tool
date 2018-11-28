@@ -24,13 +24,23 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\guitar_API\Guitar_API.csproj" />
+    <ProjectReference Include="..\Guitar_API\Guitar_API.csproj" />
     <ProjectReference Include="..\Guitar_Core\Guitar_Core.csproj" />
     <ProjectReference Include="..\Guitar_Data\Guitar_Data.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Controllers" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="publish\web.config" />
+    <_ContentIncludedByDefault Remove="publish\appsettings.Development.json" />
+    <_ContentIncludedByDefault Remove="publish\appsettings.json" />
+    <_ContentIncludedByDefault Remove="publish\ClientApp\build\asset-manifest.json" />
+    <_ContentIncludedByDefault Remove="publish\ClientApp\build\manifest.json" />
+    <_ContentIncludedByDefault Remove="publish\Guitar_Web.deps.json" />
+    <_ContentIncludedByDefault Remove="publish\Guitar_Web.runtimeconfig.json" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
