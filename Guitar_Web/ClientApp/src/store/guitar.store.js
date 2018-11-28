@@ -42,11 +42,21 @@ const dropDTuning = new Tuning('Drop D', [
     KeyUtilities.createFromChar('D', 0)
 ])
 
-const minorSpacing = ['W', 'H', 'W', 'W', 'H', 'W', 'W'];
 const majorSpacing = ['W', 'W', 'H', 'W', 'W', 'W', 'H'];
+const dorianSpacing = ['W', 'H', 'W', 'W', 'W', 'H', 'W'];
+const phrygianSpacing = ['H', 'W', 'W', 'W', 'H', 'W', 'W'];
+const lydianSpacing = ['W', 'W', 'W', 'H', 'W', 'W', 'H'];
+const mixolydianSpacing = ['W', 'W', 'H', 'W', 'W', 'H', 'W'];
+const minorSpacing = ['W', 'H', 'W', 'W', 'H', 'W', 'W'];
+const locrianSpacing = ['H', 'W', 'W', 'H', 'W', 'W', 'W'];
 
-const minor = new Scale('Minor', minorSpacing)
-const major = new Scale('Major', majorSpacing)
+const major = new Scale('Ionian (Major)', majorSpacing)
+const dorian = new Scale('Dorian', dorianSpacing)
+const phrygian = new Scale('Phrygian', phrygianSpacing)
+const lydian = new Scale('Lydian', lydianSpacing)
+const mixolydian = new Scale('Mixolydian', mixolydianSpacing)
+const minor = new Scale('Aeolian (Minor)', minorSpacing)
+const locrian = new Scale('Locrian', locrianSpacing)
 
 const minorPentatonic = new Scale('Minor Pentatonic', minorSpacing, [2, 6])
 const majorPentatonic = new Scale('Major Pentatonic', majorSpacing, [4, 7])
@@ -67,10 +77,15 @@ const initialState = {
             cTuning
         ],
         scales: [
-            major,
-            minor,
             majorPentatonic,
-            minorPentatonic
+            minorPentatonic,
+            major,
+            dorian,
+            phrygian,
+            lydian,
+            mixolydian,
+            minor,
+            locrian,
         ],
         keys: [
             aKey,
