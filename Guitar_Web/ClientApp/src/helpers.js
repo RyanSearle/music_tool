@@ -1,0 +1,1 @@
+export const makeArray = size => new Array(size).fill();

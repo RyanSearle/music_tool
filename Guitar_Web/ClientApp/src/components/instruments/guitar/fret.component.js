@@ -25,6 +25,8 @@ const FretComponent = props => {
         {cName: 'third', condition: interval === 3},
         {cName: 'thith', condition: interval === 5},
     ].filter(cl => cl.condition).map(cl => cl.cName).join(' ');
+    
+
 
     return (<span className={classes} tooltip={interval} onClick={onClick} style={style}>{props.fret.note}</span>
 )}

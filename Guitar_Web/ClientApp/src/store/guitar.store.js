@@ -63,7 +63,7 @@ const locrian = new Scale('Locrian', locrianSpacing)
 const minorPentatonic = new Scale('Minor Pentatonic', minorSpacing, [2, 6])
 const majorPentatonic = new Scale('Major Pentatonic', majorSpacing, [4, 7])
 
-const fretCount = 25;
+const fretCount = 23;
 
 const initialState = {
     active: {
