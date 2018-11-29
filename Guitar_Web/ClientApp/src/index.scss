@@ -1,6 +1,10 @@
-@media (max-width: 767px) {
-    /* On small screens, the nav menu spans the full width of the screen. Leave a space for it. */
-    body {
-        padding-top: 50px;
-    }
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #32332d;
+    color: #ffffff;
 }

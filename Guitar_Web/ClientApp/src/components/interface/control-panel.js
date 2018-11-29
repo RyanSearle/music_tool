@@ -1,4 +1,5 @@
 import React from 'react';
+import './control-panel.scss';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { actionCreators } from '../../store/guitar.store'
@@ -38,9 +39,9 @@ const ControlPanel = props => {
         props.changeTuning(tuning);
     }
 
-    return (<div>
+    return (<div className="control-panel">
         {/* Keys */}
-        <div>
+        <div className="control">
             <label>Key</label>
             <select onChange={changeKey} value={currentKey.pitch}>
                 {keys.map(key => {
@@ -50,7 +51,7 @@ const ControlPanel = props => {
         </div>
 
         {/* Scales */}
-        <div>
+        <div className="control">
             <label>Scale</label>
             <select onChange={changeScale} value={currentScale.name}>
                 {scales.map(scale => {
@@ -60,7 +61,7 @@ const ControlPanel = props => {
         </div>
 
         {/* Tunings */}
-        <div>
+        <div className="control">
             <label>Tuning</label>
             <select onChange={changeTuning} value={currentTuning.name}>
                 {tunings.map(tuning => {

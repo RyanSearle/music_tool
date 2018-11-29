@@ -50,6 +50,7 @@ const mixolydianSpacing = ['W', 'W', 'H', 'W', 'W', 'H', 'W'];
 const minorSpacing = ['W', 'H', 'W', 'W', 'H', 'W', 'W'];
 const locrianSpacing = ['H', 'W', 'W', 'H', 'W', 'W', 'W'];
 
+// Diatonic scales
 const major = new Scale('Ionian (Major)', majorSpacing)
 const dorian = new Scale('Dorian', dorianSpacing)
 const phrygian = new Scale('Phrygian', phrygianSpacing)
@@ -58,6 +59,7 @@ const mixolydian = new Scale('Mixolydian', mixolydianSpacing)
 const minor = new Scale('Aeolian (Minor)', minorSpacing)
 const locrian = new Scale('Locrian', locrianSpacing)
 
+// Pentatonic scales
 const minorPentatonic = new Scale('Minor Pentatonic', minorSpacing, [2, 6])
 const majorPentatonic = new Scale('Major Pentatonic', majorSpacing, [4, 7])
 
