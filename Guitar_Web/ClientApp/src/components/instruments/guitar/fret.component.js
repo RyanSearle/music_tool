@@ -6,9 +6,12 @@ import { actionCreators } from '../../../store/guitar.store'
 const FretComponent = props => {
 
     const activeScale = props.active.scale;
+    const visibility = props.active.visibility;
     const inScale = activeScale.isInScale(props.fret, props.active.key)
     const isRoot = activeScale.isRoot(props.fret, props.active.key)
     const interval = activeScale.getInterval(props.fret, props.active.key);
+    const scaleVisible = visibility.scale;
+    const rootVisible = visibility.root;
 
     const onClick = () => {
         console.log(props.fret);
@@ -20,8 +23,8 @@ const FretComponent = props => {
 
     const classes = [
         {cName: 'fret', condition: true},
-        {cName: 'in-scale', condition: inScale},
-        {cName: 'root', condition: isRoot},
+        {cName: 'in-scale', condition: inScale && scaleVisible},
+        {cName: 'root', condition: isRoot && rootVisible},
         {cName: 'third', condition: interval === 3},
         {cName: 'thith', condition: interval === 5},
     ].filter(cl => cl.condition).map(cl => cl.cName).join(' ');

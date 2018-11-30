@@ -70,7 +70,11 @@ const initialState = {
         tuning: standardTuning,
         scale: minorPentatonic,
         key: eKey,
-        fretCount: fretCount
+        fretCount: fretCount,
+        visibility: {
+            scale: true,
+            root: true,            
+        }
     },
     collections: {
         tunings: [
@@ -109,11 +113,15 @@ const initialState = {
 const CHANGE_KEY_TYPE = 'CHANGE_KEY_TYPE';
 const CHANGE_SCALE_TYPE = 'CHANGE_SCALE_TYPE';
 const CHANGE_TUNING_TYPE = 'CHANGE_TUNING_TYPE';
+const CHANGE_SCALE_VISIBILITY_TYPE = 'CHANGE_SCALE_VISIBILITY_TYPE';
+const CHANGE_ROOT_VISIBILITY_TYPE = 'CHANGE_ROOT_VISIBILITY_TYPE';
 
 export const actionCreators = {
     changeKey: (key) => ({type: CHANGE_KEY_TYPE, key}),
     changeScale: (scale) => ({type: CHANGE_SCALE_TYPE, scale}),
-    changeTuning: (tuning) => ({type: CHANGE_TUNING_TYPE, tuning})
+    changeTuning: (tuning) => ({type: CHANGE_TUNING_TYPE, tuning}),
+    changeScaleVisibility: (visible) => ({type: CHANGE_SCALE_VISIBILITY_TYPE, visible}),
+    changeRootVisibility: (visible) => ({type: CHANGE_ROOT_VISIBILITY_TYPE, visible}),
 };
 
 export const reducer = (state, action) => {
@@ -138,6 +146,24 @@ export const reducer = (state, action) => {
     if(action.type === CHANGE_TUNING_TYPE) {
         return {...state, active: {
             ...state.active, tuning: action.tuning
+        }}
+    }
+
+    // CHANGE_SCALE_VISIBILITY_TYPE
+    if(action.type === CHANGE_SCALE_VISIBILITY_TYPE) {
+        return {...state, active: {
+            ...state.active, visibility: {
+                ...state.active.visibility, scale: action.visible
+            }
+        }}
+    }
+
+    // CHANGE_ROOT_VISIBILITY_TYPE
+    if(action.type === CHANGE_ROOT_VISIBILITY_TYPE) {
+        return {...state, active: {
+            ...state.active, visibility: {
+                ...state.active.visibility, root: action.visible
+            }
         }}
     }
 

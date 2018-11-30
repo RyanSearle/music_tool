@@ -39,6 +39,24 @@ const ControlPanel = props => {
         props.changeTuning(tuning);
     }
 
+    // Scale visibility
+    const currentScaleVisibility = props.active.visibility.scale;
+
+    const changeScaleVisibility = (e) => {
+        const val = e.target.checked;
+                
+        props.changeScaleVisibility(val);
+    }
+
+    // Root visibility
+    const currentRootVisibility = props.active.visibility.root;
+
+    const changeRootVisibility = (e) => {
+        const val = e.target.checked;
+                
+        props.changeRootVisibility(val);
+    }
+
     return (<div className="control-panel">
         {/* Keys */}
         <div className="control">
@@ -68,6 +86,18 @@ const ControlPanel = props => {
                     return (<option key={tuning.name} value={tuning.name}>{tuning.name}</option>)
                 })}
             </select>
+        </div>
+
+        {/* Scale visibility */}
+        <div className="control">
+            <label>Scale visible</label>
+            <input type="checkbox" onChange={changeScaleVisibility} checked={currentScaleVisibility} />
+        </div>
+
+        {/* Root visibility */}
+        <div className="control">
+            <label>Root visible</label>
+            <input type="checkbox" onChange={changeRootVisibility} checked={currentRootVisibility} />
         </div>
     </div>)
 }

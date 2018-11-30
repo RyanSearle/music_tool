@@ -70,30 +70,6 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="ClientApp" t="Include">
           <e p=".gitignore" t="Include" />
-          <e p="build" t="Include">
-            <e p="asset-manifest.json" t="Include" />
-            <e p="favicon.ico" t="Include" />
-            <e p="index.html" t="Include" />
-            <e p="manifest.json" t="Include" />
-            <e p="service-worker.js" t="Include" />
-            <e p="static" t="Include">
-              <e p="css" t="Include">
-                <e p="main.f39c0b06.css" t="Include" />
-                <e p="main.f39c0b06.css.map" t="Include" />
-              </e>
-              <e p="js" t="Include">
-                <e p="main.cc14c2fe.js" t="Include" />
-                <e p="main.cc14c2fe.js.map" t="Include" />
-              </e>
-              <e p="media" t="Include">
-                <e p="glyphicons-halflings-regular.448c34a5.woff2" t="Include" />
-                <e p="glyphicons-halflings-regular.89889688.svg" t="Include" />
-                <e p="glyphicons-halflings-regular.e18bbf61.ttf" t="Include" />
-                <e p="glyphicons-halflings-regular.f4769f9b.eot" t="Include" />
-                <e p="glyphicons-halflings-regular.fa277232.woff" t="Include" />
-              </e>
-            </e>
-          </e>
           <e p="config" t="Include">
             <e p="env.js" t="Include" />
             <e p="jest" t="Include">
@@ -177,6 +153,7 @@
               <e p="instruments" t="Include">
                 <e p="guitar" t="Include">
                   <e p="fret.component.js" t="Include" />
+                  <e p="guitar-anatomy.js" t="Include" />
                   <e p="guitar.component.js" t="Include" />
                   <e p="guitar.scss" t="Include" />
                   <e p="string.component.js" t="Include" />
@@ -184,15 +161,15 @@
               </e>
               <e p="interface" t="Include">
                 <e p="control-panel.js" t="Include" />
-              </e>
-              <e p="structure" t="Include">
-                <e p="Layout.js" t="Include" />
+                <e p="control-panel.scss" t="Include" />
               </e>
             </e>
+            <e p="helpers.js" t="Include" />
             <e p="index.js" t="Include" />
             <e p="index.scss" t="Include" />
             <e p="Pages" t="Include">
               <e p="guitar.page.js" t="Include" />
+              <e p="guitar.page.scss" t="Include" />
             </e>
             <e p="registerServiceWorker.js" t="Include" />
             <e p="store" t="Include">
@@ -229,49 +206,6 @@
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
-        </e>
-        <e p="publish" t="Include">
-          <e p="appsettings.Development.json" t="Include" />
-          <e p="appsettings.json" t="Include" />
-          <e p="ClientApp" t="Include">
-            <e p="build" t="Include">
-              <e p="asset-manifest.json" t="Include" />
-              <e p="favicon.ico" t="Include" />
-              <e p="index.html" t="Include" />
-              <e p="manifest.json" t="Include" />
-              <e p="service-worker.js" t="Include" />
-              <e p="static" t="Include">
-                <e p="css" t="Include">
-                  <e p="main.f39c0b06.css" t="Include" />
-                  <e p="main.f39c0b06.css.map" t="Include" />
-                </e>
-                <e p="js" t="Include">
-                  <e p="main.cc14c2fe.js" t="Include" />
-                  <e p="main.cc14c2fe.js.map" t="Include" />
-                </e>
-                <e p="media" t="Include">
-                  <e p="glyphicons-halflings-regular.448c34a5.woff2" t="Include" />
-                  <e p="glyphicons-halflings-regular.89889688.svg" t="Include" />
-                  <e p="glyphicons-halflings-regular.e18bbf61.ttf" t="Include" />
-                  <e p="glyphicons-halflings-regular.f4769f9b.eot" t="Include" />
-                  <e p="glyphicons-halflings-regular.fa277232.woff" t="Include" />
-                </e>
-              </e>
-            </e>
-          </e>
-          <e p="Guitar_API.dll" t="Include" />
-          <e p="Guitar_API.pdb" t="Include" />
-          <e p="Guitar_Core.dll" t="Include" />
-          <e p="Guitar_Core.pdb" t="Include" />
-          <e p="Guitar_Data.dll" t="Include" />
-          <e p="Guitar_Data.pdb" t="Include" />
-          <e p="Guitar_Web.deps.json" t="Include" />
-          <e p="Guitar_Web.dll" t="Include" />
-          <e p="Guitar_Web.pdb" t="Include" />
-          <e p="Guitar_Web.runtimeconfig.json" t="Include" />
-          <e p="Guitar_Web.Views.dll" t="Include" />
-          <e p="Guitar_Web.Views.pdb" t="Include" />
-          <e p="web.config" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
       </e>
