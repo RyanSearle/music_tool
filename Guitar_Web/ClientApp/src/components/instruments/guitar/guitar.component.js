@@ -10,7 +10,7 @@ import { makeArray } from '../../../helpers';
 
 const GuitarComponent = props => {
 
-    const guitar = new Guitar(props.active.tuning, props.active.fretCount);
+    const guitar = new Guitar(props.abc.active.tuning, props.abc.active.fretCount);
     const fretCount = guitar.strings[0].frets.length;
     const widths = getFretWidths(fretCount);
 
@@ -31,6 +31,6 @@ const GuitarComponent = props => {
 }
 
 export default connect(
-    state => state.guitar,
+    state => ({ abc: state.guitar}),
     dispatch => bindActionCreators(actionCreators, dispatch)
 )(GuitarComponent);

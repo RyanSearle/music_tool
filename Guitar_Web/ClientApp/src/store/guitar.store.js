@@ -1,111 +1,50 @@
-import { Tuning } from './instruments/guitar/tuning.model'
-import { KeyUtilities } from "./music/key.model";
-import { Scale } from './music/scale.model';
-
-const aKey = KeyUtilities.createFromChar('A'),
-    aSKey = KeyUtilities.createFromChar('A#'),
-    bKey = KeyUtilities.createFromChar('B'),
-    cKey = KeyUtilities.createFromChar('C'),
-    cSKey = KeyUtilities.createFromChar('C#'),
-    dKey = KeyUtilities.createFromChar('D'),
-    dSKey = KeyUtilities.createFromChar('D#'),
-    eKey = KeyUtilities.createFromChar('E'),
-    fKey = KeyUtilities.createFromChar('F'),
-    fSKey = KeyUtilities.createFromChar('F#'),
-    gKey = KeyUtilities.createFromChar('G'),
-    gSKey = KeyUtilities.createFromChar('G#')
-
-const standardTuning = new Tuning('Standard', [
-    KeyUtilities.createFromChar('E', 2),
-    KeyUtilities.createFromChar('B', 2),
-    KeyUtilities.createFromChar('G', 1),
-    KeyUtilities.createFromChar('D', 1),
-    KeyUtilities.createFromChar('A', 1),
-    KeyUtilities.createFromChar('E', 0)
-])
-
-const cTuning = new Tuning('C', [
-    KeyUtilities.createFromChar('C', 2),
-    KeyUtilities.createFromChar('G', 1),
-    KeyUtilities.createFromChar('D#', 1),
-    KeyUtilities.createFromChar('A#', 1),
-    KeyUtilities.createFromChar('F', 0),
-    KeyUtilities.createFromChar('C', 0)
-])
-
-const dropDTuning = new Tuning('Drop D', [
-    KeyUtilities.createFromChar('E', 2),
-    KeyUtilities.createFromChar('B', 2),
-    KeyUtilities.createFromChar('G', 1),
-    KeyUtilities.createFromChar('D', 1),
-    KeyUtilities.createFromChar('A', 1),
-    KeyUtilities.createFromChar('D', 0)
-])
-
-const majorSpacing = ['W', 'W', 'H', 'W', 'W', 'W', 'H'];
-const dorianSpacing = ['W', 'H', 'W', 'W', 'W', 'H', 'W'];
-const phrygianSpacing = ['H', 'W', 'W', 'W', 'H', 'W', 'W'];
-const lydianSpacing = ['W', 'W', 'W', 'H', 'W', 'W', 'H'];
-const mixolydianSpacing = ['W', 'W', 'H', 'W', 'W', 'H', 'W'];
-const minorSpacing = ['W', 'H', 'W', 'W', 'H', 'W', 'W'];
-const locrianSpacing = ['H', 'W', 'W', 'H', 'W', 'W', 'W'];
-
-// Diatonic scales
-const major = new Scale('Ionian (Major)', majorSpacing)
-const dorian = new Scale('Dorian', dorianSpacing)
-const phrygian = new Scale('Phrygian', phrygianSpacing)
-const lydian = new Scale('Lydian', lydianSpacing)
-const mixolydian = new Scale('Mixolydian', mixolydianSpacing)
-const minor = new Scale('Aeolian (Minor)', minorSpacing)
-const locrian = new Scale('Locrian', locrianSpacing)
-
-// Pentatonic scales
-const minorPentatonic = new Scale('Minor Pentatonic', minorSpacing, [2, 6])
-const majorPentatonic = new Scale('Major Pentatonic', majorSpacing, [4, 7])
+import { Scales } from './configs/scale.config';
+import { keys } from './configs/key.config';
+import { Tunings } from "./configs/tuning.config";
 
 const fretCount = 23;
 
 const initialState = {
     active: {
-        tuning: standardTuning,
-        scale: minorPentatonic,
-        key: eKey,
+        tuning: Tunings.standardTuning,
+        scale: Scales.minorPentatonic,
+        key: keys.eKey,
         fretCount: fretCount,
         visibility: {
             scale: true,
-            root: true,            
+            root: true,
         }
     },
     collections: {
         tunings: [
-            standardTuning,
-            dropDTuning,
-            cTuning
+            Tunings.standardTuning,
+            Tunings.dropDTuning,
+            Tunings.cTuning
         ],
         scales: [
-            majorPentatonic,
-            minorPentatonic,
-            major,
-            dorian,
-            phrygian,
-            lydian,
-            mixolydian,
-            minor,
-            locrian,
+            Scales.majorPentatonic,
+            Scales.minorPentatonic,
+            Scales.major,
+            Scales.dorian,
+            Scales.phrygian,
+            Scales.lydian,
+            Scales.mixolydian,
+            Scales.minor,
+            Scales.locrian,
         ],
         keys: [
-            aKey,
-            aSKey,
-            bKey,
-            cKey,
-            cSKey,
-            dKey,
-            dSKey,
-            eKey,
-            fKey,
-            fSKey,
-            gKey,
-            gSKey,
+            keys.aKey,
+            keys.aSKey,
+            keys.bKey,
+            keys.cKey,
+            keys.cSKey,
+            keys.dKey,
+            keys.dSKey,
+            keys.eKey,
+            keys.fKey,
+            keys.fSKey,
+            keys.gKey,
+            keys.gSKey,
         ]
     }
 };
@@ -117,11 +56,11 @@ const CHANGE_SCALE_VISIBILITY_TYPE = 'CHANGE_SCALE_VISIBILITY_TYPE';
 const CHANGE_ROOT_VISIBILITY_TYPE = 'CHANGE_ROOT_VISIBILITY_TYPE';
 
 export const actionCreators = {
-    changeKey: (key) => ({type: CHANGE_KEY_TYPE, key}),
-    changeScale: (scale) => ({type: CHANGE_SCALE_TYPE, scale}),
-    changeTuning: (tuning) => ({type: CHANGE_TUNING_TYPE, tuning}),
-    changeScaleVisibility: (visible) => ({type: CHANGE_SCALE_VISIBILITY_TYPE, visible}),
-    changeRootVisibility: (visible) => ({type: CHANGE_ROOT_VISIBILITY_TYPE, visible}),
+    changeKey: (key) => ({ type: CHANGE_KEY_TYPE, key }),
+    changeScale: (scale) => ({ type: CHANGE_SCALE_TYPE, scale }),
+    changeTuning: (tuning) => ({ type: CHANGE_TUNING_TYPE, tuning }),
+    changeScaleVisibility: (visible) => ({ type: CHANGE_SCALE_VISIBILITY_TYPE, visible }),
+    changeRootVisibility: (visible) => ({ type: CHANGE_ROOT_VISIBILITY_TYPE, visible }),
 };
 
 export const reducer = (state, action) => {
@@ -129,42 +68,52 @@ export const reducer = (state, action) => {
     console.log('Guitar store: ', state);
 
     // CHANGE_KEY_TYPE
-    if(action.type === CHANGE_KEY_TYPE) {
-        return {...state, active: {
-            ...state.active, key: action.key
-        }}
+    if (action.type === CHANGE_KEY_TYPE) {
+        return {
+            ...state, active: {
+                ...state.active, key: action.key
+            }
+        }
     }
 
     // CHANGE_SCALE_TYPE
-    if(action.type === CHANGE_SCALE_TYPE) {
-        return {...state, active: {
-            ...state.active, scale: action.scale
-        }}
+    if (action.type === CHANGE_SCALE_TYPE) {
+        return {
+            ...state, active: {
+                ...state.active, scale: action.scale
+            }
+        }
     }
 
     // CHANGE_TUNING_TYPE
-    if(action.type === CHANGE_TUNING_TYPE) {
-        return {...state, active: {
-            ...state.active, tuning: action.tuning
-        }}
+    if (action.type === CHANGE_TUNING_TYPE) {
+        return {
+            ...state, active: {
+                ...state.active, tuning: action.tuning
+            }
+        }
     }
 
     // CHANGE_SCALE_VISIBILITY_TYPE
-    if(action.type === CHANGE_SCALE_VISIBILITY_TYPE) {
-        return {...state, active: {
-            ...state.active, visibility: {
-                ...state.active.visibility, scale: action.visible
+    if (action.type === CHANGE_SCALE_VISIBILITY_TYPE) {
+        return {
+            ...state, active: {
+                ...state.active, visibility: {
+                    ...state.active.visibility, scale: action.visible
+                }
             }
-        }}
+        }
     }
 
     // CHANGE_ROOT_VISIBILITY_TYPE
-    if(action.type === CHANGE_ROOT_VISIBILITY_TYPE) {
-        return {...state, active: {
-            ...state.active, visibility: {
-                ...state.active.visibility, root: action.visible
+    if (action.type === CHANGE_ROOT_VISIBILITY_TYPE) {
+        return {
+            ...state, active: {
+                ...state.active, visibility: {
+                    ...state.active.visibility, root: action.visible
+                }
             }
-        }}
+        }
     }
 
     return state;
