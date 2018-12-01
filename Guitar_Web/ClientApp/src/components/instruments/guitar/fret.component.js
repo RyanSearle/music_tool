@@ -19,7 +19,8 @@ const FretComponent = props => {
 
     const style = {        
         width: props.width + '%',
-        height: props.height + 'px'
+        height: props.height + 'px',
+        lineHeight: props.height + 'px'
     };
 
     const classes = [
@@ -28,6 +29,8 @@ const FretComponent = props => {
         {cName: 'root', condition: isRoot && rootVisible},
         {cName: 'third', condition: interval === 3},
         {cName: 'thith', condition: interval === 5},
+        {cName: 'first', condition: props.first},
+        {cName: 'last', condition: props.last},
     ].filter(cl => cl.condition).map(cl => cl.cName).join(' ');
     
 

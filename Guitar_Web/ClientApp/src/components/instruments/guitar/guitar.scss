@@ -1,8 +1,16 @@
 .guitar {
     position: relative;
     width: 100%;
-
-
+    .shadow {
+        position: absolute;
+        height: 50px;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        box-shadow: 0 20px 150px 50px black;
+        z-index: -2;
+    }
     .fret-count-row {
         white-space: nowrap;
         text-align: center;
@@ -13,8 +21,8 @@
     }
     .fret-board {
         position: relative;
-        color: #444;
-
+        color: #d8d8d8;
+        font-weight: 600;
 
         .fretboard-svg {
             position: absolute;
@@ -22,34 +30,37 @@
             top: 0;
             right: 0;
             bottom: 0;
-
             .guitar-svg {
                 position: relative;
                 width: 100%;
                 height: 100%;
                 z-index: -1;
-                fill: beige;
+                fill: lightgoldenrodyellow;
             }
         }
-
-
         .fret-section {
             display: inline-block;
             vertical-align: middle;
-            //background: beige;
-            padding: 5px 0;
+            border-right: 3px solid #c2c2c2;
+            padding: 3px 0;
+            border-radius: 5px;
+
             .fret {
                 display: inline-block;
-                text-align: center; //border-bottom: 1px dashed #444;
-                border-right: 1px solid #444;
-                padding: 5px 0;
+                text-align: center;
+                background: #8a6d3b;
                 &.in-scale {
-                    background: lightgreen;
+                    background: #144271;
                 }
                 &.root {
                     font-weight: bold;
-                    color: red;
-                }
+                    color: #cc24ff;
+                } // &.first {
+                //     //box-shadow: 10px 0px 10px 0px black;
+                // }
+                // &.last {
+                //     //box-shadow: 10px 0px 10px 0px black;
+                // }
             }
         }
         .guitar-string {

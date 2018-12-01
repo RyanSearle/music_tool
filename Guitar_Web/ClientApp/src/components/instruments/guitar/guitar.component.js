@@ -34,13 +34,13 @@ const GuitarComponent = props => {
 
     return (
         <div className="guitar">
-
             <div className="fret-count-row">
                 {makeArray(fretCount).map((_fret, i) => {
                     return <span className="fret-indicator" key={i} style={{ width: widths[i] + '%' }}>{i}</span>
                 })}
             </div>
             <div className="fret-board">
+                <div className="shadow"></div>
                 <div className="fretboard-svg">
                     <svg className="guitar-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
                         <polygon points={points} />
@@ -49,7 +49,7 @@ const GuitarComponent = props => {
                 {makeArray(fretCount).map((_val, i) => {
                     return <div key={i} style={{ width: widths[i] + '%' }} className="fret-section">
                         {guitar.strings.map((guitarStr, s) => {
-                            return <Fret className="fret" key={s} width={100} height={heights[i]} fret={guitarStr.frets[i]}></Fret>
+                            return <Fret first={s === 0} last={s === guitar.strings.length - 1} className="fret" key={s} width={100} height={heights[i]} fret={guitarStr.frets[i]}></Fret>
                         })}
                     </div>
                 })}
