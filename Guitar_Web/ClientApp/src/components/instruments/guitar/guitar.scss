@@ -1,37 +1,59 @@
 .guitar {
+    position: relative;
     width: 100%;
+
 
     .fret-count-row {
         white-space: nowrap;
         text-align: center;
+        padding-bottom: 10px;
         .fret-indicator {
             display: inline-block;
-            border-bottom: 1px solid #444;
-            }
+        }
     }
     .fret-board {
-        padding: 10px 0;
-        background: beige;
+        position: relative;
         color: #444;
 
-        .guitar-string {
-            white-space: nowrap;
+
+        .fretboard-svg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+
+            .guitar-svg {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                fill: beige;
+            }
+        }
+
+
+        .fret-section {
+            display: inline-block;
+            vertical-align: middle;
+            //background: beige;
+            padding: 5px 0;
             .fret {
                 display: inline-block;
-                text-align: center;
-                //border-bottom: 1px dashed #444;
-                border-right: 1px solid #444;                
+                text-align: center; //border-bottom: 1px dashed #444;
+                border-right: 1px solid #444;
                 padding: 5px 0;
-
                 &.in-scale {
                     background: lightgreen;
                 }
-
                 &.root {
                     font-weight: bold;
                     color: red;
                 }
             }
+        }
+        .guitar-string {
+            white-space: nowrap;
         }
     }
 }

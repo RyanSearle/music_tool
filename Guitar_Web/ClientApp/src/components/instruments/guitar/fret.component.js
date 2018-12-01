@@ -19,6 +19,7 @@ const FretComponent = props => {
 
     const style = {        
         width: props.width + '%',
+        height: props.height + 'px'
     };
 
     const classes = [

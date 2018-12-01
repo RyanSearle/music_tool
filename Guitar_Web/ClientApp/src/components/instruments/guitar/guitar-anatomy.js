@@ -1,3 +1,5 @@
+import { makeArray } from "../../../helpers";
+
 // Calculate progressive fret width
 const fretRatio = 1.059463;
 const scaleLength = 100;
@@ -17,4 +19,14 @@ export const getFretWidths = (length, openFretWidth = 2) => {
     result = result.map(x => x.a)
     const total = result.reduce((acc, next) => acc + next, 0);
     return result.map(w => (w / total) * 100);
+}
+
+// higher the narrower
+const narrowFactor = 0.5;
+export const getFretHeights = (fretSize, fretCount, stringCount) => {
+    return makeArray(fretCount).map((_val, i) => {
+        const factor = (narrowFactor / fretCount) * i;
+        const toRemove = (factor * fretSize) / stringCount;
+        return fretSize - toRemove;
+    }).reverse();
 }
