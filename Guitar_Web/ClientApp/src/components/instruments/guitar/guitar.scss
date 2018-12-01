@@ -23,7 +23,6 @@
         position: relative;
         color: #d8d8d8;
         font-weight: 600;
-
         .fretboard-svg {
             position: absolute;
             left: 0;
@@ -44,13 +43,13 @@
             border-right: 3px solid #c2c2c2;
             padding: 3px 0;
             border-radius: 5px;
-
             .fret {
                 display: inline-block;
                 text-align: center;
                 background: #8a6d3b;
                 &.in-scale {
-                    background: #144271;
+                    background: #00b4aa;
+                    color: #333;
                 }
                 &.root {
                     font-weight: bold;
