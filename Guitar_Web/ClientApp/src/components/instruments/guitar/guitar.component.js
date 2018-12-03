@@ -8,6 +8,7 @@ import { Guitar } from '../../../store/instruments/guitar/guitar.model';
 import { getFretWidths, getFretHeights } from './guitar-anatomy';
 import { makeArray } from '../../../helpers';
 
+
 const GuitarComponent = props => {
 
     const fretHeight = 30;

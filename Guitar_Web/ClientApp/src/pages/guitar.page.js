@@ -1,7 +1,7 @@
 import React from 'react';
 import './guitar.page.scss';
 import Guitar from "../components/instruments/guitar/guitar.component";
-import ControlPanel from "../components/interface/control-panel";
+import ControlPanel from "../components/interface/control-panel/control-panel";
 
 const GuitarPage = (props) => {
 

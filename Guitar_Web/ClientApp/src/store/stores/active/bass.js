@@ -1,6 +1,6 @@
 import { Scales } from '../../configs/scale.config';
 import { keys } from '../../configs/key.config';
-import Tunings from "../../configs/guitar/tuning.config";
+import Tunings from "../../configs/bass/tuning.config";
 
 export const initialState = {
     tuning: Tunings.standardTuning,
@@ -13,7 +13,7 @@ export const initialState = {
     }
 };
 
-const prefix = 'Guitar_'
+const prefix = 'Bass_'
 const CHANGE_KEY_TYPE = prefix + 'CHANGE_KEY_TYPE';
 const CHANGE_SCALE_TYPE = prefix + 'CHANGE_SCALE_TYPE';
 const CHANGE_TUNING_TYPE = prefix + 'CHANGE_TUNING_TYPE';

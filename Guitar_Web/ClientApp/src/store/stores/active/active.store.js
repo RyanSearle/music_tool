@@ -2,6 +2,7 @@ import * as Guitar from './guitar';
 
 // Add active store initial state here
 const initialState = {
+    instrument: 'Guitar',
     guitar:  Guitar.initialState
 };
 
@@ -14,7 +15,10 @@ export const reducer = (state, action) => {
     state = state || initialState;
     
     // Add active store reducers here
-    return {
+    const newState = {
+        instrument: state.instrument,
         guitar: Guitar.reducer(state.guitar, action)
     }
+    console.log('Active Store:', newState);
+    return newState;
 };

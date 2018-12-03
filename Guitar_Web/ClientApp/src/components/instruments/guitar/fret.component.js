@@ -5,8 +5,6 @@ import { actionCreators } from '../../../store/stores/active/guitar'
 
 const FretComponent = props => {
 
-console.log(props.guitar);
-
     const inScale = props.guitar.scale.isInScale(props.fret, props.guitar.key)
     const isRoot = props.guitar.scale.isRoot(props.fret, props.guitar.key)
     const interval = props.guitar.scale.getInterval(props.fret, props.guitar.key);

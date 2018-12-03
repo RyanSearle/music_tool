@@ -1,5 +1,5 @@
-import { Tuning } from '../instruments/guitar/tuning.model'
-import { KeyUtilities } from '../music/key.model'
+import { Tuning } from '../../instruments/guitar/tuning.model'
+import { KeyUtilities } from '../../music/key.model'
 
 const standardTuning = new Tuning('Standard', [
     KeyUtilities.createFromChar('E', 2),
@@ -28,8 +28,10 @@ const dropDTuning = new Tuning('Drop D', [
     KeyUtilities.createFromChar('D', 0)
 ])
 
-export const Tunings = {
+const Tunings = {
     standardTuning,
     cTuning,
     dropDTuning
 }
+
+export default Tunings;

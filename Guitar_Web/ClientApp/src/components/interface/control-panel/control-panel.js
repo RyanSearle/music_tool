@@ -2,13 +2,13 @@ import React from 'react';
 import './control-panel.scss';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { actionCreators } from '../../store/stores/active/guitar';
+import { actionCreators } from '../../../store/stores/active/guitar';
 
 const ControlPanel = props => {
 
     // Keys
     const currentKey = props.active.guitar.key;
-    const keys = props.collections.keys;
+    const keys = props.collections.music.keys;
 
     const changeKey = (e) => {
         const val = e.target.value;
@@ -19,7 +19,7 @@ const ControlPanel = props => {
 
     // Scales
     const currentScale = props.active.guitar.scale;
-    const scales = props.collections.scales;
+    const scales = props.collections.music.scales;
 
     const changeScale = (e) => {
         const val = e.target.value;
@@ -30,7 +30,7 @@ const ControlPanel = props => {
 
     // Tunings
     const currentTuning = props.active.guitar.tuning;
-    const tunings = props.collections.tunings;
+    const tunings = props.collections.guitar.tunings;
 
     const changeTuning = (e) => {
         const val = e.target.value;
