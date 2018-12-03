@@ -2,12 +2,12 @@ import React from 'react';
 import './control-panel.scss';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { actionCreators } from '../../store/guitar.store'
+import { actionCreators } from '../../store/stores/active/guitar';
 
 const ControlPanel = props => {
 
     // Keys
-    const currentKey = props.active.key;
+    const currentKey = props.active.guitar.key;
     const keys = props.collections.keys;
 
     const changeKey = (e) => {
@@ -18,7 +18,7 @@ const ControlPanel = props => {
     }
 
     // Scales
-    const currentScale = props.active.scale;
+    const currentScale = props.active.guitar.scale;
     const scales = props.collections.scales;
 
     const changeScale = (e) => {
@@ -29,7 +29,7 @@ const ControlPanel = props => {
     }
 
     // Tunings
-    const currentTuning = props.active.tuning;
+    const currentTuning = props.active.guitar.tuning;
     const tunings = props.collections.tunings;
 
     const changeTuning = (e) => {
@@ -40,7 +40,7 @@ const ControlPanel = props => {
     }
 
     // Scale visibility
-    const currentScaleVisibility = props.active.visibility.scale;
+    const currentScaleVisibility = props.active.guitar.visibility.scale;
 
     const changeScaleVisibility = (e) => {
         const val = e.target.checked;
@@ -49,7 +49,7 @@ const ControlPanel = props => {
     }
 
     // Root visibility
-    const currentRootVisibility = props.active.visibility.root;
+    const currentRootVisibility = props.active.guitar.visibility.root;
 
     const changeRootVisibility = (e) => {
         const val = e.target.checked;
@@ -103,6 +103,6 @@ const ControlPanel = props => {
 }
 
 export default connect(
-    state => state.guitar,
+    state => ({ active: state.active, collections: state.collections}),
     dispatch => bindActionCreators(actionCreators, dispatch)
 )(ControlPanel);

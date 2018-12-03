@@ -3,16 +3,15 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import './guitar.scss';
 import Fret from './fret.component';
-import { actionCreators } from '../../../store/guitar.store'
+import { actionCreators } from '../../../store/stores/active/guitar'
 import { Guitar } from '../../../store/instruments/guitar/guitar.model';
 import { getFretWidths, getFretHeights } from './guitar-anatomy';
 import { makeArray } from '../../../helpers';
 
 const GuitarComponent = props => {
 
-
     const fretHeight = 30;
-    const guitar = new Guitar(props.abc.active.tuning, props.abc.active.fretCount);
+    const guitar = new Guitar(props.active.guitar.tuning, props.active.guitar.fretCount);
     const fretCount = guitar.fretCount;
     const widths = getFretWidths(fretCount);
     const heights = getFretHeights(fretHeight, fretCount, guitar.strings.length);
@@ -59,6 +58,6 @@ const GuitarComponent = props => {
 }
 
 export default connect(
-    state => ({ abc: state.guitar }),
+    state => ({ active: state.active }),
     dispatch => bindActionCreators(actionCreators, dispatch)
 )(GuitarComponent);

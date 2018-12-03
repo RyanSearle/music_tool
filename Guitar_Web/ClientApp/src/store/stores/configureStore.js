@@ -1,11 +1,13 @@
 ﻿import { applyMiddleware, combineReducers, compose, createStore } from 'redux';
 import thunk from 'redux-thunk';
 import { routerReducer, routerMiddleware } from 'react-router-redux';
-import * as Guitar from "./guitar.store";
+import * as Active from "./active/active.store";
+import * as Collections from './collections/collections.store';
 
 export default function configureStore(history, initialState) {
   const reducers = {
-    guitar: Guitar.reducer
+    active: Active.reducer,
+    collections: Collections.reducer
   };
 
   const middleware = [
