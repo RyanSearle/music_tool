@@ -1,15 +1,12 @@
 import React from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import { actionCreators } from '../../../store/stores/active/guitar'
 
 const FretComponent = props => {
 
-    const inScale = props.guitar.scale.isInScale(props.fret, props.guitar.key)
-    const isRoot = props.guitar.scale.isRoot(props.fret, props.guitar.key)
-    const interval = props.guitar.scale.getInterval(props.fret, props.guitar.key);
-    const scaleVisible = props.guitar.visibility.scale;
-    const rootVisible = props.guitar.visibility.root;
+    const inScale = props.instrument.scale.isInScale(props.fret, props.instrument.key)
+    const isRoot = props.instrument.scale.isRoot(props.fret, props.instrument.key)
+    const interval = props.instrument.scale.getInterval(props.fret, props.instrument.key);
+    const scaleVisible = props.instrument.visibility.scale;
+    const rootVisible = props.instrument.visibility.root;
 
     const onClick = () => {
         console.log(props.fret);
@@ -37,7 +34,4 @@ const FretComponent = props => {
     )
 }
 
-export default connect(
-    state => ({ guitar: state.active.guitar }),
-    dispatch => bindActionCreators(actionCreators, dispatch)
-)(FretComponent);
+export default FretComponent;

@@ -1,60 +1,57 @@
 import React from 'react';
 import './control-panel.scss';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import { actionCreators } from '../../../store/stores/active/guitar';
 
 const ControlPanel = props => {
 
     // Keys
-    const currentKey = props.active.guitar.key;
+    const currentKey = props.instrument.key;
     const keys = props.collections.music.keys;
 
     const changeKey = (e) => {
         const val = e.target.value;
         
         const key = keys.find(k => k.pitch.toString() === val);
-        props.changeKey(key);
+        props.actions.changeKey(key);
     }
 
     // Scales
-    const currentScale = props.active.guitar.scale;
+    const currentScale = props.instrument.scale;
     const scales = props.collections.music.scales;
 
     const changeScale = (e) => {
         const val = e.target.value;
         
         const scale = scales.find(s => s.name === val);
-        props.changeScale(scale);
+        props.actions.changeScale(scale);
     }
 
     // Tunings
-    const currentTuning = props.active.guitar.tuning;
-    const tunings = props.collections.guitar.tunings;
+    const currentTuning = props.instrument.tuning;
+    const tunings = props.collections.instrument.tunings;
 
     const changeTuning = (e) => {
         const val = e.target.value;
         
         const tuning = tunings.find(t => t.name === val);
-        props.changeTuning(tuning);
+        props.actions.changeTuning(tuning);
     }
 
     // Scale visibility
-    const currentScaleVisibility = props.active.guitar.visibility.scale;
+    const currentScaleVisibility = props.instrument.visibility.scale;
 
     const changeScaleVisibility = (e) => {
         const val = e.target.checked;
                 
-        props.changeScaleVisibility(val);
+        props.actions.changeScaleVisibility(val);
     }
 
     // Root visibility
-    const currentRootVisibility = props.active.guitar.visibility.root;
+    const currentRootVisibility = props.instrument.visibility.root;
 
     const changeRootVisibility = (e) => {
         const val = e.target.checked;
                 
-        props.changeRootVisibility(val);
+        props.actions.changeRootVisibility(val);
     }
 
     return (<div className="control-panel">
@@ -102,7 +99,4 @@ const ControlPanel = props => {
     </div>)
 }
 
-export default connect(
-    state => ({ active: state.active, collections: state.collections}),
-    dispatch => bindActionCreators(actionCreators, dispatch)
-)(ControlPanel);
+export default ControlPanel;

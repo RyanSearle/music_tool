@@ -1,4 +1,4 @@
-import { Tuning } from '../../instruments/guitar/tuning.model'
+import { Tuning } from '../../instruments/string-instrument/tuning.model'
 import { KeyUtilities } from '../../music/key.model'
 
 const standardTuning = new Tuning('Standard', [

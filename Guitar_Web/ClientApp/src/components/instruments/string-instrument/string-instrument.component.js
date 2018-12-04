@@ -1,18 +1,15 @@
 import React from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import './guitar.scss';
+import './string-instrument.scss';
 import Fret from './fret.component';
-import { actionCreators } from '../../../store/stores/active/guitar'
-import { Guitar } from '../../../store/instruments/guitar/guitar.model';
-import { getFretWidths, getFretHeights } from './guitar-anatomy';
+import { getFretWidths, getFretHeights } from './string-instrument-anatomy';
 import { makeArray } from '../../../helpers';
+import { StringInstrument } from '../../../store/instruments/string-instrument/string-instrument.model';
 
 
-const GuitarComponent = props => {
+const StringInstrumentComponent = props => {
 
     const fretHeight = 30;
-    const guitar = new Guitar(props.active.guitar.tuning, props.active.guitar.fretCount);
+    const guitar = new StringInstrument(props.instrument.tuning, props.instrument.fretCount);
     const fretCount = guitar.fretCount;
     const widths = getFretWidths(fretCount);
     const heights = getFretHeights(fretHeight, fretCount, guitar.strings.length);
@@ -49,7 +46,7 @@ const GuitarComponent = props => {
                 {makeArray(fretCount).map((_val, i) => {
                     return <div key={i} style={{ width: widths[i] + '%' }} className="fret-section">
                         {guitar.strings.map((guitarStr, s) => {
-                            return <Fret first={s === 0} last={s === guitar.strings.length - 1} className="fret" key={s} width={100} height={heights[i]} fret={guitarStr.frets[i]}></Fret>
+                            return <Fret instrument={props.instrument} first={s === 0} last={s === guitar.strings.length - 1} className="fret" key={s} width={100} height={heights[i]} fret={guitarStr.frets[i]}></Fret>
                         })}
                     </div>
                 })}
@@ -58,7 +55,4 @@ const GuitarComponent = props => {
     )
 }
 
-export default connect(
-    state => ({ active: state.active }),
-    dispatch => bindActionCreators(actionCreators, dispatch)
-)(GuitarComponent);
+export default StringInstrumentComponent;
