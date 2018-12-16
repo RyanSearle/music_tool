@@ -46,7 +46,7 @@ const StringInstrumentComponent = props => {
                 {makeArray(fretCount).map((_val, i) => {
                     return <div key={i} style={{ width: widths[i] + '%' }} className="fret-section">
                         {guitar.strings.map((guitarStr, s) => {
-                            return <Fret instrument={props.instrument} first={s === 0} last={s === guitar.strings.length - 1} className="fret" key={s} width={100} height={heights[i]} fret={guitarStr.frets[i]}></Fret>
+                            return <Fret music={props.music} first={s === 0} last={s === guitar.strings.length - 1} className="fret" key={s} width={100} height={heights[i]} fret={guitarStr.frets[i]}></Fret>
                         })}
                     </div>
                 })}

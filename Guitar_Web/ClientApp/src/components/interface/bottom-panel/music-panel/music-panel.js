@@ -1,11 +1,11 @@
 import React from 'react';
-import './control-panel.scss';
+import './music-panel.scss';
 
-const ControlPanel = props => {
+const MusicPanel = props => {
 
     // Keys
-    const currentKey = props.instrument.key;
-    const keys = props.collections.music.keys;
+    const currentKey = props.music.key;
+    const keys = props.collections.keys;
 
     const changeKey = (e) => {
         const val = e.target.value;
@@ -15,8 +15,8 @@ const ControlPanel = props => {
     }
 
     // Scales
-    const currentScale = props.instrument.scale;
-    const scales = props.collections.music.scales;
+    const currentScale = props.music.scale;
+    const scales = props.collections.scales;
 
     const changeScale = (e) => {
         const val = e.target.value;
@@ -25,19 +25,8 @@ const ControlPanel = props => {
         props.actions.changeScale(scale);
     }
 
-    // Tunings
-    const currentTuning = props.instrument.tuning;
-    const tunings = props.collections.instrument.tunings;
-
-    const changeTuning = (e) => {
-        const val = e.target.value;
-        
-        const tuning = tunings.find(t => t.name === val);
-        props.actions.changeTuning(tuning);
-    }
-
     // Scale visibility
-    const currentScaleVisibility = props.instrument.visibility.scale;
+    const currentScaleVisibility = props.music.visibility.scale;
 
     const changeScaleVisibility = (e) => {
         const val = e.target.checked;
@@ -46,7 +35,7 @@ const ControlPanel = props => {
     }
 
     // Root visibility
-    const currentRootVisibility = props.instrument.visibility.root;
+    const currentRootVisibility = props.music.visibility.root;
 
     const changeRootVisibility = (e) => {
         const val = e.target.checked;
@@ -75,16 +64,6 @@ const ControlPanel = props => {
             </select>
         </div>
 
-        {/* Tunings */}
-        <div className="control">
-            <label>Tuning</label>
-            <select onChange={changeTuning} value={currentTuning.name}>
-                {tunings.map(tuning => {
-                    return (<option key={tuning.name} value={tuning.name}>{tuning.name}</option>)
-                })}
-            </select>
-        </div>
-
         {/* Scale visibility */}
         <div className="control">
             <label>Scale visible</label>
@@ -99,4 +78,4 @@ const ControlPanel = props => {
     </div>)
 }
 
-export default ControlPanel;
+export default MusicPanel;

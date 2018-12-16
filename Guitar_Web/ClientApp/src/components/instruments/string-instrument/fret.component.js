@@ -2,11 +2,11 @@ import React from 'react';
 
 const FretComponent = props => {
 
-    const inScale = props.instrument.scale.isInScale(props.fret, props.instrument.key)
-    const isRoot = props.instrument.scale.isRoot(props.fret, props.instrument.key)
-    const interval = props.instrument.scale.getInterval(props.fret, props.instrument.key);
-    const scaleVisible = props.instrument.visibility.scale;
-    const rootVisible = props.instrument.visibility.root;
+    const inScale = props.music.scale.isInScale(props.fret, props.music.key)
+    const isRoot = props.music.scale.isRoot(props.fret, props.music.key)
+    const interval = props.music.scale.getInterval(props.fret, props.music.key);
+    const scaleVisible = props.music.visibility.scale;
+    const rootVisible = props.music.visibility.root;
 
     const onClick = () => {
         console.log(props.fret);
