@@ -23,7 +23,7 @@ const FretComponent = props => {
         { cName: 'in-scale', condition: inScale && scaleVisible },
         { cName: 'root', condition: isRoot && rootVisible },
         { cName: 'third', condition: interval === 3 },
-        { cName: 'thith', condition: interval === 5 },
+        { cName: 'fifth', condition: interval === 5 },
         { cName: 'first', condition: props.first },
         { cName: 'last', condition: props.last },
     ].filter(cl => cl.condition).map(cl => cl.cName).join(' ');

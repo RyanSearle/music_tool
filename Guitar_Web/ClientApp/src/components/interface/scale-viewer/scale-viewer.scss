@@ -1,0 +1,30 @@
+.scale-viewer {
+    text-align: center;
+
+    .intervals {
+
+        .note {
+            display: inline-block;
+            padding: 0 5px;
+            font-size: 40px;
+            color: #bbb;
+            width: 60px;
+        }
+
+        .root {
+            color: #cc24ff;
+        }
+
+        .third {
+            color: aqua;
+        }
+
+        .fifth {
+            color: aqua;
+        }
+
+        .gap {
+            opacity: 0.2;
+        }
+    }
+}

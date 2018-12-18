@@ -50,13 +50,20 @@
                 text-align: center;
                 background: #8a6d3b;
                 &.in-scale {
-                    background: #00b4aa;
+                    background: #3d6d6a;
                     color: #333;
                 }
                 &.root {
                     font-weight: bold;
                     color: #cc24ff;
-                } // &.first {
+                }
+                &.third {
+                    color: aqua;
+                }
+                &.fifth {
+                    color: aqua;                    
+                }
+                // &.first {
                 //     //box-shadow: 10px 0px 10px 0px black;
                 // }
                 // &.last {

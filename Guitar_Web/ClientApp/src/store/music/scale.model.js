@@ -1,8 +1,10 @@
+import { KeyUtilities } from "./key.model";
+
 export const Scale = (function () {
 
     const Scale = function (name, distances, gaps) {
         this.name = name;
-        this.gaps = gaps;
+        this.gaps = gaps || [];
 
         this.distances = distances.map(distance => {
             if (distance === 'H') return 1;
@@ -20,11 +22,17 @@ export const Scale = (function () {
         }, 0);
     }
 
+    Scale.prototype.getKeys = function(rootKey) {
+        return this.accumilativeDistances.slice(0, this.accumilativeDistances.length - 1).map(distance => {
+            return KeyUtilities.createFromKey(rootKey, distance);
+        })
+    }
+
     Scale.prototype.isInScale = function (key, rootKey) {
         return this.accumilativeDistances.reduce((acc, next, index) => {
 
             // Check if in gap
-            if(this.gaps && this.gaps.includes(index + 1)){
+            if(this.gaps.includes(index + 1)){
                 return acc;
             }
 
@@ -40,6 +48,10 @@ export const Scale = (function () {
 
     Scale.prototype.isRoot = function (key, rootKey) {
         return Boolean(this.getInterval(key, rootKey) === 1);
+    }
+
+    Scale.prototype.isGap = function (key, rootKey) {
+        return Boolean(this.gaps.includes(this.getInterval(key, rootKey)));
     }
 
     return Scale;
