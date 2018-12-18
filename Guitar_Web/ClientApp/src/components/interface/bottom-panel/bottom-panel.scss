@@ -3,11 +3,14 @@
     color: #33352c;
     padding: 20px;
 
-    .left-panel {
+    white-space: nowrap;
+    > div {
+        white-space: normal;
+        width: 50%;
         display: inline-block;
     }
 
     .right-panel {
-        display: inline-block;
+        text-align: right;
     }
 }

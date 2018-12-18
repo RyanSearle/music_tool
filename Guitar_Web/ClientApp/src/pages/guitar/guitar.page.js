@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 const GuitarPage = (props) => {
 
-    document.title = 'Music Tool - Guitar'
+    document.title = props.active.instrument.selected === 'guitar' ? 'Music Tool - Guitar' : 'Music Tool - Bass';
 
     const guitar = (
         <StringInstrument instrument={props.active.instrument.guitar} music={props.active.music}></StringInstrument>

@@ -1,23 +1,22 @@
 import React from "react";
-import { withRouter } from 'react-router-dom'
 import './instrument-select.scss';
+import { actionCreators } from '../../../store/stores/active/active.store';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 import guitarImg from '../../../images/electric-guitar-music-instrument.svg';
 import bassImg from '../../../images/bass-guitar.svg';
 
-const InstrumentSelect = withRouter(({history, location}) => {
+const InstrumentSelect = ((props) => {
 
     const goToPage = page => {
-        history.push(`/${page}`);
+        props.actions.changeInstrument(page);
     }
-
-console.log(location);
-
 
     const getClasses = route => {
         var classes = [
             'instrument-container'
         ]
-        if(location.pathname === '/' + route) {
+        if(props.active.instrument.selected === route) {
             classes.push('active');
         }
         return classes.join(' ');
@@ -25,7 +24,7 @@ console.log(location);
     
     return (
         <div className='instruments'>
-            <div className={getClasses('')} onClick={() => goToPage('')}>
+            <div className={getClasses('guitar')} onClick={() => goToPage('guitar')}>
                 <img src={guitarImg}></img>
             </div>
             <div className={getClasses('bass')} onClick={() => goToPage('bass')}>        
@@ -35,4 +34,7 @@ console.log(location);
     )
 });
 
-export default InstrumentSelect;
+export default connect(
+    state => ({ active: state.active }),
+    dispatch => ({ actions: bindActionCreators(actionCreators.instrument, dispatch)})
+)(InstrumentSelect);

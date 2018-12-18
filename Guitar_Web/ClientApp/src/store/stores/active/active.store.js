@@ -12,9 +12,16 @@ const initialState = {
     music: Music.initialState
 };
 
+const CHANGE_INSTRUMENT = 'CHANGE_INSTRUMENT';
+
+const actionCreator = {
+    changeInstrument: (instrument) => ({type: CHANGE_INSTRUMENT, instrument})
+}
+
 // Add active store action creators here
 export const actionCreators = {
     instrument: {
+        ...actionCreator,
         guitar: Guitar.actionCreators,
         bass: Bass.actionCreators
     },
@@ -33,6 +40,11 @@ export const reducer = (state, action) => {
         },
         music: Music.reducer(state.music, action)
     }
+
+    if(action.type === CHANGE_INSTRUMENT){
+        newState.instrument.selected = action.instrument;
+    }
+
     console.log('Active Store:', newState);
     return newState;
 };
