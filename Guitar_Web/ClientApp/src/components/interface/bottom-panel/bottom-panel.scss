@@ -6,11 +6,15 @@
     white-space: nowrap;
     > div {
         white-space: normal;
-        width: 50%;
         display: inline-block;
+    }
+
+    .left-panel {
+        width: 75%;
     }
 
     .right-panel {
         text-align: right;
+        width: 25%;
     }
 }

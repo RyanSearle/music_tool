@@ -7,6 +7,8 @@ const FretComponent = props => {
     const interval = props.music.scale.getInterval(props.fret, props.music.key);
     const scaleVisible = props.music.visibility.scale;
     const rootVisible = props.music.visibility.root;
+    const thirdVisible = props.music.visibility.third;
+    const fifthVisible = props.music.visibility.fifth;
 
     const onClick = () => {
         console.log(props.fret);
@@ -22,8 +24,8 @@ const FretComponent = props => {
         { cName: 'fret', condition: true },
         { cName: 'in-scale', condition: inScale && scaleVisible },
         { cName: 'root', condition: isRoot && rootVisible },
-        { cName: 'third', condition: interval === 3 },
-        { cName: 'fifth', condition: interval === 5 },
+        { cName: 'third', condition: interval === 3 && thirdVisible },
+        { cName: 'fifth', condition: interval === 5 && fifthVisible },
         { cName: 'first', condition: props.first },
         { cName: 'last', condition: props.last },
     ].filter(cl => cl.condition).map(cl => cl.cName).join(' ');

@@ -43,6 +43,24 @@ const MusicPanel = props => {
         props.actions.changeRootVisibility(val);
     }
 
+    // Third visibility
+    const currentThirdVisibility = props.music.visibility.third;
+
+    const changeThirdVisibility = (e) => {
+        const val = e.target.checked;
+                
+        props.actions.changeThirdVisibility(val);
+    }
+
+    // Fifth visibility
+    const currentFifthVisibility = props.music.visibility.fifth;
+
+    const changeFifthVisibility = (e) => {
+        const val = e.target.checked;
+                
+        props.actions.changeFifthVisibility(val);
+    }
+
     return (<div className="control-panel">
         {/* Keys */}
         <div className="control">
@@ -74,6 +92,18 @@ const MusicPanel = props => {
         <div className="control">
             <label>Root visible</label>
             <input type="checkbox" onChange={changeRootVisibility} checked={currentRootVisibility} />
+        </div>
+
+        {/* Third visibility */}
+        <div className="control">
+            <label>Third visible</label>
+            <input type="checkbox" onChange={changeThirdVisibility} checked={currentThirdVisibility} />
+        </div>
+
+        {/* Fifth visibility */}
+        <div className="control">
+            <label>Fifth visible</label>
+            <input type="checkbox" onChange={changeFifthVisibility} checked={currentFifthVisibility} />
         </div>
     </div>)
 }
