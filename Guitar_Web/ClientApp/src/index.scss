@@ -15,9 +15,6 @@ body {
     display: flex;
     flex-direction: column;
 
-    .instrument-select {
-        z-index: 10;
-    }
     .routes {
         flex: 1;
         position: relative;

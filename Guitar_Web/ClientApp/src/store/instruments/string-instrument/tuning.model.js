@@ -1,4 +1,4 @@
-import { String } from './string.model'
+import { String_ } from './string.model'
 
 export const Tuning = (function() {
     let Tuning = function(name, stringTunings) {
@@ -8,7 +8,7 @@ export const Tuning = (function() {
 
     Tuning.prototype.getStrings = function(fretCount) {
         return this.stringTunings.map(key => {
-            return new String(key, fretCount);
+            return new String_(key, fretCount);
         })
     }
     return Tuning;

@@ -32,7 +32,10 @@ const FretComponent = props => {
 
 
 
-    return (<span className={classes} tooltip={interval} onClick={onClick} style={style}>{props.fret.note}</span>
+    return (<span className={classes} tooltip={interval} onClick={onClick} style={style}>
+        <div>{props.fret.note}</div>
+        <div className="fret-shadow"></div>
+        </span>
     )
 }
 

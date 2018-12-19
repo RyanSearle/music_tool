@@ -5,7 +5,7 @@ import * as Music from './music';
 // Add active store initial state here
 const initialState = {
     instrument: {
-        selected: 'guitar',
+        selected: 'Guitar',
         guitar:  Guitar.initialState,
         bass: Bass.initialState
     },
@@ -20,8 +20,8 @@ const actionCreator = {
 
 // Add active store action creators here
 export const actionCreators = {
-    instrument: {
-        ...actionCreator,
+    instrument: {        
+        general: actionCreator,
         guitar: Guitar.actionCreators,
         bass: Bass.actionCreators
     },
@@ -33,8 +33,8 @@ export const reducer = (state, action) => {
     
     // Add active store reducers here
     const newState = {
-        instrument: {
-            selected: 'guitar',
+        instrument: {            
+            selected: state.instrument.selected,
             guitar: Guitar.reducer(state.instrument.guitar, action),
             bass: Bass.reducer(state.instrument.bass, action)
         },

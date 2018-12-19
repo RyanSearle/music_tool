@@ -46,12 +46,27 @@
             border-radius: 5px;
 
             .fret {
+                position: relative;
                 display: inline-block;
                 text-align: center;
                 background: #8a6d3b;
+                color: #1D222E;
                 &.in-scale {
-                    background: #3d6d6a;
-                    color: #333;
+                    // background: #3d6d6a;
+                    background: #8a6d3ac4;
+                    color: #fff;
+
+                    .fret-shadow {
+                        box-shadow: 0 0 25px 3px;
+                        width: 0;
+                        height: 0px;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto;
+                    }
                 }
                 &.root {
                     font-weight: bold;
@@ -63,6 +78,8 @@
                 &.fifth {
                     color: orange;                
                 }
+
+  
                 // &.first {
                 //     //box-shadow: 10px 0px 10px 0px black;
                 // }

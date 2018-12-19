@@ -17,6 +17,10 @@ const initialState = {
         ],
     },
     music: {
+        instruments: [
+            'Guitar',
+            'Bass'
+        ],
         scales: [
             Scales.majorPentatonic,
             Scales.minorPentatonic,

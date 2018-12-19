@@ -10,7 +10,10 @@ const StringInstrumentComponent = props => {
 
     const fretHeight = 30;
     const guitar = new StringInstrument(props.instrument.tuning, props.instrument.fretCount);
+
+    // Account for open string
     const fretCount = guitar.fretCount;
+
     const widths = getFretWidths(fretCount);
     const heights = getFretHeights(fretHeight, fretCount, guitar.strings.length);
 
