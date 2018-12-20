@@ -30,3 +30,18 @@ export const getFretHeights = (fretSize, fretCount, stringCount) => {
         return fretSize - toRemove;
     }).reverse();
 }
+
+export const getFretMarkers = () => {
+    return [
+        { fret: 3, single: true},
+        { fret: 5, single: true},
+        { fret: 7, single: true},
+        { fret: 9, single: true},
+        { fret: 12, double: true},
+        { fret: 15, single: true},
+        { fret: 17, single: true},
+        { fret: 19, single: true},
+        { fret: 21, single: true},
+        { fret: 24, double: true},
+    ]
+}

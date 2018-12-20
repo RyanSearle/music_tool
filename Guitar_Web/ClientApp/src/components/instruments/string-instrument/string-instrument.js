@@ -1,7 +1,7 @@
 import React from 'react';
 import './string-instrument.scss';
 import Fret from './fret.component';
-import { getFretWidths, getFretHeights } from './string-instrument-anatomy';
+import { getFretWidths, getFretHeights, getFretMarkers } from './string-instrument-anatomy';
 import { makeArray } from '../../../helpers';
 import { StringInstrument } from '../../../store/instruments/string-instrument/string-instrument.model';
 
@@ -16,6 +16,7 @@ const StringInstrumentComponent = props => {
 
     const widths = getFretWidths(fretCount);
     const heights = getFretHeights(fretHeight, fretCount, guitar.strings.length);
+    const markers = getFretMarkers();
 
     // SVG 
     const scalingRatio = (heights[0] / fretHeight);
@@ -31,6 +32,16 @@ const StringInstrumentComponent = props => {
     ]
 
     const points = pointArray.map(point => `${point.x} ${point.y}`).join(',');
+
+    const getMarkerSingle = (i) => {
+        const marker = markers.find(x => x.fret === i);
+        return marker && (marker.single || marker.double);
+    }
+
+    const getMarkerDouble = (i) => {
+        const marker = markers.find(x => x.fret === i);
+        return marker && marker.double;
+    }
 
     return (
         <div className="guitar">
@@ -51,6 +62,14 @@ const StringInstrumentComponent = props => {
                         {guitar.strings.map((guitarStr, s) => {
                             return <Fret music={props.music} first={s === 0} last={s === guitar.strings.length - 1} className="fret" key={s} width={100} height={heights[i]} fret={guitarStr.frets[i]}></Fret>
                         })}
+                    </div>
+                })}
+            </div>
+            <div className="markers">
+                {makeArray(fretCount).map((_val, i) => {
+                    return <div key={i} style={{ width: widths[i] + '%' }} className="fret-footer">
+                        {getMarkerSingle(i) ? <div>&bull;</div> : null}
+                        {getMarkerDouble(i) ? <div>&bull;</div> : null}
                     </div>
                 })}
             </div>

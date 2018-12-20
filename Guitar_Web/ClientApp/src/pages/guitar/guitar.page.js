@@ -1,6 +1,6 @@
 import React from 'react';
 import './guitar.page.scss';
-import StringInstrument from "../../components/instruments/string-instrument/string-instrument.component";
+import StringInstrument from "../../components/instruments/string-instrument/string-instrument";
 import { connect } from 'react-redux';
 
 const GuitarPage = (props) => {
