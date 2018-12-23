@@ -19,4 +19,10 @@ body {
         flex: 1;
         position: relative;
     }
+
+    .scale-picker {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
 }

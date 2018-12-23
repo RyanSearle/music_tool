@@ -1,0 +1,31 @@
+.controls {
+    color: #a1a1a1;
+    padding: 10px;
+
+
+
+    .scale-sets {
+        display: inline-block;
+
+        > div {
+            cursor: pointer;
+            &.active {
+                color: #fff;
+                cursor: unset;
+            }
+        }
+    }
+    
+    .scales {
+        display: inline-block;
+        vertical-align: top;
+
+        > div {
+            cursor: pointer;
+            &.active {
+                color: #fff;
+                cursor: unset;
+            }
+        }
+    }
+}

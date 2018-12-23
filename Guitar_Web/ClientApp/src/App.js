@@ -3,9 +3,13 @@ import { Route } from 'react-router';
 import GuitarPage from "./pages/guitar/guitar.page";
 import BottomPanel from './components/interface/bottom-panel/bottom-panel';
 import ScaleViewer from './components/interface/scale-viewer/scale-viewer';
+import ScalePicker from './components/interface/scale-picker/scale-picker';
 
 export default () => (
     <div className="full-page">
+        <div className="scale-picker">
+            <ScalePicker></ScalePicker>
+        </div>
         <div className="scale-viewer">
             <ScaleViewer></ScaleViewer>
         </div>

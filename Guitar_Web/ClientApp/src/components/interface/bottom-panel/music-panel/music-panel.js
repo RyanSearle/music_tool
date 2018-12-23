@@ -14,17 +14,6 @@ const MusicPanel = props => {
         props.actions.changeKey(key);
     }
 
-    // Scales
-    const currentScale = props.music.scale;
-    const scales = props.collections.scales;
-
-    const changeScale = (e) => {
-        const val = e.target.value;
-        
-        const scale = scales.find(s => s.name === val);
-        props.actions.changeScale(scale);
-    }
-
     // Scale visibility
     const currentScaleVisibility = props.music.visibility.scale;
 
@@ -68,16 +57,6 @@ const MusicPanel = props => {
             <select onChange={changeKey} value={currentKey.pitch}>
                 {keys.map(key => {
                     return (<option key={key.pitch} value={key.pitch}>{key.note}</option>)
-                })}
-            </select>
-        </div>
-
-        {/* Scales */}
-        <div className="control">
-            <label>Scale</label>
-            <select onChange={changeScale} value={currentScale.name}>
-                {scales.map(scale => {
-                    return (<option key={scale.name} value={scale.name}>{scale.name}</option>)
                 })}
             </select>
         </div>

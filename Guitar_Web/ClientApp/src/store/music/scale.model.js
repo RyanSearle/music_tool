@@ -2,8 +2,8 @@ import { KeyUtilities } from "./key.model";
 
 export const Scale = (function () {
 
-    const Scale = function (name, distances, gaps) {
-        this.name = name;
+    const Scale = function (type, distances, gaps) {
+        this.type = type;
         this.gaps = gaps || [];
 
         this.distances = distances.map(distance => {

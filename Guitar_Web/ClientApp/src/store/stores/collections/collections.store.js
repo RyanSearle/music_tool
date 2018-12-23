@@ -1,4 +1,4 @@
-import { Scales } from '../../configs/scale.config';
+import { ScaleSets } from '../../configs/scale.config';
 import { keys } from '../../configs/key.config';
 import GuitarTunings from "../../configs/guitar/tuning.config";
 import BassTunings from "../../configs/bass/tuning.config";
@@ -21,16 +21,14 @@ const initialState = {
             'Guitar',
             'Bass'
         ],
-        scales: [
-            Scales.majorPentatonic,
-            Scales.minorPentatonic,
-            Scales.major,
-            Scales.dorian,
-            Scales.phrygian,
-            Scales.lydian,
-            Scales.mixolydian,
-            Scales.minor,
-            Scales.locrian,
+        scaleSets: [
+            ScaleSets.major,
+            ScaleSets.dorian,
+            ScaleSets.phrygian,
+            ScaleSets.lydian,
+            ScaleSets.mixolydian,
+            ScaleSets.minor,
+            ScaleSets.locrian
         ],
         keys: [
             keys.aKey,

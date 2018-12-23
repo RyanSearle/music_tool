@@ -1,8 +1,9 @@
-import { Scales } from '../../configs/scale.config';
+import { ScaleSets } from '../../configs/scale.config';
 import { keys } from '../../configs/key.config';
 
 export const initialState = {
-    scale: Scales.minorPentatonic,
+    scaleSet: ScaleSets.major,
+    scale: ScaleSets.major.scales[0],
     key: keys.eKey,
     visibility: {
         scale: true,
@@ -14,6 +15,7 @@ export const initialState = {
 
 const CHANGE_KEY_TYPE = 'CHANGE_KEY_TYPE';
 const CHANGE_SCALE_TYPE = 'CHANGE_SCALE_TYPE';
+const CHANGE_SCALE_SET_TYPE = 'CHANGE_SCALE_SET_TYPE';
 const CHANGE_SCALE_VISIBILITY_TYPE = 'CHANGE_SCALE_VISIBILITY_TYPE';
 const CHANGE_ROOT_VISIBILITY_TYPE = 'CHANGE_ROOT_VISIBILITY_TYPE';
 const CHANGE_THIRD_VISIBILITY_TYPE = 'CHANGE_THIRD_VISIBILITY_TYPE';
@@ -22,6 +24,7 @@ const CHANGE_FIFTH_VISIBILITY_TYPE = 'CHANGE_FIFTH_VISIBILITY_TYPE';
 export const actionCreators = {
     changeKey: (key) => ({ type: CHANGE_KEY_TYPE, key }),
     changeScale: (scale) => ({ type: CHANGE_SCALE_TYPE, scale }),
+    changeScaleSet: (scaleSet) => ({ type: CHANGE_SCALE_SET_TYPE, scaleSet }),
     changeScaleVisibility: (visible) => ({ type: CHANGE_SCALE_VISIBILITY_TYPE, visible }),
     changeRootVisibility: (visible) => ({ type: CHANGE_ROOT_VISIBILITY_TYPE, visible }),
     changeThirdVisibility: (visible) => ({ type: CHANGE_THIRD_VISIBILITY_TYPE, visible }),
@@ -43,6 +46,14 @@ export const reducer = (state, action) => {
         return {
             ...state,
             scale: action.scale
+        }
+    }
+
+    // CHANGE_SCALE_TYPE
+    if (action.type === CHANGE_SCALE_SET_TYPE) {
+        return {
+            ...state,
+            scaleSet: action.scaleSet
 
         }
     }
