@@ -11,17 +11,13 @@
             width: 60px;
             color: #fff;
 
-            .interval {
-                font-size: 16px;
+            .chordMajMin {
+                font-size: 20px;
+                font-family: 'Times New Roman', Times, serif;
             }
-
-            .shadow {
-                box-shadow: 0 5px 20px 5px;
-                width: 20%;
-                margin: 5px auto;
-            }
-
         }
+
+
 
         .root {
             color: #cc24ff;
@@ -35,17 +31,24 @@
         .fifth {
             color: orange;
         }
-        
-        .sharp {
-            .shadow {
-                width: 40%;
-            }
-        }
 
         .gap {
             color: #1D222E;
             .shadow {
                 display: none;
+            }
+        }
+
+        .major {
+            .chordMajMin {
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+        }
+
+        .diminished {
+            .chordMajMin::after {
+                content: '◦';
             }
         }
     }

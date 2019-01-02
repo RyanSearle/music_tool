@@ -1,5 +1,9 @@
 import React from 'react';
 
+const onClick = (fret) => {
+    console.log(fret);
+}
+
 const FretComponent = props => {
 
     const inScale = props.music.scale.isInScale(props.fret, props.music.key)
@@ -9,10 +13,6 @@ const FretComponent = props => {
     const rootVisible = props.music.visibility.root;
     const thirdVisible = props.music.visibility.third;
     const fifthVisible = props.music.visibility.fifth;
-
-    const onClick = () => {
-        console.log(props.fret);
-    }
 
     const style = {
         width: props.width + '%',
@@ -32,7 +32,7 @@ const FretComponent = props => {
 
 
 
-    return (<span className={classes} tooltip={interval} onClick={onClick} style={style}>
+    return (<span className={classes} tooltip={interval} onClick={() => onClick(props.fret)} style={style}>
         <div>{props.fret.note}</div>
         <div className="fret-shadow"></div>
         </span>

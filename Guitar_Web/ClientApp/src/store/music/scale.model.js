@@ -54,5 +54,44 @@ export const Scale = (function () {
         return Boolean(this.gaps.includes(this.getInterval(key, rootKey)));
     }
 
+    Scale.prototype.getKeyAtInterval = function(interval, rootKey) {
+        const scaleKeys = this.getKeys(rootKey);
+
+        if(interval <= scaleKeys.length) return scaleKeys[interval - 1];
+
+        let index = 0;
+        while (interval > scaleKeys.length) {
+            interval = interval - 7;
+            index++;
+        }
+
+        return KeyUtilities.createFromKey(scaleKeys[interval - 1], 12);
+    }
+
+    Scale.prototype.getTonality = function (key, rootKey) {
+
+        const interval = this.getInterval(key, rootKey);    
+        
+        const relativeThird = this.getKeyAtInterval(2 + interval, rootKey);
+        const relativeFifth = this.getKeyAtInterval(4 + interval, rootKey);
+
+        const thirdDistance = relativeThird.getDistanceAbsolute(key);
+        const fifthDistance = relativeFifth.getDistanceAbsolute(key);
+
+        if(thirdDistance === 4 && fifthDistance === 7) {
+            return 'major';
+        }
+
+        if(thirdDistance === 3 && fifthDistance === 7) {
+            return 'minor';
+        }         
+
+        if(thirdDistance === 3 && fifthDistance === 6) {
+            return 'diminished';
+        }
+
+        throw new Error('Tonality error');
+    }
+
     return Scale;
 })();

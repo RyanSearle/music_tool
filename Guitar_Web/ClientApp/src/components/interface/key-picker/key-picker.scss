@@ -1,0 +1,16 @@
+.key-picker {
+    font-size: 20px;
+    display: inline-block;
+
+    .key {
+        display: inline-block;
+        padding: 10px;
+        color: #a1a1a1;
+        cursor: pointer;
+
+        &.active {
+            color: #fff;
+            cursor: unset;
+        }
+    }
+}

@@ -3,17 +3,6 @@ import './music-panel.scss';
 
 const MusicPanel = props => {
 
-    // Keys
-    const currentKey = props.music.key;
-    const keys = props.collections.keys;
-
-    const changeKey = (e) => {
-        const val = e.target.value;
-        
-        const key = keys.find(k => k.pitch.toString() === val);
-        props.actions.changeKey(key);
-    }
-
     // Scale visibility
     const currentScaleVisibility = props.music.visibility.scale;
 
@@ -51,15 +40,6 @@ const MusicPanel = props => {
     }
 
     return (<div className="control-panel">
-        {/* Keys */}
-        <div className="control">
-            <label>Key</label>
-            <select onChange={changeKey} value={currentKey.pitch}>
-                {keys.map(key => {
-                    return (<option key={key.pitch} value={key.pitch}>{key.note}</option>)
-                })}
-            </select>
-        </div>
 
         {/* Scale visibility */}
         <div className="control">

@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from 'react-redux';
 import './scale-viewer.scss';
+import { toNumerals } from "../../../helpers";
 
 const ScaleViewer = props => {
 
@@ -17,13 +18,16 @@ const ScaleViewer = props => {
         const interval = scale.getInterval(key, rootKey);
         const isSharp = key.note.length === 2;
 
+        const tonality = scale.getTonality(key, rootKey);
+
         return [
             { cName: 'note', condition: true },
             { cName: 'root', condition: isRoot && rootVisible },
             { cName: 'third', condition: interval === 3 && thirdVisible },
             { cName: 'fifth', condition: interval === 5 && fifthVisible },
             { cName: 'sharp', condition: isSharp },
-            { cName: 'gap', condition: isGap }
+            { cName: 'gap', condition: isGap },
+            { cName: tonality, condition: true }
         ].filter(cl => cl.condition).map(cl => cl.cName).join(' ');
     }
 
@@ -32,8 +36,7 @@ const ScaleViewer = props => {
         {keys.map((k, index) => {
             return (<div key={index} className={getClasses(k)}>
                 <span>{k.note}</span>
-                <div className="interval">{index + 1}</div>
-                <div className="shadow"></div>
+                <div className="chordMajMin">{toNumerals(index + 1)}</div>
             </div>)
         })}
     </div>)
