@@ -58,11 +58,9 @@ export const Scale = (function () {
         const scaleKeys = this.getKeys(rootKey);
 
         if(interval <= scaleKeys.length) return scaleKeys[interval - 1];
-
-        let index = 0;
+        
         while (interval > scaleKeys.length) {
-            interval = interval - 7;
-            index++;
+            interval = interval - 7;            
         }
 
         return KeyUtilities.createFromKey(scaleKeys[interval - 1], 12);
