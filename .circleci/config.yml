@@ -2,8 +2,8 @@ version: 1
 jobs:
   build:
     working_directory: ~/temp
-    docker:
-      - image: circle/node:7
+    # docker:
+    #   - image: circle/node:7
     steps:
       - checkout
       - run: docker build -t "deriveddev/musictool:1.5.1" .
