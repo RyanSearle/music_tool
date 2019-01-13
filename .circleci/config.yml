@@ -34,11 +34,13 @@ workflows:
           requires:
             - build
           filters:
-            only: develop
+            branches:
+              only: develop
       - deploy-live:
           requires:
             - build
           filters:
-            only: master
+            branches:
+              only: master
 
 
