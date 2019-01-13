@@ -47,7 +47,7 @@ const StringInstrumentComponent = props => {
         <div className="guitar">
             <div className="fret-count-row">
                 {makeArray(fretCount).map((_fret, i) => {
-                    return <span className="fret-indicator" key={i} style={{ width: widths[i] + '%' }}>{i}</span>
+                    return <span className="fret-indicator" key={i} style={{ width: widths[i] + '%' }}>{i > 0 ? i : ''}</span>
                 })}
             </div>
             <div className="fret-board">
