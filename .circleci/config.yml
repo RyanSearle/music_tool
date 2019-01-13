@@ -1,11 +1,8 @@
 version: 2
 jobs:
   build:
-    context: Personal
-    working_directory: ~/temp
     machine: true
     steps:
-
       - checkout
       - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
        # build the application image
@@ -20,10 +17,9 @@ jobs:
           - "3b:21:b4:5d:7e:ac:39:fd:46:cf:aa:1b:84:aa:39:89"
       - run: ssh root@138.68.137.60 'docker stop $(docker ps -aq)'
       - run: ssh root@138.68.137.60 'docker-start musictool $CIRCLE_SHA1'
-
 workflows:
   version: 2
-  build-deploy:
+  build-and-deploy:
     jobs:
       - build
       - deploy:
