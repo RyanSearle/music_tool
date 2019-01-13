@@ -10,3 +10,5 @@ jobs:
        # build the application image
       - run: docker build -t deriveddev/musictool:$CIRCLE_BRANCH .
       - run: docker push deriveddev/musictool:$CIRCLE_BRANCH
+      - run: ssh root@138.68.137.60 'docker stop $(docker ps -aq)'
+      - run: ssh root@138.68.137.60 'docker-start musictool $CIRCLE_BRANCH'
