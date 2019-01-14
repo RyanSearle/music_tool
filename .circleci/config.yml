@@ -4,9 +4,15 @@ jobs:
     machine: true
     steps:
       - checkout
-      - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
-      - run: docker build -t deriveddev/musictool:$CIRCLE_SHA1 .
-      - run: docker push deriveddev/musictool:$CIRCLE_SHA1
+      - run: 
+          name: Docker login
+          command: docker login -u $DOCKER_USER -p $DOCKER_PASS
+      - run: 
+          name: Docker build
+          command: docker build -t deriveddev/musictool:$CIRCLE_SHA1 .
+      - run: 
+          name: Docker push
+          command: docker push deriveddev/musictool:$CIRCLE_SHA1
   deploy-dev:
     machine: 
       enabled: true
@@ -14,8 +20,12 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "3b:21:b4:5d:7e:ac:39:fd:46:cf:aa:1b:84:aa:39:89"
-      - run: ssh $SSH_USER@$SERVER_DEV 'docker stop $(docker ps -aq)'
-      - run: ssh $SSH_USER@$SERVER_DEV "docker-start musictool $CIRCLE_SHA1"
+      - run: 
+          name: SHH => DEV Docker stop all containers
+          command: ssh $SSH_USER@$SERVER_DEV 'docker stop $(docker ps -aq)'        
+      - run:
+          name: SHH => DEV Docker start musictool
+          command: ssh $SSH_USER@$SERVER_DEV "docker-start musictool $CIRCLE_SHA1"
   deploy-live:
     machine: 
       enabled: true
