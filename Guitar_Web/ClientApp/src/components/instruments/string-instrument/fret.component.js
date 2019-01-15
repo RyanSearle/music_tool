@@ -8,28 +8,21 @@ const FretComponent = props => {
 
     const inScale = props.music.scale.isInScale(props.fret, props.music.key)
     const interval = props.music.scale.getInterval(props.fret, props.music.key);
-    const isGap = props.music.scale.isGap(props.fret, props.music.key);    
-    const visibility = props.music.visibleIntervals;
-
-    var visibilityObject = visibility.find(val => val.interval === interval);
+    const isGap = props.music.scale.isGap(props.fret, props.music.key);        
+    const visibility = props.music.visibleIntervals.find(val => val.interval === interval);
+    
     const style = {
         width: props.width + '%',
         height: props.height + 'px',
         lineHeight: props.height + 'px',
-        color: visibilityObject && !isGap ? visibilityObject.color : null
+        color: visibility && visibility.active && !isGap ? visibility.color : null
     };
 
     const classes = [
         { cName: 'fret', condition: true },
         { cName: 'in-scale', condition: inScale },
-        { cName: 'visible', condition: visibility.some(val => val.interval === interval)},  
-        // { cName: 'root', condition: interval === 1 },
-        // { cName: 'second', condition: interval === 2 },
-        // { cName: 'third', condition: interval === 3 },
-        // { cName: 'fourth', condition: interval === 4 },
-        // { cName: 'fifth', condition: interval === 5 },            
-        // { cName: 'sixth', condition: interval === 6 },            
-        // { cName: 'seventh', condition: interval === 7 },   
+        { cName: 'visible', condition: visibility && visibility.active},
+        { cName: 'root', condition: interval === 1 },
         { cName: 'first', condition: props.first },
         { cName: 'last', condition: props.last },
     ].filter(cl => cl.condition).map(cl => cl.cName).join(' ');

@@ -6,28 +6,26 @@ export const initialState = {
     scale: ScaleSets.major.scales[0],
     key: keys.eKey,
     visibleIntervals: [
-        {interval: 1, color: '#cc24ff'},
-        {interval: 2, color: '#ff00bb'},
-        {interval: 3, color: '#00ffff'},
-        {interval: 4, color: '#ee5522'},
-        {interval: 5, color: '#ffa500'},
-        {interval: 6, color: '#aaff00'},
-        {interval: 7, color: '#44f5a0'},
+        {interval: 1, color: '#ff00aa', active: true},
+        {interval: 2, color: '#cc24ff', active: false},
+        {interval: 3, color: '#ee5522', active: true},
+        {interval: 4, color: '#ffa500', active: false},
+        {interval: 5, color: '#aaff00', active: true},
+        {interval: 6, color: '#44f5a0', active: false},
+        {interval: 7, color: '#00ffff', active: false},
     ]
 };
 
 const CHANGE_KEY_TYPE = 'CHANGE_KEY_TYPE';
 const CHANGE_SCALE_TYPE = 'CHANGE_SCALE_TYPE';
 const CHANGE_SCALE_SET_TYPE = 'CHANGE_SCALE_SET_TYPE';
-const ADD_INTERVAL_VISIBILITY_TYPE = 'ADD_INTERVAL_VISIBILITY_TYPE'; 
-const REMOVE_INTERVAL_VISIBILITY_TYPE = 'REMOVE_INTERVAL_VISIBILITY_TYPE'; 
+const SET_INTERVAL_VISIBILITY_TYPE = 'SET_INTERVAL_VISIBILITY_TYPE'; 
 
 export const actionCreators = {
     changeKey: (key) => ({ type: CHANGE_KEY_TYPE, key }),
     changeScale: (scale) => ({ type: CHANGE_SCALE_TYPE, scale }),
     changeScaleSet: (scaleSet) => ({ type: CHANGE_SCALE_SET_TYPE, scaleSet }),
-    addIntervalVisibility: (interval) => ({ type: ADD_INTERVAL_VISIBILITY_TYPE, interval }),
-    removeIntervalVisibility: (interval, color) => ({ type: REMOVE_INTERVAL_VISIBILITY_TYPE, interval, color })
+    setIntervalVisibility: (interval, active) => ({ type: SET_INTERVAL_VISIBILITY_TYPE, interval, active })    
 };
 
 export const reducer = (state, action) => {
@@ -57,19 +55,22 @@ export const reducer = (state, action) => {
         }
     }
 
-    // ADD_INTERVAL_VISIBILITY_TYPE
-    if(action.type === ADD_INTERVAL_VISIBILITY_TYPE) {
-        return {
-            ...state,
-            visibleIntervals: [...state.visibleIntervals, {interval: action.interval, color: action.color}]
-        }
-    }
+    // SET_INTERVAL_VISIBILITY_TYPE
+    if(action.type === SET_INTERVAL_VISIBILITY_TYPE) {
+        
+        const interval = state.visibleIntervals.find(val => val.interval === action.interval);        
 
-    // REMOVE_INTERVAL_VISIBILITY_TYPE
-    if(action.type === REMOVE_INTERVAL_VISIBILITY_TYPE) {
+        const newInterval = {
+            ...interval,
+            active: action.active        
+        }        
+
+        const newVisibleIntervals = [...state.visibleIntervals.filter(val => val.interval !== action.interval)];
+        newVisibleIntervals.push(newInterval);
+
         return {
             ...state,
-            visibleIntervals: state.visibleIntervals.filter(val => val.interval !== action.interval)
+            visibleIntervals: newVisibleIntervals
         }
     }
 

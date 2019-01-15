@@ -3,6 +3,8 @@
     margin: 120px 0 0 0;
     
     .intervals {
+        cursor: pointer;
+        user-select: none;
 
         .note {
             display: inline-block;
