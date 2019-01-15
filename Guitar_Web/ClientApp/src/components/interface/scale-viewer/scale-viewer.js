@@ -8,33 +8,40 @@ const ScaleViewer = props => {
     const scale = props.active.music.scale;
     const rootKey = props.active.music.key;
     const keys = scale.getKeys(rootKey);
-    const rootVisible = props.active.music.visibility.root;
-    const thirdVisible = props.active.music.visibility.third;
-    const fifthVisible = props.active.music.visibility.fifth;
+    const visibility = props.active.music.visibleIntervals;
 
-    const getClasses = (key) => {
-        const isRoot = scale.isRoot(key, rootKey);
+    const getClasses = (key) => {        
         const isGap = scale.isGap(key, rootKey);
         const interval = scale.getInterval(key, rootKey);
         const isSharp = key.note.length === 2;
-
-        const tonality = scale.getTonality(key, rootKey);
+        const tonality = scale.getTonality(key, rootKey);        
 
         return [
-            { cName: 'note', condition: true },
-            { cName: 'root', condition: isRoot && rootVisible },
-            { cName: 'third', condition: interval === 3 && thirdVisible },
-            { cName: 'fifth', condition: interval === 5 && fifthVisible },
+            { cName: 'note', condition: true },         
+            { cName: 'visible', condition: visibility.some(val => val.interval === interval)},  
+            { cName: 'root', condition: interval === 1 },
+            // { cName: 'second', condition: interval === 2 },
+            // { cName: 'third', condition: interval === 3 },
+            // { cName: 'fourth', condition: interval === 4 },
+            // { cName: 'fifth', condition: interval === 5 },            
+            // { cName: 'sixth', condition: interval === 6 },            
+            // { cName: 'seventh', condition: interval === 7 },            
             { cName: 'sharp', condition: isSharp },
             { cName: 'gap', condition: isGap },
             { cName: tonality, condition: true }
         ].filter(cl => cl.condition).map(cl => cl.cName).join(' ');
     }
 
+    const getStyles = (key) => {
+        const isGap = scale.isGap(key, rootKey);
+        const interval = scale.getInterval(key, rootKey);
+        var visibilityObject = visibility.find(val => val.interval === interval);
+        return visibilityObject && !isGap ? { color: visibilityObject.color } : null;
+    }
 
     return (<div className="intervals">
         {keys.map((k, index) => {
-            return (<div key={index} className={getClasses(k)}>
+            return (<div key={index} className={getClasses(k)} style={getStyles(k)}>
                 <span>{k.note}</span>
                 <div className="chordMajMin">{toNumerals(index + 1)}</div>
             </div>)

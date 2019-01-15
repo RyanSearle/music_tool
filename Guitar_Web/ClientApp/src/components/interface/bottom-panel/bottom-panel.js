@@ -29,7 +29,7 @@ const BottomPanel = (props) => {
     return (
         <div className="bottom-panel">
             <div className="left-panel">
-                <MusicPanel actions={props.actions.music} collections={props.collections.music} music={props.active.music}></MusicPanel>
+                {/* <MusicPanel actions={props.actions.music} collections={props.collections.music} music={props.active.music}></MusicPanel> */}
             </div>
             <div className="right-panel">
                 {panel}

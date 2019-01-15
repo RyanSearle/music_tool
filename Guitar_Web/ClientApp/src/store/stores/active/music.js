@@ -5,30 +5,29 @@ export const initialState = {
     scaleSet: ScaleSets.major,
     scale: ScaleSets.major.scales[0],
     key: keys.eKey,
-    visibility: {
-        scale: true,
-        root: true,
-        third: true,
-        fifth: true
-    }
+    visibleIntervals: [
+        {interval: 1, color: '#cc24ff'},
+        {interval: 2, color: '#ff00bb'},
+        {interval: 3, color: '#00ffff'},
+        {interval: 4, color: '#ee5522'},
+        {interval: 5, color: '#ffa500'},
+        {interval: 6, color: '#aaff00'},
+        {interval: 7, color: '#44f5a0'},
+    ]
 };
 
 const CHANGE_KEY_TYPE = 'CHANGE_KEY_TYPE';
 const CHANGE_SCALE_TYPE = 'CHANGE_SCALE_TYPE';
 const CHANGE_SCALE_SET_TYPE = 'CHANGE_SCALE_SET_TYPE';
-const CHANGE_SCALE_VISIBILITY_TYPE = 'CHANGE_SCALE_VISIBILITY_TYPE';
-const CHANGE_ROOT_VISIBILITY_TYPE = 'CHANGE_ROOT_VISIBILITY_TYPE';
-const CHANGE_THIRD_VISIBILITY_TYPE = 'CHANGE_THIRD_VISIBILITY_TYPE';
-const CHANGE_FIFTH_VISIBILITY_TYPE = 'CHANGE_FIFTH_VISIBILITY_TYPE';
+const ADD_INTERVAL_VISIBILITY_TYPE = 'ADD_INTERVAL_VISIBILITY_TYPE'; 
+const REMOVE_INTERVAL_VISIBILITY_TYPE = 'REMOVE_INTERVAL_VISIBILITY_TYPE'; 
 
 export const actionCreators = {
     changeKey: (key) => ({ type: CHANGE_KEY_TYPE, key }),
     changeScale: (scale) => ({ type: CHANGE_SCALE_TYPE, scale }),
     changeScaleSet: (scaleSet) => ({ type: CHANGE_SCALE_SET_TYPE, scaleSet }),
-    changeScaleVisibility: (visible) => ({ type: CHANGE_SCALE_VISIBILITY_TYPE, visible }),
-    changeRootVisibility: (visible) => ({ type: CHANGE_ROOT_VISIBILITY_TYPE, visible }),
-    changeThirdVisibility: (visible) => ({ type: CHANGE_THIRD_VISIBILITY_TYPE, visible }),
-    changeFifthVisibility: (visible) => ({ type: CHANGE_FIFTH_VISIBILITY_TYPE, visible }),
+    addIntervalVisibility: (interval) => ({ type: ADD_INTERVAL_VISIBILITY_TYPE, interval }),
+    removeIntervalVisibility: (interval, color) => ({ type: REMOVE_INTERVAL_VISIBILITY_TYPE, interval, color })
 };
 
 export const reducer = (state, action) => {
@@ -58,43 +57,19 @@ export const reducer = (state, action) => {
         }
     }
 
-    // CHANGE_SCALE_VISIBILITY_TYPE
-    if (action.type === CHANGE_SCALE_VISIBILITY_TYPE) {
+    // ADD_INTERVAL_VISIBILITY_TYPE
+    if(action.type === ADD_INTERVAL_VISIBILITY_TYPE) {
         return {
             ...state,
-            visibility: {
-                ...state.visibility, scale: action.visible
-            }
+            visibleIntervals: [...state.visibleIntervals, {interval: action.interval, color: action.color}]
         }
     }
 
-    // CHANGE_ROOT_VISIBILITY_TYPE
-    if (action.type === CHANGE_ROOT_VISIBILITY_TYPE) {
+    // REMOVE_INTERVAL_VISIBILITY_TYPE
+    if(action.type === REMOVE_INTERVAL_VISIBILITY_TYPE) {
         return {
             ...state,
-            visibility: {
-                ...state.visibility, root: action.visible
-            }
-        }
-    }
-
-    // CHANGE_THIRD_VISIBILITY_TYPE
-    if (action.type === CHANGE_THIRD_VISIBILITY_TYPE) {
-        return {
-            ...state,
-            visibility: {
-                ...state.visibility, third: action.visible
-            }
-        }
-    }
-
-    // CHANGE_FIFTH_VISIBILITY_TYPE
-    if (action.type === CHANGE_FIFTH_VISIBILITY_TYPE) {
-        return {
-            ...state,
-            visibility: {
-                ...state.visibility, fifth: action.visible
-            }
+            visibleIntervals: state.visibleIntervals.filter(val => val.interval !== action.interval)
         }
     }
 
