@@ -3,7 +3,6 @@
     margin: 120px 0 0 0;
     
     .intervals {
-        cursor: pointer;
         user-select: none;
 
         .note {
@@ -12,6 +11,8 @@
             font-size: 40px;
             width: 60px;
             color: #fff;
+            cursor: pointer;
+
 
             .chordMajMin {
                 font-size: 20px;
