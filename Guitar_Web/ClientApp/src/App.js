@@ -24,8 +24,8 @@ export default () => (
         <div className="routes">
             <Route exact path='/' component={GuitarPage} />
         </div>
-        <div className="panels">
+        {/* <div className="panels">
             <BottomPanel></BottomPanel>
-        </div>
+        </div> */}
     </div>
 );

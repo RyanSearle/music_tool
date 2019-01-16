@@ -7,12 +7,12 @@ export const initialState = {
     key: keys.eKey,
     visibleIntervals: [
         {interval: 1, color: '#ff00aa', active: true},
-        {interval: 2, color: '#cc24ff', active: false},
+        {interval: 2, color: '#cc24ff', active: true},
         {interval: 3, color: '#ee5522', active: true},
-        {interval: 4, color: '#ffa500', active: false},
+        {interval: 4, color: '#ffa500', active: true},
         {interval: 5, color: '#aaff00', active: true},
-        {interval: 6, color: '#44f5a0', active: false},
-        {interval: 7, color: '#00ffff', active: false},
+        {interval: 6, color: '#44f5a0', active: true},
+        {interval: 7, color: '#00ffff', active: true},
     ]
 };
 
