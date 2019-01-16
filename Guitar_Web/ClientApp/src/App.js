@@ -5,6 +5,7 @@ import BottomPanel from './components/interface/bottom-panel/bottom-panel';
 import ScaleViewer from './components/interface/scale-viewer/scale-viewer';
 import ScalePicker from './components/interface/scale-picker/scale-picker';
 import KeyPicker from './components/interface/key-picker/key-picker';
+import TuningPicker from './components/interface/tuning-picker/tuning-picker';
 
 export default () => (
     <div className="full-page">
@@ -13,6 +14,9 @@ export default () => (
         </div>
         <div className="key-picker-container">
             <KeyPicker></KeyPicker>
+        </div>
+        <div className="tuning-picker-container">
+            <TuningPicker></TuningPicker>
         </div>
         <div className="scale-viewer">
             <ScaleViewer></ScaleViewer>

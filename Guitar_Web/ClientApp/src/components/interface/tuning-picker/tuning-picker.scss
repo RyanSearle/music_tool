@@ -1,0 +1,16 @@
+.controls {
+    color: #a1a1a1;
+    padding: 10px;
+    
+    .tunings {
+        display: block;        
+
+        > div {
+            cursor: pointer;
+            &.active {
+                color: #fff;
+                cursor: unset;
+            }
+        }
+    }
+}
