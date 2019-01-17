@@ -8,7 +8,7 @@ import { StringInstrument } from '../../../store/instruments/string-instrument/s
 
 const StringInstrumentComponent = props => {
 
-    const fretHeight = 30;
+    const fretHeight = 35;
     const guitar = new StringInstrument(props.instrument.tuning, props.instrument.fretCount);
 
     // Account for open string
