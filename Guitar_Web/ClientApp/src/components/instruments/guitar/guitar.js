@@ -1,15 +1,15 @@
 import React from 'react';
-import './string-instrument.scss';
-import Fret from './fret.component';
-import { getFretWidths, getFretHeights, getFretMarkers } from './string-instrument-anatomy';
+import './guitar.scss';
+import Fret from './fret';
+import { getFretWidths, getFretHeights, getFretMarkers } from './guitar-anatomy';
 import { makeArray } from '../../../helpers';
-import { StringInstrument } from '../../../domain/instruments/string-instrument/string-instrument.model';
+import { Guitar } from '../../../domain/instruments/guitar/guitar.model';
 
 
-const StringInstrumentComponent = props => {
+export const GuitarComponent = props => {
 
     const fretHeight = 35;
-    const guitar = new StringInstrument(props.instrument.tuning, props.instrument.fretCount);
+    const guitar = new Guitar(props.instrument.tuning, props.instrument.fretCount);
 
     // Account for open string
     const fretCount = guitar.fretCount;
@@ -77,4 +77,3 @@ const StringInstrumentComponent = props => {
     )
 }
 
-export default StringInstrumentComponent;

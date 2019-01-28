@@ -1,18 +1,18 @@
 import React from 'react';
 import './guitar.page.scss';
-import StringInstrument from "../../components/instruments/string-instrument/string-instrument";
 import { connect } from 'react-redux';
+import { GuitarComponent } from '../../components/instruments/guitar/guitar';
 
 const GuitarPage = (props) => {
 
     document.title = props.active.instrument.selected === 'Guitar' ? 'Music Tool: Guitar' : 'Music Tool: Bass';
 
     const guitar = (
-        <StringInstrument instrument={props.active.instrument.guitar} music={props.active.music}></StringInstrument>
+        <GuitarComponent instrument={props.active.instrument.guitar} music={props.active.music}></GuitarComponent>
     )
 
     const bass= (
-        <StringInstrument instrument={props.active.instrument.bass} music={props.active.music}></StringInstrument>
+        <GuitarComponent instrument={props.active.instrument.bass} music={props.active.music}></GuitarComponent>
     )
 
     const instrument = props.active.instrument.selected === 'Guitar' ? guitar : bass;

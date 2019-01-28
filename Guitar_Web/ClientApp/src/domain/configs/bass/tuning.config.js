@@ -1,5 +1,5 @@
-import { Tuning } from '../../instruments/string-instrument/tuning.model'
 import { KeyUtilities } from '../../music/key.model'
+import { Tuning } from '../../instruments/guitar/tuning.model';
 
 const standardTuning = new Tuning('Standard', [
     KeyUtilities.createFromChar('G', 1),
@@ -9,8 +9,6 @@ const standardTuning = new Tuning('Standard', [
 ])
 
 
-const Tunings = {
+export const Tunings = {
     standardTuning
 }
-
-export default Tunings;

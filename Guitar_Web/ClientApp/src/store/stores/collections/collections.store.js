@@ -1,7 +1,7 @@
 import { ScaleSets } from '../../../domain/configs/scale.config';
 import { keys } from '../../../domain/configs/key.config';
-import GuitarTunings from "../../../domain/configs/guitar/tuning.config";
-import BassTunings from "../../../domain/configs/bass/tuning.config";
+import { Tunings as BassTunings } from '../../../domain/configs/bass/tuning.config';
+import { Tunings as GuitarTunings } from '../../../domain/configs/guitar/tuning.config';
 
 const initialState = {
     bass: {

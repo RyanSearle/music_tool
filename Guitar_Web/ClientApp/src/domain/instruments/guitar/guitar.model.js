@@ -1,6 +1,6 @@
-export const StringInstrument = (function () {
+export const Guitar = (function () {
     const defaultFretCount = 24;
-    const StringInstrument = function(tuning, fretCount) {
+    const Guitar = function(tuning, fretCount) {
         let fretCountCalc = fretCount || defaultFretCount;
 
         // Account for open string
@@ -10,5 +10,5 @@ export const StringInstrument = (function () {
         this.strings = tuning.getStrings(fretCountCalc);
         this.fretCount = fretCountCalc;
     }
-    return StringInstrument;
+    return Guitar;
 })();
