@@ -1,7 +1,9 @@
 import { ScaleSets } from '../../configs/scale.config';
 import { keys } from '../../configs/key.config';
+import { ChordSets } from '../../configs/chord.config';
 
 export const initialState = {
+    chord: ChordSets.triads.standard,
     scaleSet: ScaleSets.major,
     scale: ScaleSets.major.scales[0],
     key: keys.eKey,
