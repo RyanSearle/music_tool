@@ -1,4 +1,4 @@
-import Tunings from "../../configs/bass/tuning.config";
+import Tunings from "../../../domain/configs/bass/tuning.config";
 
 export const initialState = {
     tuning: Tunings.standardTuning,

@@ -3,7 +3,7 @@ import './string-instrument.scss';
 import Fret from './fret.component';
 import { getFretWidths, getFretHeights, getFretMarkers } from './string-instrument-anatomy';
 import { makeArray } from '../../../helpers';
-import { StringInstrument } from '../../../store/instruments/string-instrument/string-instrument.model';
+import { StringInstrument } from '../../../domain/instruments/string-instrument/string-instrument.model';
 
 
 const StringInstrumentComponent = props => {

@@ -1,6 +1,6 @@
-import { ScaleSets } from '../../configs/scale.config';
-import { keys } from '../../configs/key.config';
-import { ChordSets } from '../../configs/chord.config';
+import { ScaleSets } from '../../../domain/configs/scale.config';
+import { keys } from '../../../domain/configs/key.config';
+import { ChordSets } from '../../../domain/configs/chord.config';
 
 export const initialState = {
     chord: ChordSets.triads.standard,
