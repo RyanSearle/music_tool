@@ -11,6 +11,8 @@ const FretComponent = props => {
     const isGap = props.music.scale.isGap(props.fret, props.music.key);        
     const visibility = props.music.visibleIntervals.find(val => val.interval === interval);
     
+    if(props.chordNote) console.log(props.chordNote);
+
     const style = {
         width: props.width + '%',
         height: props.height + 'px',
@@ -25,6 +27,7 @@ const FretComponent = props => {
         { cName: 'root', condition: interval === 1 },
         { cName: 'first', condition: props.first },
         { cName: 'last', condition: props.last },
+        { cName: 'in-chord', condition: props.chordNote },
     ].filter(cl => cl.condition).map(cl => cl.cName).join(' ');
     
     return (<span className={classes} tooltip={interval} onClick={() => onClick(props.fret)} style={style}>

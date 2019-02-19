@@ -8,11 +8,11 @@ const GuitarPage = (props) => {
     document.title = props.active.instrument.selected === 'Guitar' ? 'Music Tool: Guitar' : 'Music Tool: Bass';
 
     const guitar = (
-        <GuitarComponent instrument={props.active.instrument.guitar} music={props.active.music}></GuitarComponent>
+        <GuitarComponent voicing={props.active.voicing} instrument={props.active.instrument.guitar} music={props.active.music}></GuitarComponent>
     )
 
     const bass= (
-        <GuitarComponent instrument={props.active.instrument.bass} music={props.active.music}></GuitarComponent>
+        <GuitarComponent voicing={props.active.voicing} instrument={props.active.instrument.bass} music={props.active.music}></GuitarComponent>
     )
 
     const instrument = props.active.instrument.selected === 'Guitar' ? guitar : bass;
