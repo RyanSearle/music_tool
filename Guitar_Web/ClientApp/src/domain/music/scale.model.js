@@ -1,4 +1,4 @@
-import { Key, Tone, ScaleResolver } from "./key.model";
+import { Tone, ScaleResolver } from "./key.model";
 
 // export const Scale = (function () {
 
@@ -155,12 +155,12 @@ export const Scale = (function () {
         return sharpScale.reduce(getComplexityValue, 0) <= flatScale.reduce(getComplexityValue, 0) ? sharpScale : flatScale;
     }
 
-    Scale.prototype.isInScale = function (key) {
-        return this.getKeys().map(k => k.pitch).includes(key.pitch);
+    Scale.prototype.isInScale = function (tone) {
+        return this.getKeys().map(k => k.pitch).includes(tone.pitch);
     }
 
-    Scale.prototype.getInterval = function (key) {
-        return this.getKeys().map(k => k.pitch).indexOf(key.pitch) + 1;
+    Scale.prototype.getInterval = function (tone) {
+        return this.getKeys().map(k => k.pitch).indexOf(tone.pitch) + 1;
     }
 
     Scale.prototype.isRoot = function (tone) {

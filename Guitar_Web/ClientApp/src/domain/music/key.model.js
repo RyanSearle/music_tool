@@ -93,6 +93,13 @@ export const Tone = (function (){
         return new Key(this.pitch, targetLetter, scaleResolver);
     }
 
+    Tone.prototype.getKeyWithScale = function (scale) {
+        if(scale.isInScale(this)) {
+            return scale.getKeys().find(x => x.pitch === this.pitch)
+        }
+        return new Key(this.pitch);
+    }
+
     return Tone;
 })();
 

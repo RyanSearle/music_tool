@@ -33,7 +33,7 @@ const FretComponent = props => {
     ].filter(cl => cl.condition).map(cl => cl.cName).join(' ');
     
     return (<span className={classes} tooltip={interval} onClick={() => onClick(props.fret)} style={style}>
-        <div>{props.fret.getDisplayCharacter()}</div>
+        <div>{props.fret.getKeyWithScale(scale).getDisplayCharacter()}</div>
         <div className="fret-shadow"></div>
         </span>
     )
