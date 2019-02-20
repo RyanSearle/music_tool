@@ -1,4 +1,4 @@
-import { Chord } from "../music/chord.model";
+import { Chord } from "../../music/chord.model";
 
 // Common Chords: https://music.stackexchange.com/questions/12425/looking-for-a-list-of-common-4-note-chords?noredirect=1&lq=1
 

@@ -1,31 +1,31 @@
-import { KeyUtilities } from '../../music/key.model'
 import { Tuning } from '../../instruments/guitar/tuning.model';
+import { Key } from '../../music/key.model';
 
 const standardTuning = new Tuning('Standard', [
-    KeyUtilities.createFromChar('E', 2),
-    KeyUtilities.createFromChar('B', 2),
-    KeyUtilities.createFromChar('G', 1),
-    KeyUtilities.createFromChar('D', 1),
-    KeyUtilities.createFromChar('A', 1),
-    KeyUtilities.createFromChar('E', 0)
+    new Key(7, 'E'),
+    new Key(2, 'B'),
+    new Key(10, 'G'),
+    new Key(5, 'D'),
+    new Key(0, 'A'),
+    new Key(7, 'E'),
 ])
 
 const cTuning = new Tuning('C', [
-    KeyUtilities.createFromChar('C', 2),
-    KeyUtilities.createFromChar('G', 1),
-    KeyUtilities.createFromChar('D#', 1),
-    KeyUtilities.createFromChar('A#', 1),
-    KeyUtilities.createFromChar('F', 0),
-    KeyUtilities.createFromChar('C', 0)
+    new Key(3, 'C'),
+    new Key(10, 'G'),
+    new Key(6, 'D'),
+    new Key(1, 'A'),
+    new Key(8, 'F'),
+    new Key(3, 'C'),
 ])
 
 const dropDTuning = new Tuning('Drop D', [
-    KeyUtilities.createFromChar('E', 2),
-    KeyUtilities.createFromChar('B', 2),
-    KeyUtilities.createFromChar('G', 1),
-    KeyUtilities.createFromChar('D', 1),
-    KeyUtilities.createFromChar('A', 1),
-    KeyUtilities.createFromChar('D', 0)
+    new Key(7, 'E'),
+    new Key(2, 'B'),
+    new Key(10, 'G'),
+    new Key(5, 'D'),
+    new Key(0, 'A'),
+    new Key(5, 'D'),
 ])
 
 export const Tunings = {

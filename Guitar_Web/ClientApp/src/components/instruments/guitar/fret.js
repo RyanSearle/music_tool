@@ -6,9 +6,11 @@ const onClick = (fret) => {
 
 const FretComponent = props => {
 
-    const inScale = props.music.scale.isInScale(props.fret, props.music.key)
-    const interval = props.music.scale.getInterval(props.fret, props.music.key);
-    const isGap = props.music.scale.isGap(props.fret, props.music.key);        
+    const scale = props.music.scaleTemplate.createScale(props.music.key);
+    console.log(scale)
+    const inScale = scale.isInScale(props.fret, props.music.key)
+    const interval = scale.getInterval(props.fret, props.music.key);
+    const isGap = scale.isGap(props.fret, props.music.key);        
     const visibility = props.music.visibleIntervals.find(val => val.interval === interval);
     
     if(props.chordNote) console.log(props.chordNote);
@@ -31,7 +33,7 @@ const FretComponent = props => {
     ].filter(cl => cl.condition).map(cl => cl.cName).join(' ');
     
     return (<span className={classes} tooltip={interval} onClick={() => onClick(props.fret)} style={style}>
-        <div>{props.fret.note}</div>
+        <div>{props.fret.getDisplayCharacter()}</div>
         <div className="fret-shadow"></div>
         </span>
     )

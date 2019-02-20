@@ -24,7 +24,7 @@ const KeyPicker = props => {
     }
 
     return (<div className="key-picker">
-        {keys.map((k, index) => <div className={getClasses(k)} onClick={() => changeKey(k)} key={index}>{k.note}</div>)}
+        {keys.map((k, index) => <div className={getClasses(k)} onClick={() => changeKey(k)} key={index}>{k.getDisplayCharacter()}</div>)}
     </div>)
 }
 

@@ -1,11 +1,11 @@
-import { ScaleSets } from '../../../domain/configs/scale.config';
-import { keys } from '../../../domain/configs/key.config';
-import { ChordSets } from '../../../domain/configs/chord.config';
+import { ScaleSets } from '../../../domain/configs/music/scale.config';
+import { keys } from '../../../domain/configs/music/key.config';
+import { ChordSets } from '../../../domain/configs/music/chord.config';
 
 export const initialState = {
     chord: ChordSets.triads.standard,
     scaleSet: ScaleSets.major,
-    scale: ScaleSets.major.scales[0],
+    scaleTemplate: ScaleSets.major.scales[0],
     key: keys.eKey,
     visibleIntervals: [
         {interval: 1, color: '#ff00aa', active: true},
@@ -25,7 +25,7 @@ const SET_INTERVAL_VISIBILITY_TYPE = 'SET_INTERVAL_VISIBILITY_TYPE';
 
 export const actionCreators = {
     changeKey: (key) => ({ type: CHANGE_KEY_TYPE, key }),
-    changeScale: (scale) => ({ type: CHANGE_SCALE_TYPE, scale }),
+    changeScale: (scaleTemplate) => ({ type: CHANGE_SCALE_TYPE, scaleTemplate }),
     changeScaleSet: (scaleSet) => ({ type: CHANGE_SCALE_SET_TYPE, scaleSet }),
     setIntervalVisibility: (interval, active) => ({ type: SET_INTERVAL_VISIBILITY_TYPE, interval, active })    
 };
@@ -44,7 +44,7 @@ export const reducer = (state, action) => {
     if (action.type === CHANGE_SCALE_TYPE) {
         return {
             ...state,
-            scale: action.scale
+            scaleTemplate: action.scaleTemplate
         }
     }
 

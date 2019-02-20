@@ -7,16 +7,16 @@ import { toNumerals } from "../../../helpers";
 
 const ScaleViewer = props => {
 
-    const scale = props.active.music.scale;
+    const scale = props.active.music.scaleTemplate.createScale(props.active.music.key);
     const rootKey = props.active.music.key;
     const keys = scale.getKeys(rootKey);
     const visibilities = props.active.music.visibleIntervals;
 
     const getClasses = (key) => {        
-        const isGap = scale.isGap(key, rootKey);
-        const interval = scale.getInterval(key, rootKey);
-        const isSharp = key.note.length === 2;
-        const tonality = scale.getTonality(key, rootKey);        
+        const isGap = scale.isGap(key);
+        const interval = scale.getInterval(key);
+        const isSharp = key.modifier > 0;
+        const tonality = scale.getTonality(key);        
         const visibility = visibilities.some(val => val.interval === interval);
 
         return [
@@ -48,7 +48,7 @@ const ScaleViewer = props => {
     return (<div className="intervals">
         {keys.map((k, index) => {
             return (<div onClick={() => handleClick(k)} key={index} className={getClasses(k)} style={getStyles(k)}>
-                <span>{k.note}</span>
+                <span>{k.getDisplayCharacter()}</span>
                 <div className="chordMajMin">{toNumerals(index + 1)}</div>
             </div>)
         })}
