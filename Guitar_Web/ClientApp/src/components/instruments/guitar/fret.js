@@ -7,10 +7,9 @@ const onClick = (fret) => {
 const FretComponent = props => {
 
     const scale = props.music.scaleTemplate.createScale(props.music.key);
-    console.log(scale)
-    const inScale = scale.isInScale(props.fret, props.music.key)
-    const interval = scale.getInterval(props.fret, props.music.key);
-    const isGap = scale.isGap(props.fret, props.music.key);        
+    const inScale = scale.isInScale(props.fret.pitch)
+    const interval = scale.getInterval(props.fret.pitch);
+    const isGap = scale.isGap(props.fret.pitch);        
     const visibility = props.music.visibleIntervals.find(val => val.interval === interval);
     
     if(props.chordNote) console.log(props.chordNote);

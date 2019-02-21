@@ -8,15 +8,14 @@ import { toNumerals } from "../../../helpers";
 const ScaleViewer = props => {
 
     const scale = props.active.music.scaleTemplate.createScale(props.active.music.key);
-    const rootKey = props.active.music.key;
-    const keys = scale.getKeys(rootKey);
+    const keys = scale.getKeys();
     const visibilities = props.active.music.visibleIntervals;
 
     const getClasses = (key) => {        
-        const isGap = scale.isGap(key);
-        const interval = scale.getInterval(key);
+        const isGap = scale.isGap(key.pitch);
+        const interval = scale.getInterval(key.pitch);
         const isSharp = key.modifier > 0;
-        const tonality = scale.getTonality(key);        
+        const tonality = scale.getTonality(key.pitch);        
         const visibility = visibilities.some(val => val.interval === interval);
 
         return [
@@ -30,14 +29,14 @@ const ScaleViewer = props => {
     }
 
     const getStyles = (key) => {
-        const isGap = scale.isGap(key, rootKey);
-        const interval = scale.getInterval(key, rootKey);
+        const isGap = scale.isGap(key.pitch);
+        const interval = scale.getInterval(key.pitch);
         var visibilityObject = visibilities.find(val => val.interval === interval);
         return visibilityObject && visibilityObject.active && !isGap ? { color: visibilityObject.color } : null;
     }
 
     const handleClick = key => {
-        const interval = scale.getInterval(key, rootKey);
+        const interval = scale.getInterval(key.pitch);
         const visibility = visibilities.find(val => val.interval === interval)
         
         if(visibility) {            

@@ -85,8 +85,9 @@
 export const Tone = (function (){
 
     // pitch represents the 0-11 value of the chromatic scale
-    const Tone = function(pitch) {
+    const Tone = function(pitch, octave) {
         this.pitch = pitch % 12;
+        this.octave = octave || 0;
     }
 
     Tone.prototype.getKey = function (targetLetter, scaleResolver) {
