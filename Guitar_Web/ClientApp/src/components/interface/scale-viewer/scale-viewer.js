@@ -12,10 +12,10 @@ const ScaleViewer = props => {
     const visibilities = props.active.music.visibleIntervals;
 
     const getClasses = (key) => {        
-        const isGap = scale.isGap(key.pitch);
-        const interval = scale.getInterval(key.pitch);
+        const isGap = scale.isGap(key.tone);
+        const interval = scale.getInterval(key.tone);
         const isSharp = key.modifier > 0;
-        const tonality = scale.getTonality(key.pitch);        
+        const tonality = scale.getTonality(key.tone);        
         const visibility = visibilities.some(val => val.interval === interval);
 
         return [
@@ -29,14 +29,14 @@ const ScaleViewer = props => {
     }
 
     const getStyles = (key) => {
-        const isGap = scale.isGap(key.pitch);
-        const interval = scale.getInterval(key.pitch);
+        const isGap = scale.isGap(key.tone);
+        const interval = scale.getInterval(key.tone);
         var visibilityObject = visibilities.find(val => val.interval === interval);
         return visibilityObject && visibilityObject.active && !isGap ? { color: visibilityObject.color } : null;
     }
 
     const handleClick = key => {
-        const interval = scale.getInterval(key.pitch);
+        const interval = scale.getInterval(key.tone);
         const visibility = visibilities.find(val => val.interval === interval)
         
         if(visibility) {            

@@ -43,14 +43,14 @@ export const Tone = (function (){
     }
 
     Tone.prototype.getKey = function (targetLetter, scaleResolver) {
-        return new Key(this.pitch, targetLetter, scaleResolver);
+        return new Key(this, targetLetter, scaleResolver);
     }
 
     Tone.prototype.getKeyWithScale = function (scale) {
         if(scale.isInScale(this)) {
-            return scale.getKeys().find(x => x.pitch === this.pitch)
+            return scale.getKeys().find(x => x.tone.pitch === this.pitch)
         }
-        return new Key(this.pitch);
+        return new Key(this);
     }
 
     return Tone;

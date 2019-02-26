@@ -15,29 +15,28 @@ export const Key = (function () {
         { char: 'G#', value: 11, rational: 'G' }
     ]
 
-    const Key = function(pitch, targetLetter, scaleResolver) {
+    const Key = function(tone, targetLetter, scaleResolver) {
+        this.tone = tone;
 
-        pitch = pitch % 12;
-        targetLetter = targetLetter || chromaticScale.find(x => x.value === pitch).rational;
+        targetLetter = targetLetter || chromaticScale.find(x => x.value === tone.pitch).rational;
 
-        this.pitch = pitch;
         this.letter = targetLetter;
 
         const startingPoint = chromaticScale.find(x => x.char === targetLetter) 
 
         if(!startingPoint) throw new Error('targetLetter not found ' + targetLetter);
-
+        
         switch (scaleResolver) {
             case ScaleResolver.SHARPEN:
-                this.modifier = resolveWithSharps(startingPoint.value, pitch);
+                this.modifier = resolveWithSharps(startingPoint.value, tone.pitch);
                 break;
             case ScaleResolver.FLATTEN:
-                this.modifier = resolveWithFlats(startingPoint.value, pitch);
+                this.modifier = resolveWithFlats(startingPoint.value, tone.pitch);
                 break;
             default:
                 // If no resolver is defined then use simplest
-                const sharp = resolveWithSharps(startingPoint.value, pitch);
-                const flat = resolveWithFlats(startingPoint.value, pitch);
+                const sharp = resolveWithSharps(startingPoint.value, tone.pitch);
+                const flat = resolveWithFlats(startingPoint.value, tone.pitch);
                 this.modifier = Math.abs(sharp) > Math.abs(flat) ? flat : sharp;
                 break;
         }

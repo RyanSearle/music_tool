@@ -10,15 +10,16 @@ const KeyPicker = props => {
     const keys = props.collections.music.keys;
     const scaleTemplate = props.active.music.scaleTemplate;
 
-    const rationalKeys = new Array(12).fill().map((_,index) => {
-        const keysInPitch = keys.filter(key => key.pitch === index);
-        console.log(keysInPitch);
+    const rationalKeys = new Array(12).fill().map((_,index) => {        
+        const keysInPitch = keys.filter(key => key.tone.pitch === index);
         
         return keysInPitch.reduce((acc, next) => {
             const complexity = scaleTemplate.createScale(next).getComplexity();
+
             return complexity <= acc.complexity ? {key: next, complexity} : acc;
-        }, {complexity: 999}).key;
+        }, {complexity: 999, key: 'bla'}).key;
     })
+
 
     const getClasses = key => {
         return [

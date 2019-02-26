@@ -24,8 +24,8 @@ export const Scale = (function () {
         accumilativeDistances.pop();
 
         this.tones = accumilativeDistances.map(distance => {
-            const octave = Math.floor((rootKey.pitch + distance) / 12);
-            const pitch = (rootKey.pitch + distance) % 12
+            const octave = Math.floor((rootKey.tone.pitch + distance) / 12);
+            const pitch = (rootKey.tone.pitch + distance) % 12
             return new Tone(pitch, octave);
         })
 
@@ -70,20 +70,20 @@ export const Scale = (function () {
     }
 
 
-    Scale.prototype.isInScale = function (pitch) {
-        return this.pitches.includes(pitch);
+    Scale.prototype.isInScale = function (tone) {
+        return this.pitches.includes(tone.pitch);
     }
 
-    Scale.prototype.getInterval = function (pitch) {
-        return this.pitches.indexOf(pitch) + 1;
+    Scale.prototype.getInterval = function (tone) {
+        return this.pitches.indexOf(tone.pitch) + 1;
     }
 
-    Scale.prototype.isRoot = function (pitch) {
-        return Boolean(this.getInterval(pitch) === 1);
+    Scale.prototype.isRoot = function (tone) {
+        return Boolean(this.getInterval(tone) === 1);
     }
 
-    Scale.prototype.isGap = function (pitch) {
-        return Boolean(this.gaps.includes(this.getInterval(pitch)));
+    Scale.prototype.isGap = function (tone) {
+        return Boolean(this.gaps.includes(this.getInterval(tone)));
     }
 
     Scale.prototype.getToneAtInterval = function(interval) {
@@ -98,12 +98,12 @@ export const Scale = (function () {
         return tone.add(new Tone(0, octave));
     }
 
-    Scale.prototype.getTonality = function (pitch) {
+    Scale.prototype.getTonality = function (tone) {
 
-        const initialTone = this.tones.find(t => t.pitch === pitch);
+        const initialTone = this.tones.find(t => t.pitch === tone.pitch);
         if(!initialTone) throw new Error('Pitch not in scale');
 
-        const interval = this.getInterval(initialTone.pitch);
+        const interval = this.getInterval(initialTone);
 
         const relativeThirdTone = this.getToneAtInterval(2 + interval);
         const relativeFifthTone = this.getToneAtInterval(4 + interval);

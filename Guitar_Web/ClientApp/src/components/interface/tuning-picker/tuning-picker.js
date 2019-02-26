@@ -10,8 +10,6 @@ const TuningPicker = props => {
     const activeTuning = props.active.instrument.guitar.tuning;
     const tunings = props.collections.guitar.tunings;
 
-    console.log(tunings)
-
     const changeTuning = (tuning) => {
         if(tuning === activeTuning) return;
         props.action.changeTuning(tuning);
