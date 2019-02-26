@@ -1,5 +1,5 @@
 import { makeArray } from '../../../helpers';
-import { Tone } from '../../music/key.model';
+import { Tone } from '../../music/tone.model';
 
 export const String_ = (function () {
     const String_ = function (key, fretCount) {

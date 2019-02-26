@@ -1,4 +1,5 @@
-import { Tone, ScaleResolver, Key } from "./key.model";
+import { ScaleResolver } from "./key.model";
+import { Tone } from "./tone.model";
 
 export const Scale = (function () {
 
@@ -16,16 +17,19 @@ export const Scale = (function () {
             return distance;
         });
 
-        var accumilativeDistances = [0];
+        var accumilativeDistances = [0]; 
         this.distances.reduce((acc, next, index) => {
             return accumilativeDistances[index + 1] = acc + next;
         }, 0);
         accumilativeDistances.pop();
 
-        this.pitches = accumilativeDistances.map(distance => {
-            return (rootKey.pitch + distance) % 12
+        this.tones = accumilativeDistances.map(distance => {
+            const octave = Math.floor((rootKey.pitch + distance) / 12);
+            const pitch = (rootKey.pitch + distance) % 12
+            return new Tone(pitch, octave);
         })
 
+        this.pitches = this.tones.map(tone => tone.pitch);
         this.letters = getLetters(rootKey.letter);
     }
 
@@ -37,16 +41,12 @@ export const Scale = (function () {
         return initialLetters.concat(rationalScale.slice(0, startIndex));
     }
 
-    Scale.prototype.getTones = function() {
-        return this.pitches.map(p => new Tone(p));
-    }
-
     Scale.prototype.getKeys = function() {
-        const sharpScale = this.getTones().map((tone, index) => {
+        const sharpScale = this.tones.map((tone, index) => {
             const letter = this.letters[index];
             return tone.getKey(letter, ScaleResolver.SHARPEN);
         })
-        const flatScale = this.getTones().map((tone, index) => {
+        const flatScale = this.tones.map((tone, index) => {
             const letter = this.letters[index];
             return tone.getKey(letter, ScaleResolver.FLATTEN);
         })
@@ -62,6 +62,7 @@ export const Scale = (function () {
         return sharpScale.reduce(getComplexityValue, 0) <= flatScale.reduce(getComplexityValue, 0)
          ? sharpScale : flatScale;
     }
+
 
     Scale.prototype.isInScale = function (pitch) {
         return this.pitches.includes(pitch);
@@ -79,47 +80,47 @@ export const Scale = (function () {
         return Boolean(this.gaps.includes(this.getInterval(pitch)));
     }
 
-    Scale.prototype.getPitchAtInterval = function(interval) {
+    Scale.prototype.getToneAtInterval = function(interval) {
         const rationalInterval = interval % 7 || 7;
-        const pitch = this.pitches[rationalInterval - 1];
+        const tone = this.tones[rationalInterval - 1];
         const octave = Math.floor((interval - 1) / 7)
-        console.log({pitch, octave})
-        console.log(this.pitches);
         
-        return (octave * 12) + pitch;
+        // console.log('octave', octave);
+        // console.log('tone.octave', tone.octave);
+        // console.log('tone.pitch', tone.pitch);
+
+        return tone.add(new Tone(0, octave));
     }
 
     Scale.prototype.getTonality = function (pitch) {
 
-        const initialTone = this.getTones().find(t => t.pitch === pitch);
+        const initialTone = this.tones.find(t => t.pitch === pitch);
         if(!initialTone) throw new Error('Pitch not in scale');
 
-        const interval = this.getInterval(pitch);
-        
-        const relativeThirdPitch = this.getPitchAtInterval(2 + interval);
-        // const relativeFifthPitch = this.getPitchAtInterval(4 + interval);
+        const interval = this.getInterval(initialTone.pitch);
 
-        // console.log(relativeThirdPitch)
-        // console.log(relativeFifthPitch)
+        const relativeThirdTone = this.getToneAtInterval(2 + interval);
+        const relativeFifthTone = this.getToneAtInterval(4 + interval);
 
-        // const thirdDistance = relativeThirdPitch - pitch
-        // const fifthDistance = relativeFifthPitch - pitch;
+        const thirdDistance = relativeThirdTone.subtract(initialTone).units;
+        const fifthDistance = relativeFifthTone.subtract(initialTone).units;
 
-        // if(thirdDistance === 4 && fifthDistance === 7) {
-        //     return 'major';
-        // }
+        // console.log('relativeThirdPitch',relativeThirdPitch)
+        // console.log('pitch',initialTone.pitch)
+        // console.log('octave',initialTone.octave)
 
-        // if(thirdDistance === 3 && fifthDistance === 7) {
-        //      return 'minor';
-        // }         
+        if(thirdDistance === 4 && fifthDistance === 7) {
+            return 'major';
+        }
 
-        // if(thirdDistance === 3 && fifthDistance === 6) {
-        //     return 'diminished';
-        // }
-        // console.log('thirdDistance', thirdDistance)
-        // console.log('fifthDistance', fifthDistance)
+        if(thirdDistance === 3 && fifthDistance === 7) {
+             return 'minor';
+        }         
 
-        return '';
+        if(thirdDistance === 3 && fifthDistance === 6) {
+            return 'diminished';
+        }
+
         throw new Error('Tonality error');
     }
 
