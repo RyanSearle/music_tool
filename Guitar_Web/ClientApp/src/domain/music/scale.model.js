@@ -41,6 +41,10 @@ export const Scale = (function () {
         return initialLetters.concat(rationalScale.slice(0, startIndex));
     }
 
+    const getComplexityValue = (prev, next) => {
+        return prev + Math.abs(next.modifier);
+    };
+
     Scale.prototype.getKeys = function() {
         const sharpScale = this.tones.map((tone, index) => {
             const letter = this.letters[index];
@@ -55,12 +59,14 @@ export const Scale = (function () {
             return this.rootKey.modifier > 0 ? sharpScale : flatScale;
         }
 
-        const getComplexityValue = (prev, next) => {
-            return prev + Math.abs(next.modifier);
-        };
+
 
         return sharpScale.reduce(getComplexityValue, 0) <= flatScale.reduce(getComplexityValue, 0)
          ? sharpScale : flatScale;
+    }
+
+    Scale.prototype.getComplexity = function() {
+        return this.getKeys().reduce(getComplexityValue, 0);
     }
 
 
