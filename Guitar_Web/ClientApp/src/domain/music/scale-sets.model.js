@@ -2,7 +2,7 @@
 export const ScaleSet = (function() {
     const ScaleSet = function(name, scales){
         this.name = name;
-        this.scales =scales;
+        this.scales = scales;
     }
 
     ScaleSet.prototype.default = function() {

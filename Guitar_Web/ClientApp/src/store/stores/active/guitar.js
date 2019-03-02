@@ -1,4 +1,5 @@
-import Tunings from "../../configs/guitar/tuning.config";
+import { Tunings } from '../../../domain/configs/guitar/tuning.config';
+
 
 export const initialState = {
     tuning: Tunings.standardTuning,

@@ -1,5 +1,5 @@
-import { Scale } from '../music/scale.model';
-import { ScaleSet } from '../music/scale-sets.model';
+import { ScaleSet } from '../../music/scale-sets.model';
+import { ScaleTemplate } from '../../music/scale-template.model';
 
 const majorSpacing = ['W', 'W', 'H', 'W', 'W', 'W', 'H'];
 const dorianSpacing = ['W', 'H', 'W', 'W', 'W', 'H', 'W'];
@@ -11,16 +11,16 @@ const locrianSpacing = ['H', 'W', 'W', 'H', 'W', 'W', 'W'];
 
 const Scales = {
     // Diatonic scales
-    major: new Scale('Diatonic', majorSpacing),
-    dorian: new Scale('Diatonic', dorianSpacing),
-    phrygian: new Scale('Diatonic', phrygianSpacing),
-    lydian: new Scale('Diatonic', lydianSpacing),
-    mixolydian: new Scale('Diatonic', mixolydianSpacing),
-    minor: new Scale('Diatonic', minorSpacing),
-    locrian: new Scale('Diatonic', locrianSpacing),
+    major: new ScaleTemplate('Diatonic', majorSpacing),
+    dorian: new ScaleTemplate('Diatonic', dorianSpacing),
+    phrygian: new ScaleTemplate('Diatonic', phrygianSpacing),
+    lydian: new ScaleTemplate('Diatonic', lydianSpacing),
+    mixolydian: new ScaleTemplate('Diatonic', mixolydianSpacing),
+    minor: new ScaleTemplate('Diatonic', minorSpacing),
+    locrian: new ScaleTemplate('Diatonic', locrianSpacing),
     // Pentatonic scales
-    minorPentatonic: new Scale('Pentatonic', minorSpacing, [2, 6]),
-    majorPentatonic: new Scale('Pentatonic', majorSpacing, [4, 7])
+    minorPentatonic: new ScaleTemplate('Pentatonic', minorSpacing, [2, 6]),
+    majorPentatonic: new ScaleTemplate('Pentatonic', majorSpacing, [4, 7])
 }
 
 export const ScaleSets = {

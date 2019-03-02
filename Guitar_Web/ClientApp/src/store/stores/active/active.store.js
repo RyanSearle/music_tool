@@ -2,6 +2,7 @@ import * as Guitar from './guitar';
 import * as Bass from './bass';
 import * as Music from './music';
 
+
 // Add active store initial state here
 const initialState = {
     instrument: {
@@ -11,6 +12,7 @@ const initialState = {
     },
     music: Music.initialState
 };
+
 
 const CHANGE_INSTRUMENT = 'CHANGE_INSTRUMENT';
 

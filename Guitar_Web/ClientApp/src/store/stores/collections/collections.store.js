@@ -1,7 +1,7 @@
-import { ScaleSets } from '../../configs/scale.config';
-import { keys } from '../../configs/key.config';
-import GuitarTunings from "../../configs/guitar/tuning.config";
-import BassTunings from "../../configs/bass/tuning.config";
+import { ScaleSets } from '../../../domain/configs/music/scale.config';
+import { Tunings as BassTunings } from '../../../domain/configs/bass/tuning.config';
+import { Tunings as GuitarTunings } from '../../../domain/configs/guitar/tuning.config';
+import { Tones } from '../../../domain/configs/music/tone.config';
 
 const initialState = {
     bass: {
@@ -30,25 +30,11 @@ const initialState = {
             ScaleSets.minor,
             ScaleSets.locrian
         ],
-        keys: [
-            keys.aKey,
-            keys.aSKey,
-            keys.bKey,
-            keys.cKey,
-            keys.cSKey,
-            keys.dKey,
-            keys.dSKey,
-            keys.eKey,
-            keys.fKey,
-            keys.fSKey,
-            keys.gKey,
-            keys.gSKey,
-        ]
+        tones: Tones
     }
 };
 
 export const reducer = (state, action) => {
     state = state || initialState;
-    console.log('Collections store: ', state);
     return state;
 };

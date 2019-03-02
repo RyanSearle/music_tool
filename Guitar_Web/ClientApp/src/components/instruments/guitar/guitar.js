@@ -1,15 +1,15 @@
 import React from 'react';
-import './string-instrument.scss';
-import Fret from './fret.component';
-import { getFretWidths, getFretHeights, getFretMarkers } from './string-instrument-anatomy';
+import './guitar.scss';
+import Fret from './fret';
+import { getFretWidths, getFretHeights, getFretMarkers } from './guitar-anatomy';
 import { makeArray } from '../../../helpers';
-import { StringInstrument } from '../../../store/instruments/string-instrument/string-instrument.model';
+import { Guitar } from '../../../domain/instruments/guitar/guitar.model';
 
 
-const StringInstrumentComponent = props => {
+export const GuitarComponent = props => {
 
-    const fretHeight = 30;
-    const guitar = new StringInstrument(props.instrument.tuning, props.instrument.fretCount);
+    const fretHeight = 35;
+    const guitar = new Guitar(props.instrument.tuning, props.instrument.fretCount);
 
     // Account for open string
     const fretCount = guitar.fretCount;
@@ -60,7 +60,7 @@ const StringInstrumentComponent = props => {
                 {makeArray(fretCount).map((_val, i) => {
                     return <div key={i} style={{ width: widths[i] + '%' }} className="fret-section">
                         {guitar.strings.map((guitarStr, s) => {
-                            return <Fret music={props.music} first={s === 0} last={s === guitar.strings.length - 1} className="fret" key={s} width={100} height={heights[i]} fret={guitarStr.frets[i]}></Fret>
+                            return <Fret music={props.music} first={s === 0} last={s === guitar.strings.length - 1} className="fret" key={s} width={100} height={heights[i]} tone={guitarStr.frets[i]}></Fret>
                         })}
                     </div>
                 })}
@@ -77,4 +77,3 @@ const StringInstrumentComponent = props => {
     )
 }
 
-export default StringInstrumentComponent;

@@ -10,7 +10,7 @@ const ScalePicker = props => {
     const scaleSets = props.collections.music.scaleSets;
 
     const activeScaleSet = props.active.music.scaleSet
-    const activeScale = props.active.music.scale;
+    const activeScale = props.active.music.scaleTemplate;
 
     const changeScaleSet = (scaleSet) => {
         if(scaleSet === activeScaleSet) return;
@@ -39,7 +39,7 @@ const ScalePicker = props => {
             className={scale === activeScale ? 'active' : ''} 
             key={i}
             onClick={() => changeScale(scale)}>
-            {scale.type}
+            {scale.name}
         </div>)}
     </div>
 
