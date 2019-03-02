@@ -5,33 +5,27 @@ import { bindActionCreators } from "redux";
 import { actionCreators } from '../../../store/stores/active/active.store';
 
 const KeyPicker = props => {
-
-    const activeKey = props.active.music.key;
-    const keys = props.collections.music.keys;
+    
+    const tones = props.collections.music.tones;
     const scaleTemplate = props.active.music.scaleTemplate;
-
-    const rationalKeys = new Array(12).fill().map((_,index) => {        
-        const keysInPitch = keys.filter(key => key.tone.pitch === index);
-        
-        return keysInPitch.reduce((acc, next) => {
-            const complexity = scaleTemplate.createScale(next).getComplexity();
-
-            return complexity <= acc.complexity ? {key: next, complexity} : acc;
-        }, {complexity: 999, key: 'bla'}).key;
-    })
+    const activeKeyTone = props.active.music.keyTone;
+    
+    const rationalKeys = tones.map(tone => {
+        return scaleTemplate.createScale(tone).rootKey;
+    });
 
 
     const getClasses = key => {
         return [
             { cName: 'key', condition: true },
-            { cName: 'active', condition: key === activeKey },
+            { cName: 'active', condition: key.tone.pitch === activeKeyTone.pitch },
         ].filter(cl => cl.condition).map(cl => cl.cName).join(' ');
     }
 
     const changeKey = key => {
-        if(key === activeKey) return;
+        if(key.tone === activeKeyTone) return;
 
-        props.action.changeKey(key);
+        props.action.changeKeyTone(key.tone);
     }
 
     return (<div className="key-picker">

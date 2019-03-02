@@ -6,7 +6,7 @@ const onClick = (fret) => {
 
 const FretComponent = props => {
 
-    const scale = props.music.scaleTemplate.createScale(props.music.key);
+    const scale = props.music.scaleTemplate.createScale(props.music.keyTone);
     const inScale = scale.isInScale(props.tone)
     const interval = scale.getInterval(props.tone);
     const isGap = scale.isGap(props.tone);        

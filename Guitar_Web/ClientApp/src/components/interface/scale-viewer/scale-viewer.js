@@ -7,7 +7,7 @@ import { toNumerals } from "../../../helpers";
 
 const ScaleViewer = props => {
 
-    const scale = props.active.music.scaleTemplate.createScale(props.active.music.key);
+    const scale = props.active.music.scaleTemplate.createScale(props.active.music.keyTone);
     const keys = scale.getKeys();
     const visibilities = props.active.music.visibleIntervals;
 

@@ -1,8 +1,6 @@
 import * as Guitar from './guitar';
 import * as Bass from './bass';
 import * as Music from './music';
-import { ChordFinder } from '../../../domain/provider/chord-finder';
-import { Guitar as tempGuitar } from '../../../domain/instruments/guitar/guitar.model';
 
 
 // Add active store initial state here
@@ -48,8 +46,6 @@ export const reducer = (state, action) => {
     if(action.type === CHANGE_INSTRUMENT){
         newState.instrument.selected = action.instrument;
     }
-
-    newState.voicing = ChordFinder.getFingering(newState.music.chord, newState.music.scale, newState.music.key, new tempGuitar(newState.instrument.guitar.tuning, newState.instrument.guitar.fretCount));
 
     console.log('Active Store:', newState);
     return newState;

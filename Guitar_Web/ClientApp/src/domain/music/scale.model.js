@@ -31,6 +31,8 @@ export const Scale = (function () {
 
         this.pitches = this.tones.map(tone => tone.pitch);
         this.letters = getLetters(rootKey.letter);
+
+        console.log('ScaleCalculated');
     }
 
     const getLetters = function(startLetter) {
@@ -68,7 +70,6 @@ export const Scale = (function () {
     Scale.prototype.getComplexity = function() {
         return this.getKeys().reduce(getComplexityValue, 0);
     }
-
 
     Scale.prototype.isInScale = function (tone) {
         return this.pitches.includes(tone.pitch);
