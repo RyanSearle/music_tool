@@ -31,8 +31,6 @@ export const Scale = (function () {
 
         this.pitches = this.tones.map(tone => tone.pitch);
         this.letters = getLetters(rootKey.letter);
-
-        console.log('ScaleCalculated');
     }
 
     const getLetters = function(startLetter) {
