@@ -53,7 +53,7 @@ export const reducer = (state, action) => {
         return {
             ...state,
             scaleSet: action.scaleSet
-
+            
         }
     }
 

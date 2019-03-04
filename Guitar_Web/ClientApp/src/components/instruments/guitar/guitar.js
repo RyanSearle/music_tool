@@ -10,6 +10,14 @@ export const GuitarComponent = props => {
 
     const fretHeight = 35;
     const guitar = new Guitar(props.instrument.tuning, props.instrument.fretCount);
+    const scale = props.music.scaleTemplate.createScale(props.music.keyTone);
+
+    const tones = props.collections.music.tones;
+    const scaleTemplate = props.music.scaleTemplate;    
+    
+    const rationalKeys = tones.map(tone => {
+        return scaleTemplate.createScale(tone).rootKey;
+    });
 
     // Account for open string
     const fretCount = guitar.fretCount;
@@ -60,7 +68,7 @@ export const GuitarComponent = props => {
                 {makeArray(fretCount).map((_val, i) => {
                     return <div key={i} style={{ width: widths[i] + '%' }} className="fret-section">
                         {guitar.strings.map((guitarStr, s) => {
-                            return <Fret music={props.music} first={s === 0} last={s === guitar.strings.length - 1} className="fret" key={s} width={100} height={heights[i]} tone={guitarStr.frets[i]}></Fret>
+                            return <Fret music={props.music} scale={scale} rationalKeys={rationalKeys} first={s === 0} last={s === guitar.strings.length - 1} className="fret" key={s} width={100} height={heights[i]} tone={guitarStr.frets[i]}></Fret>
                         })}
                     </div>
                 })}
