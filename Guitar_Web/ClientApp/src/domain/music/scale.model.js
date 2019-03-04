@@ -70,7 +70,9 @@ export const Scale = (function () {
     }
 
     Scale.prototype.isInScale = function (tone) {
-        return this.pitches.includes(tone.pitch);
+        return this.pitches
+            .filter((p, index) => !this.gaps.includes(index + 1))
+            .includes(tone.pitch);
     }
 
     Scale.prototype.getInterval = function (tone) {
