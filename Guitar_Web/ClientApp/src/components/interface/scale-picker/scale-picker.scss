@@ -9,6 +9,8 @@
 
         > div {
             cursor: pointer;
+            transition: 300ms;
+
             &.active {
                 color: #fff;
                 cursor: unset;
@@ -22,6 +24,8 @@
 
         > div {
             cursor: pointer;
+            transition: 300ms;
+
             &.active {
                 color: #fff;
                 cursor: unset;

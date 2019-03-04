@@ -57,6 +57,8 @@
                 text-align: center;
                 background: #8a6d3b;
                 color: #1D222E;
+                transition: 300ms;
+
                 &.in-scale {
                     // background: #3d6d6a;
                     background: #8a6d3ac4;
