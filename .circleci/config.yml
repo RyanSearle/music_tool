@@ -26,6 +26,9 @@ jobs:
       - run: 
           name: SSH => DEV Docker remove stopped all containers
           command: ssh $SSH_USER@$SERVER_DEV 'docker system prune -f'   
+      - run: 
+          name: SSH => DEV Docker remove all images
+          command: ssh $SSH_USER@$SERVER_DEV 'docker images purge' 
       - run:
           name: SSH => DEV Docker start musictool
           command: ssh $SSH_USER@$SERVER_DEV "docker-start musictool $CIRCLE_SHA1"
@@ -39,7 +42,10 @@ jobs:
       - run: ssh $SSH_USER@$SERVER_LIVE 'docker stop $(docker ps -aq)'
       - run: 
           name: SSH => DEV Docker remove stopped all containers
-          command: ssh $SSH_USER@$SERVER_LIVE 'docker system prune -f'   
+          command: ssh $SSH_USER@$SERVER_LIVE 'docker system prune -f'
+      - run: 
+          name: SSH => DEV Docker remove all images
+          command: ssh $SSH_USER@$SERVER_DEV 'docker images purge'    
       - run: ssh $SSH_USER@$SERVER_LIVE "docker-start musictool $CIRCLE_SHA1"
 workflows:
   version: 2
