@@ -8,7 +8,9 @@ import { Guitar } from '../../../domain/instruments/guitar/guitar.model';
 
 export const GuitarComponent = props => {
 
-    const fretHeight = 35;
+    // height = viewWidth * fretHeight + fretBase
+    const fretHeight = 1.4;
+    const fretBase = 0.8
     const guitar = new Guitar(props.instrument.tuning, props.instrument.fretCount);
     const scale = props.music.scaleTemplate.createScale(props.music.keyTone);
 
@@ -27,7 +29,7 @@ export const GuitarComponent = props => {
     const markers = getFretMarkers();
 
     // SVG 
-    const scalingRatio = (heights[0] / fretHeight);
+    const scalingRatio = ((heights[0] + fretBase) / (fretHeight  + fretBase));
     const scallingPercent = (scalingRatio * 100);
     const topLeftY = (100 - scallingPercent) / 2;
     const bottomLeftY = scallingPercent + topLeftY;
@@ -55,7 +57,11 @@ export const GuitarComponent = props => {
         <div className="guitar">
             <div className="fret-count-row">
                 {makeArray(fretCount).map((_fret, i) => {
-                    return <span className="fret-indicator" key={i} style={{ width: widths[i] + '%' }}>{i > 0 ? i : ''}</span>
+                    return <span className="fret-indicator" 
+                    key={i} 
+                    style={{ width: widths[i] + '%' }}>
+                    {i > 0 ? i : ''}
+                    </span>
                 })}
             </div>
             <div className="fret-board">
@@ -68,7 +74,16 @@ export const GuitarComponent = props => {
                 {makeArray(fretCount).map((_val, i) => {
                     return <div key={i} style={{ width: widths[i] + '%' }} className="fret-section">
                         {guitar.strings.map((guitarStr, s) => {
-                            return <Fret music={props.music} scale={scale} rationalKeys={rationalKeys} first={s === 0} last={s === guitar.strings.length - 1} className="fret" key={s} width={100} height={heights[i]} tone={guitarStr.frets[i]}></Fret>
+                            return <Fret music={props.music}
+                             scale={scale} 
+                             rationalKeys={rationalKeys} 
+                             first={s === 0} 
+                             last={s === guitar.strings.length - 1} 
+                             className="fret" 
+                             key={s} 
+                             width={100} 
+                             height={heights[i] + fretBase} 
+                             tone={guitarStr.frets[i]}></Fret>
                         })}
                     </div>
                 })}

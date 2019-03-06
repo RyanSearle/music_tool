@@ -2,6 +2,7 @@
     cursor: default;
     position: relative;
     width: 100%;
+    font-size: 0.9vw;
     .shadow {
         position: absolute;
         height: 50px;
@@ -58,7 +59,7 @@
                 text-align: center;
                 background: #8a6d3b;
                 color: #1D222E;
-                transition: 300ms;
+                transition: background-color 300ms;
 
                 &.in-scale {
                     // background: #3d6d6a;

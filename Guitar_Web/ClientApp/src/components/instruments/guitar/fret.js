@@ -12,8 +12,8 @@ const FretComponent = props => {
 
     const style = {
         width: props.width + '%',
-        height: props.height + 'px',
-        lineHeight: props.height + 'px',
+        height: props.height + 'vw',
+        lineHeight: props.height + 'vw',
         color: visibility && visibility.active && !isGap ? visibility.color : null
     };
 
