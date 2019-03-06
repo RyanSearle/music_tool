@@ -22,7 +22,7 @@ jobs:
             - "3b:21:b4:5d:7e:ac:39:fd:46:cf:aa:1b:84:aa:39:89"
       - run: 
           name: SSH => DEV Docker stop all containers
-          command: ssh $SSH_USER@$SERVER_DEV 'docker stop $(docker ps -aq)'        
+          command: ssh $SSH_USER@$SERVER_DEV 'docker stop "$(docker ps -aq)"'        
       - run: 
           name: SSH => DEV Docker remove stopped all containers
           command: ssh $SSH_USER@$SERVER_DEV 'docker system prune -f'   
@@ -39,7 +39,7 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "3b:21:b4:5d:7e:ac:39:fd:46:cf:aa:1b:84:aa:39:89"
-      - run: ssh $SSH_USER@$SERVER_LIVE 'docker stop $(docker ps -aq)'
+      - run: ssh $SSH_USER@$SERVER_LIVE 'docker stop "$(docker ps -aq)"'
       - run: 
           name: SSH => DEV Docker remove stopped all containers
           command: ssh $SSH_USER@$SERVER_LIVE 'docker system prune -f'
