@@ -28,7 +28,7 @@ jobs:
           command: ssh $SSH_USER@$SERVER_DEV 'docker system prune -f'   
       - run: 
           name: SSH => DEV Docker remove all images
-          command: ssh $SSH_USER@$SERVER_DEV 'docker images purge' 
+          command: ssh $SSH_USER@$SERVER_DEV 'docker rmi $(docker images -a -q)' 
       - run:
           name: SSH => DEV Docker start musictool
           command: ssh $SSH_USER@$SERVER_DEV "docker-start musictool $CIRCLE_SHA1"
@@ -45,7 +45,7 @@ jobs:
           command: ssh $SSH_USER@$SERVER_LIVE 'docker system prune -f'
       - run: 
           name: SSH => DEV Docker remove all images
-          command: ssh $SSH_USER@$SERVER_DEV 'docker images purge'    
+          command: ssh $SSH_USER@$SERVER_DEV 'docker rmi $(docker images -a -q)'    
       - run: ssh $SSH_USER@$SERVER_LIVE "docker-start musictool $CIRCLE_SHA1"
 workflows:
   version: 2
