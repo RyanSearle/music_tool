@@ -1,6 +1,6 @@
 .scale-viewer {
     text-align: center;
-    margin: 120px 0 0 0;
+    margin: 140px 0 0 0;
     
     .intervals {
         user-select: none;
@@ -8,15 +8,14 @@
         .note {
             display: inline-block;
             padding: 0 5px;
-            font-size: 40px;
-            width: 60px;
+            font-size: calc(1.5vw + 20px);
+            width: calc(3vw + 20px);
             color: #fff;
             cursor: pointer;
-            transition: 300ms;
-
+            transition: color 300ms;
 
             .chordMajMin {
-                font-size: 20px;
+                font-size: calc(0.75vw + 10px);
                 font-family: 'Times New Roman', Times, serif;
             }
         }        

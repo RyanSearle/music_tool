@@ -22,7 +22,7 @@ export const getFretWidths = (length, openFretWidth = 2) => {
 }
 
 // higher the narrower
-const narrowFactor = 0.6;
+const narrowFactor = 0.7;
 export const getFretHeights = (fretSize, fretCount, stringCount) => {
     return makeArray(fretCount).map((_val, i) => {
         const factor = (narrowFactor / fretCount) * i;

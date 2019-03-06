@@ -9,8 +9,8 @@ import { Guitar } from '../../../domain/instruments/guitar/guitar.model';
 export const GuitarComponent = props => {
 
     // height = viewWidth * fretHeight + fretBase
-    const fretHeight = 1.4;
-    const fretBase = 0.8
+    const fretHeight = 2.2;
+    // const fretBase = 0.0
     const guitar = new Guitar(props.instrument.tuning, props.instrument.fretCount);
     const scale = props.music.scaleTemplate.createScale(props.music.keyTone);
 
@@ -29,7 +29,7 @@ export const GuitarComponent = props => {
     const markers = getFretMarkers();
 
     // SVG 
-    const scalingRatio = ((heights[0] + fretBase) / (fretHeight  + fretBase));
+    const scalingRatio = (heights[0] / fretHeight);
     const scallingPercent = (scalingRatio * 100);
     const topLeftY = (100 - scallingPercent) / 2;
     const bottomLeftY = scallingPercent + topLeftY;
@@ -59,8 +59,7 @@ export const GuitarComponent = props => {
                 {makeArray(fretCount).map((_fret, i) => {
                     return <span className="fret-indicator" 
                     key={i} 
-                    style={{ width: widths[i] + '%' }}>
-                    {i > 0 ? i : ''}
+                    style={{ width: widths[i] + '%' }}>{i > 0 ? i : ''}
                     </span>
                 })}
             </div>
@@ -82,7 +81,7 @@ export const GuitarComponent = props => {
                              className="fret" 
                              key={s} 
                              width={100} 
-                             height={heights[i] + fretBase} 
+                             height={heights[i]} 
                              tone={guitarStr.frets[i]}></Fret>
                         })}
                     </div>
@@ -90,7 +89,9 @@ export const GuitarComponent = props => {
             </div>
             <div className="markers">
                 {makeArray(fretCount).map((_val, i) => {
-                    return <div key={i} style={{ width: widths[i] + '%' }} className="fret-footer">
+                    return <div key={i} 
+                        style={{ width: widths[i] + '%' }} 
+                        className="fret-footer">
                         {getMarkerSingle(i) ? <div>&bull;</div> : null}
                         {getMarkerDouble(i) ? <div>&bull;</div> : null}
                     </div>
