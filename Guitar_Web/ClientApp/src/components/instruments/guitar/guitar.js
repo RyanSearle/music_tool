@@ -8,8 +8,18 @@ import { Guitar } from '../../../domain/instruments/guitar/guitar.model';
 
 export const GuitarComponent = props => {
 
-    const fretHeight = 35;
+    // height = viewWidth * fretHeight + fretBase
+    const fretHeight = 2.2;
+    // const fretBase = 0.0
     const guitar = new Guitar(props.instrument.tuning, props.instrument.fretCount);
+    const scale = props.music.scaleTemplate.createScale(props.music.keyTone);
+
+    const tones = props.collections.music.tones;
+    const scaleTemplate = props.music.scaleTemplate;    
+    
+    const rationalKeys = tones.map(tone => {
+        return scaleTemplate.createScale(tone).rootKey;
+    });
 
     // Account for open string
     const fretCount = guitar.fretCount;
@@ -47,7 +57,10 @@ export const GuitarComponent = props => {
         <div className="guitar">
             <div className="fret-count-row">
                 {makeArray(fretCount).map((_fret, i) => {
-                    return <span className="fret-indicator" key={i} style={{ width: widths[i] + '%' }}>{i > 0 ? i : ''}</span>
+                    return <span className="fret-indicator" 
+                    key={i} 
+                    style={{ width: widths[i] + '%' }}>{i > 0 ? i : ''}
+                    </span>
                 })}
             </div>
             <div className="fret-board">
@@ -60,14 +73,25 @@ export const GuitarComponent = props => {
                 {makeArray(fretCount).map((_val, i) => {
                     return <div key={i} style={{ width: widths[i] + '%' }} className="fret-section">
                         {guitar.strings.map((guitarStr, s) => {
-                            return <Fret music={props.music} first={s === 0} last={s === guitar.strings.length - 1} className="fret" key={s} width={100} height={heights[i]} tone={guitarStr.frets[i]}></Fret>
+                            return <Fret music={props.music}
+                             scale={scale} 
+                             rationalKeys={rationalKeys} 
+                             first={s === 0} 
+                             last={s === guitar.strings.length - 1} 
+                             className="fret" 
+                             key={s} 
+                             width={100} 
+                             height={heights[i]} 
+                             tone={guitarStr.frets[i]}></Fret>
                         })}
                     </div>
                 })}
             </div>
             <div className="markers">
                 {makeArray(fretCount).map((_val, i) => {
-                    return <div key={i} style={{ width: widths[i] + '%' }} className="fret-footer">
+                    return <div key={i} 
+                        style={{ width: widths[i] + '%' }} 
+                        className="fret-footer">
                         {getMarkerSingle(i) ? <div>&bull;</div> : null}
                         {getMarkerDouble(i) ? <div>&bull;</div> : null}
                     </div>

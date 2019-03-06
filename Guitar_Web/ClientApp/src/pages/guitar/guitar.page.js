@@ -8,11 +8,11 @@ const GuitarPage = (props) => {
     document.title = props.active.instrument.selected === 'Guitar' ? 'Music Tool: Guitar' : 'Music Tool: Bass';
 
     const guitar = (
-        <GuitarComponent voicing={props.active.voicing} instrument={props.active.instrument.guitar} music={props.active.music}></GuitarComponent>
+        <GuitarComponent voicing={props.active.voicing} instrument={props.active.instrument.guitar} music={props.active.music} collections={props.collections}></GuitarComponent>
     )
 
     const bass= (
-        <GuitarComponent voicing={props.active.voicing} instrument={props.active.instrument.bass} music={props.active.music}></GuitarComponent>
+        <GuitarComponent voicing={props.active.voicing} instrument={props.active.instrument.bass} music={props.active.music} collections={props.collections}></GuitarComponent>
     )
 
     const instrument = props.active.instrument.selected === 'Guitar' ? guitar : bass;
@@ -27,6 +27,6 @@ const GuitarPage = (props) => {
 }
 
 export default connect(
-    state => ({ active: state.active})
+    state => ({ active: state.active, collections: state.collections})
 )(GuitarPage);
 

@@ -1,21 +1,19 @@
 import React from 'react';
 
-const onClick = (fret) => {
-    console.log(fret);
-}
-
 const FretComponent = props => {
 
-    const scale = props.music.scaleTemplate.createScale(props.music.keyTone);
+    const scale = props.scale;
     const inScale = scale.isInScale(props.tone)
     const interval = scale.getInterval(props.tone);
     const isGap = scale.isGap(props.tone);        
-    const visibility = props.music.visibleIntervals.find(val => val.interval === interval);
+    const visibility = props.music.visibleIntervals.find(val => val.interval === interval);    
+
+    const key = props.rationalKeys.find(k => k.tone.pitch === props.tone.pitch);
 
     const style = {
         width: props.width + '%',
-        height: props.height + 'px',
-        lineHeight: props.height + 'px',
+        height: props.height + 'vw',
+        lineHeight: props.height + 'vw',
         color: visibility && visibility.active && !isGap ? visibility.color : null
     };
 
@@ -29,8 +27,8 @@ const FretComponent = props => {
         { cName: 'in-chord', condition: props.chordNote },
     ].filter(cl => cl.condition).map(cl => cl.cName).join(' ');
     
-    return (<span className={classes} tooltip={interval} onClick={() => onClick(props.fret)} style={style}>
-        <div>{props.tone.getKeyWithScale(scale).getDisplayCharacter()}</div>
+    return (<span className={classes} tooltip={interval} style={style}>
+        <div>{inScale ? props.tone.getKeyWithScale(scale).getDisplayCharacter() : key.getDisplayCharacter()}</div>                
         <div className="fret-shadow"></div>
         </span>
     )

@@ -1,9 +1,11 @@
 .guitar {
+    cursor: default;
     position: relative;
     width: 100%;
+    font-size: 0.9vw;
     .shadow {
         position: absolute;
-        height: 50px;
+        height: calc(13vw - 150px);
         width: 100%;
         top: 0;
         bottom: 0;
@@ -57,10 +59,9 @@
                 text-align: center;
                 background: #8a6d3b;
                 color: #1D222E;
-                transition: 300ms;
+                transition: background-color 300ms;
 
                 &.in-scale {
-                    // background: #3d6d6a;
                     background: #8a6d3ac4;
                     color: #fff;
 
@@ -76,9 +77,6 @@
                         margin: auto;
                     }
                 }
-                // &.in-chord {
-                //     border: 2px solid gold;
-                // }
                 &.root {
                     font-weight: bold;
                 }

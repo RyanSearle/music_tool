@@ -1,8 +1,6 @@
 import { Key } from "../../music/key.model";
 import { Tone } from "../../music/tone.model";
 
-// import { KeyUtilities } from '../music/key.model'
-
 export const keys = [
     new Key(new Tone(0), 'A'),
     new Key(new Tone(1), 'A'),
