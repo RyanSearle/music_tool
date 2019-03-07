@@ -18,6 +18,16 @@ export const initialState = {
     ]
 };
 
+// visibleIntervals: [
+//     {interval: 1, color: '#ff6860', active: true},
+//     {interval: 2, color: '#ea9d2f', active: true},
+//     {interval: 3, color: '#74c130', active: true},
+//     {interval: 4, color: '#00d75e', active: true},
+//     {interval: 5, color: '#00dde2', active: true},
+//     {interval: 6, color: '#f16dfa', active: true},
+//     {interval: 7, color: '#ff27eb', active: true},
+// ]
+
 const CHANGE_KEY_TONE_TYPE = 'CHANGE_KEY_TONE_TYPE';
 const CHANGE_SCALE_TYPE = 'CHANGE_SCALE_TYPE';
 const CHANGE_SCALE_SET_TYPE = 'CHANGE_SCALE_SET_TYPE';

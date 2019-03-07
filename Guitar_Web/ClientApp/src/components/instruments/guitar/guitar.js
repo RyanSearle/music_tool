@@ -1,7 +1,7 @@
 import React from 'react';
 import './guitar.scss';
 import Fret from './fret';
-import { getFretWidths, getFretHeights, getFretMarkers } from './guitar-anatomy';
+import { getFretWidths, getFretHeights, getFretMarkers, getFretHeight } from './guitar-anatomy';
 import { makeArray } from '../../../helpers';
 import { Guitar } from '../../../domain/instruments/guitar/guitar.model';
 
@@ -25,11 +25,11 @@ export const GuitarComponent = props => {
     const fretCount = guitar.fretCount;
 
     const widths = getFretWidths(fretCount);
-    const heights = getFretHeights(fretHeight, fretCount, guitar.strings.length);
+    const height = getFretHeight(0, fretHeight, guitar.strings.length);
     const markers = getFretMarkers();
 
     // SVG 
-    const scalingRatio = (heights[0] / fretHeight);
+    const scalingRatio = (height / fretHeight);
     const scallingPercent = (scalingRatio * 100);
     const topLeftY = (100 - scallingPercent) / 2;
     const bottomLeftY = scallingPercent + topLeftY;
@@ -71,6 +71,9 @@ export const GuitarComponent = props => {
                     </svg>
                 </div>
                 {makeArray(fretCount).map((_val, i) => {
+                    const percentage = widths.slice(0, i + 1).reduce((acc, next) => acc + next);
+                    const height = getFretHeight(percentage, fretHeight, guitar.strings.length);
+                    
                     return <div key={i} style={{ width: widths[i] + '%' }} className="fret-section">
                         {guitar.strings.map((guitarStr, s) => {
                             return <Fret music={props.music}
@@ -81,7 +84,7 @@ export const GuitarComponent = props => {
                              className="fret" 
                              key={s} 
                              width={100} 
-                             height={heights[i]} 
+                             height={height} 
                              tone={guitarStr.frets[i]}></Fret>
                         })}
                     </div>

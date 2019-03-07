@@ -22,13 +22,12 @@ export const getFretWidths = (length, openFretWidth = 2) => {
 }
 
 // higher the narrower
-const narrowFactor = 0.7;
-export const getFretHeights = (fretSize, fretCount, stringCount) => {
-    return makeArray(fretCount).map((_val, i) => {
-        const factor = (narrowFactor / fretCount) * i;
-        const toRemove = (factor * fretSize) / stringCount;
-        return fretSize - toRemove;
-    }).reverse();
+const narrowFactor = 0.4;
+export const getFretHeight = (percentage, fretSize, stringCount) => {
+    percentage = 100 - percentage;
+    const factor = 1 - (((1 - narrowFactor) * percentage) / 100) / stringCount;
+
+    return fretSize * factor;
 }
 
 export const getFretMarkers = () => {
