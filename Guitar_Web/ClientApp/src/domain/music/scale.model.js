@@ -128,6 +128,14 @@ export const Scale = (function () {
             return 'diminished';
         }
 
+        if(thirdDistance === 4 && fifthDistance === 8) {
+            return 'augmented';
+        }
+
+        console.log('thirdDistance', thirdDistance)
+        console.log('fifthDistance', fifthDistance)
+
+        return 'no-tonality'
         throw new Error('Tonality error');
     }
 

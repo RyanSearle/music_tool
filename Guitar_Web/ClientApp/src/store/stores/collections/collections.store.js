@@ -21,15 +21,7 @@ const initialState = {
             'Guitar',
             'Bass'
         ],
-        scaleSets: [
-            ScaleSets.major,
-            ScaleSets.dorian,
-            ScaleSets.phrygian,
-            ScaleSets.lydian,
-            ScaleSets.mixolydian,
-            ScaleSets.minor,
-            ScaleSets.locrian
-        ],
+        scaleSets: ScaleSets,
         tones: Tones
     }
 };

@@ -2,17 +2,17 @@ export const Key = (function () {
 
     const chromaticScale = [
         { char: 'A', value: 0, rational: 'A' },
-        { char: 'A#', value: 1, rational: 'A' },
+        { char: 'A♯', value: 1, rational: 'A' },
         { char: 'B', value: 2, rational: 'B' },
         { char: 'C', value: 3, rational: 'C' },
-        { char: 'C#', value: 4, rational: 'C' },
+        { char: 'C♯', value: 4, rational: 'C' },
         { char: 'D', value: 5, rational: 'D' },
-        { char: 'D#', value: 6, rational: 'D' },
+        { char: 'D♯', value: 6, rational: 'D' },
         { char: 'E', value: 7, rational: 'E' },
         { char: 'F', value: 8, rational: 'F' },
-        { char: 'F#', value: 9, rational: 'F' },
+        { char: 'F♯', value: 9, rational: 'F' },
         { char: 'G', value: 10, rational: 'G' },
-        { char: 'G#', value: 11, rational: 'G' }
+        { char: 'G♯', value: 11, rational: 'G' }
     ]
 
     const Key = function(tone, targetLetter, scaleResolver) {
@@ -43,7 +43,7 @@ export const Key = (function () {
     }
 
     Key.prototype.getDisplayCharacter = function() {
-        const modifierChar = this.modifier >= 0 ? '#' : '♭';
+        const modifierChar = this.modifier >= 0 ? '♯' : '♭';
         let toAdd = '';
         for (let index = 0; index < Math.abs(this.modifier); index++) {
             toAdd = toAdd + modifierChar;

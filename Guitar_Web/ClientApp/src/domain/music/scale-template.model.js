@@ -15,13 +15,16 @@ export const ScaleTemplate = (function() {
         if(potentialKeys.length === 0) throw new Error('not matching keys for tone: ' + tone)
 
         // Test for lowest complexity
-        const key = potentialKeys.reduce((acc, nextKey) => {
-            const scaleComplexity = new Scale(nextKey, this.name, this.distances, this.gaps).getComplexity();
+        const scale = potentialKeys.reduce((acc, nextKey) => {
+            const scale = new Scale(nextKey, this.name, this.distances, this.gaps);
+            const scaleComplexity = scale.getComplexity();
 
-            return scaleComplexity <= acc.complexity ? {key: nextKey, complexity: scaleComplexity} : acc;
-        }, {complexity: Number.POSITIVE_INFINITY}).key;
+            return scaleComplexity <= acc.complexity ? {scale: scale, complexity: scaleComplexity} : acc;
+        }, {complexity: Number.POSITIVE_INFINITY}).scale;
 
-        return new Scale(key, this.name, this.distances, this.gaps);
+        const overlyComplex = scale.getKeys
+
+        return scale;
     }
 
     return ScaleTemplate;
