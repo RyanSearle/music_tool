@@ -47,10 +47,10 @@ export const Tone = (function (){
     }
 
     Tone.prototype.getKeyWithScale = function (scale) {
-        if(scale.isInScale(this)) {
-            return scale.getKeys().find(x => x.tone.pitch === this.pitch)
-        }
-        return new Key(this);
+        if(!scale.isInScale(this)) throw new Error('Tone not in scale')
+        const key = scale.keys.find(x => x.tone.pitch === this.pitch); 
+        if(!key) throw new Error('No Key ' + this.pitch);
+        return key;
     }
 
     return Tone;
