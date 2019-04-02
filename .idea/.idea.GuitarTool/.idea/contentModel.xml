@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/Library/Caches/Rider2018.2/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/Library/Caches/Rider2018.2/resharper-host/local/Transient/ReSharperHost/v182/SolutionCaches/_GuitarTool.-158598924.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2018.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2018.3/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_GuitarTool.-158598924.00" t="ExcludeRecursive" />
     <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
     <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
@@ -152,39 +152,96 @@
             <e p="components" t="Include">
               <e p="instruments" t="Include">
                 <e p="guitar" t="Include">
-                  <e p="fret.component.js" t="Include" />
+                  <e p="fret.js" t="Include" />
                   <e p="guitar-anatomy.js" t="Include" />
-                  <e p="guitar.component.js" t="Include" />
+                  <e p="guitar.js" t="Include" />
                   <e p="guitar.scss" t="Include" />
-                  <e p="string.component.js" t="Include" />
                 </e>
               </e>
               <e p="interface" t="Include">
-                <e p="control-panel.js" t="Include" />
-                <e p="control-panel.scss" t="Include" />
+                <e p="key-picker" t="Include">
+                  <e p="key-picker.js" t="Include" />
+                  <e p="key-picker.scss" t="Include" />
+                </e>
+                <e p="scale-picker" t="Include">
+                  <e p="scale-picker.js" t="Include" />
+                  <e p="scale-picker.scss" t="Include" />
+                </e>
+                <e p="scale-viewer" t="Include">
+                  <e p="scale-viewer.js" t="Include" />
+                  <e p="scale-viewer.scss" t="Include" />
+                </e>
+                <e p="tooltip" t="Include">
+                  <e p="tooltip.js" t="Include" />
+                  <e p="tooltip.scss" t="Include" />
+                </e>
+                <e p="tuning-picker" t="Include">
+                  <e p="tuning-picker.js" t="Include" />
+                  <e p="tuning-picker.scss" t="Include" />
+                </e>
               </e>
             </e>
-            <e p="helpers.js" t="Include" />
-            <e p="index.js" t="Include" />
-            <e p="index.scss" t="Include" />
-            <e p="Pages" t="Include">
-              <e p="guitar.page.js" t="Include" />
-              <e p="guitar.page.scss" t="Include" />
-            </e>
-            <e p="registerServiceWorker.js" t="Include" />
-            <e p="store" t="Include">
-              <e p="configureStore.js" t="Include" />
-              <e p="guitar.store.js" t="Include" />
+            <e p="domain" t="Include">
+              <e p="configs" t="Include">
+                <e p="bass" t="Include">
+                  <e p="tuning.config.js" t="Include" />
+                </e>
+                <e p="guitar" t="Include">
+                  <e p="tuning.config.js" t="Include" />
+                </e>
+                <e p="music" t="Include">
+                  <e p="chord.config.js" t="Include" />
+                  <e p="key.config.js" t="Include" />
+                  <e p="scale.config.js" t="Include" />
+                  <e p="tone.config.js" t="Include" />
+                </e>
+              </e>
               <e p="instruments" t="Include">
                 <e p="guitar" t="Include">
-                  <e p="guitar-string.model.js" t="Include" />
                   <e p="guitar.model.js" t="Include" />
+                  <e p="string.model.js" t="Include" />
                   <e p="tuning.model.js" t="Include" />
                 </e>
               </e>
               <e p="music" t="Include">
+                <e p="chord.model.js" t="Include" />
                 <e p="key.model.js" t="Include" />
+                <e p="scale-sets.model.js" t="Include" />
+                <e p="scale-template.model.js" t="Include" />
                 <e p="scale.model.js" t="Include" />
+                <e p="tone.model.js" t="Include" />
+              </e>
+              <e p="provider" t="Include">
+                <e p="chord-finder.js" t="Include" />
+              </e>
+            </e>
+            <e p="helpers.js" t="Include" />
+            <e p="images" t="Include">
+              <e p="bass-guitar.svg" t="Include" />
+              <e p="electric-guitar-music-instrument.svg" t="Include" />
+              <e p="strat-outline-clear.png" t="Include" />
+            </e>
+            <e p="index.js" t="Include" />
+            <e p="index.scss" t="Include" />
+            <e p="Pages" t="Include">
+              <e p="guitar" t="Include">
+                <e p="guitar.page.js" t="Include" />
+                <e p="guitar.page.scss" t="Include" />
+              </e>
+            </e>
+            <e p="registerServiceWorker.js" t="Include" />
+            <e p="store" t="Include">
+              <e p="stores" t="Include">
+                <e p="active" t="Include">
+                  <e p="active.store.js" t="Include" />
+                  <e p="bass.js" t="Include" />
+                  <e p="guitar.js" t="Include" />
+                  <e p="music.js" t="Include" />
+                </e>
+                <e p="collections" t="Include">
+                  <e p="collections.store.js" t="Include" />
+                </e>
+                <e p="configureStore.js" t="Include" />
               </e>
             </e>
           </e>
@@ -198,6 +255,7 @@
             </e>
           </e>
         </e>
+        <e p="package-lock.json" t="Include" />
         <e p="Pages" t="Include">
           <e p="_ViewImports.cshtml" t="Include" />
           <e p="Error.cshtml" t="Include" />
