@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e7fa4b01-ed8e-442b-9770-c25665e54eb0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GuitarTool/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GuitarTool/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GuitarTool/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GuitarTool/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,154 +11,18 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="921137173">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="Dockerfile" value="2" />
-          <entry key="Dockerfile2" value="1" />
-          <entry key="cs" value="7" />
-          <entry key="cshtml" value="2" />
-          <entry key="csproj" value="3" />
-          <entry key="dockerignore" value="2" />
-          <entry key="json" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="C#" value="7" />
-          <entry key="Csproj" value="3" />
-          <entry key="Dockerfile" value="2" />
-          <entry key="JSON" value="2" />
-          <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Razor" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="Dockerfile" value="132" />
-          <entry key="cs" value="4" />
-          <entry key="dockerignore" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="C#" value="4" />
-          <entry key="Dockerfile" value="132" />
-          <entry key="PLAIN_TEXT" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Guitar_Web/Startup.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-141">
-              <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
-              <folding>
-                <marker date="1543310713285" expanded="false" signature="6:256" ph="..." />
-                <marker date="1543310713285" expanded="true" signature="278:2026" ph="{...}" />
-                <marker date="1543310713285" expanded="true" signature="305:2024" ph="{...}" />
-                <marker date="1543310713285" expanded="true" signature="364:427" ph="{...}" />
-                <marker date="1543310713285" expanded="true" signature="650:987" ph="{...}" />
-                <marker date="1543310713285" expanded="true" signature="887:975" ph="{...}" />
-                <marker date="1543310713285" expanded="true" signature="1180:2018" ph="{...}" />
-                <marker date="1543310713285" expanded="true" signature="1227:1304" ph="{...}" />
-                <marker date="1543310713285" expanded="true" signature="1321:1431" ph="{...}" />
-                <marker date="1543310713285" expanded="true" signature="1576:1742" ph="{...}" />
-                <marker date="1543310713285" expanded="true" signature="1775:2006" ph="{...}" />
-                <marker date="1543310713285" expanded="true" signature="1885:1992" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Guitar_Web/Pages/_ViewImports.cshtml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Guitar_Web/Pages/Error.cshtml.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <marker date="1543233757513" expanded="false" signature="6:100" ph="..." />
-                <marker date="1543233757513" expanded="true" signature="128:517" ph="{...}" />
-                <marker date="1543233757513" expanded="true" signature="259:515" ph="{...}" />
-                <marker date="1543233757513" expanded="true" signature="412:509" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Guitar_Web/Pages/Error.cshtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-              <folding>
-                <marker date="1543232708107" expanded="true" signature="24:61" ph="@..." />
-                <marker date="1543232708107" expanded="true" signature="178:291" ph="@..." />
-                <marker date="1543232708107" expanded="true" signature="203:291" ph="{...}" />
-                <marker date="1543232708107" expanded="true" signature="210:289" ph="&lt;p.../&gt;" />
-                <marker date="1543232708107" expanded="true" signature="319:454" ph="&lt;p.../&gt;" />
-                <marker date="1543232708107" expanded="true" signature="455:845" ph="&lt;p.../&gt;" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Guitar_Web/Properties/launchSettings.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Guitar_Web/Guitar_Web.csproj">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="66" selection-start-line="26" selection-start-column="66" selection-end-line="26" selection-end-column="66" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Guitar_Web/Program.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <marker date="1543233757515" expanded="false" signature="6:63" ph="..." />
-                <marker date="1543233757515" expanded="true" signature="85:412" ph="{...}" />
-                <marker date="1543233757515" expanded="true" signature="112:410" ph="{...}" />
-                <marker date="1543233757515" expanded="true" signature="165:239" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Guitar_Web/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Guitar_Web/Pages/Error.cshtml.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Guitar_Web/Startup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Guitar_Web/Pages/_ViewImports.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Guitar_Web/Pages/Error.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Guitar_Web/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Guitar_Web/Pages/_ViewImports.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Guitar_Web/Startup.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -169,27 +34,14 @@
         <option value="$PROJECT_DIR$/Guitar_Web/Startup.cs" />
         <option value="$PROJECT_DIR$/Guitar_Web/.dockerignore" />
         <option value="$PROJECT_DIR$/Guitar_Web/Dockerfile" />
+        <option value="$PROJECT_DIR$/Guitar_API/obj/Debug/netstandard2.0/guitar_API.AssemblyInfo.cs" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/Guitar_Web/ClientApp/node_modules" />
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/Guitar_Web/ClientApp/package.json" />
-    </packageJsonPaths>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="828" />
+    <option name="height" value="825" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -213,13 +65,13 @@
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="GuitarTool" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="1 - Distribution" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Guitar_Web" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="2 - Service" type="24d0babc:SolutionExplorerModelNode" />
             </path>
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="GuitarTool" type="24d0babc:SolutionExplorerModelNode" />
               <item name="2 - Service" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Guitar_API" type="24d0babc:SolutionExplorerModelNode" />
             </path>
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
@@ -231,11 +83,18 @@
               <item name="GuitarTool" type="24d0babc:SolutionExplorerModelNode" />
               <item name="4 - Data" type="24d0babc:SolutionExplorerModelNode" />
             </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="GuitarTool" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="4 - Data" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Guitar_Data" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
           </expand>
           <select />
         </subPane>
         <option name="show-all-files" value="false" />
       </pane>
+      <pane id="AssemblyExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -281,7 +140,6 @@
         <settings>
           <option name="JSONFilePath" value="" />
           <option name="command" value="" />
-          <option name="commandLineOptions" value="" />
           <option name="containerName" value="music_tool_test" />
           <option name="entrypoint" value="" />
           <option name="imageTag" value="musictool:latest" />
@@ -293,9 +151,7 @@
               </DockerPortBindingImpl>
             </list>
           </option>
-          <option name="startBrowserSettings">
-            <browser url="http://127.0.0.1" />
-          </option>
+          <option name="commandLineOptions" value="" />
         </settings>
       </deployment>
       <method v="2" />
@@ -327,11 +183,12 @@
       <workItem from="1543232929111" duration="2962000" />
       <workItem from="1543310697997" duration="11081000" />
       <workItem from="1543570830939" duration="554000" />
+      <workItem from="1554200735114" duration="663000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14597000" />
+    <option name="totallyTimeSpent" value="15260000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -343,10 +200,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="828" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1440" height="825" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35336193" />
+      <window_info id="Image Layers" />
+      <window_info id="Capture Tool" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3583691" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -361,10 +219,11 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unit Tests" order="11" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.87267524" visible="true" weight="0.43206522" />
-      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.12732475" side_tool="true" visible="true" weight="0.43206522" />
-      <window_info anchor="bottom" id="Build" order="14" sideWeight="0.49946752" weight="0.32969433" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.47782546" weight="0.43110505" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50143063" side_tool="true" visible="true" weight="0.3287858" />
+      <window_info anchor="bottom" id="Build" order="14" sideWeight="0.4985694" visible="true" weight="0.3287858" />
       <window_info anchor="bottom" id="REST Client" order="15" />
+      <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -375,9 +234,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -419,16 +275,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Guitar_Web/Properties/launchSettings.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Guitar_Web/Guitar_Web.csproj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="66" selection-start-line="26" selection-start-column="66" selection-end-line="26" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Guitar_Web/Pages/Error.cshtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -441,6 +287,16 @@
             <marker date="1543232708107" expanded="true" signature="319:454" ph="&lt;p.../&gt;" />
             <marker date="1543232708107" expanded="true" signature="455:845" ph="&lt;p.../&gt;" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Guitar_Web/Properties/launchSettings.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Guitar_Web/Guitar_Web.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="66" selection-start-line="26" selection-start-column="66" selection-end-line="26" selection-end-column="66" />
         </state>
       </provider>
     </entry>
@@ -458,7 +314,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Guitar_Web/Startup.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-141">
+        <state relative-caret-position="285">
           <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
           <folding>
             <marker date="1543310713285" expanded="false" signature="6:256" ph="..." />
@@ -474,6 +330,13 @@
             <marker date="1543310713285" expanded="true" signature="1775:2006" ph="{...}" />
             <marker date="1543310713285" expanded="true" signature="1885:1992" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Guitar_API/obj/Debug/netstandard2.0/Guitar_API.AssemblyInfo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>

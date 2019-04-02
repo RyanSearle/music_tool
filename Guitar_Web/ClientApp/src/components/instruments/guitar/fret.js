@@ -4,7 +4,7 @@ const FretComponent = props => {
 
     const scale = props.scale;
     const inScale = scale.isInScale(props.tone)
-    const interval = scale.getInterval(props.tone);
+    const interval = inScale ? scale.getInterval(props.tone) : 0;
     const isGap = scale.isGap(props.tone);        
     const visibility = props.music.visibleIntervals.find(val => val.interval === interval);    
 

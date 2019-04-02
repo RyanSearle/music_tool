@@ -4,8 +4,8 @@ import { Tone } from '../../../domain/music/tone.model';
 
 export const initialState = {
     chord: ChordSets.triads.standard,
-    scaleSet: ScaleSets.major,
-    scaleTemplate: ScaleSets.major.scales[0],
+    scaleSet: ScaleSets[0],
+    scaleTemplate: ScaleSets[0].scales[0],
     keyTone: new Tone(7),
     visibleIntervals: [
         {interval: 1, color: '#ff00aa', active: true},

@@ -39,5 +39,15 @@
                 content: '◦';
             }
         }
+
+        .augmented {
+            .chordMajMin {
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+            .chordMajMin::after {
+                content: '+';
+            }
+        }
     }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import './guitar.scss';
 import Fret from './fret';
-import { getFretWidths, getFretHeights, getFretMarkers, getFretHeight } from './guitar-anatomy';
+import { getFretWidths, getFretMarkers, getFretHeight } from './guitar-anatomy';
 import { makeArray } from '../../../helpers';
 import { Guitar } from '../../../domain/instruments/guitar/guitar.model';
 
