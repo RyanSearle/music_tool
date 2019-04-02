@@ -1,5 +1,3 @@
-import { Key } from "./key.model";
-
 export const Tone = (function (){
 
     // pitch represents the 0-11 value of the chromatic scale
@@ -40,10 +38,6 @@ export const Tone = (function (){
     Tone.prototype.subtract = function(tone) {
         const newValue = this.units - tone.units; 
         return new Tone(newValue);
-    }
-
-    Tone.prototype.getKey = function (targetLetter, scaleResolver) {
-        return new Key(this, targetLetter, scaleResolver);
     }
 
     Tone.prototype.getKeyWithScale = function (scale) {

@@ -1,5 +1,3 @@
-import { makeArray } from "../../../helpers";
-
 // Calculate progressive fret width
 const fretRatio = 1.059463;
 const scaleLength = 100;

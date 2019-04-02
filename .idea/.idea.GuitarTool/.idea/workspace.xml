@@ -281,7 +281,6 @@
         <settings>
           <option name="JSONFilePath" value="" />
           <option name="command" value="" />
-          <option name="commandLineOptions" value="" />
           <option name="containerName" value="music_tool_test" />
           <option name="entrypoint" value="" />
           <option name="imageTag" value="musictool:latest" />
@@ -293,9 +292,7 @@
               </DockerPortBindingImpl>
             </list>
           </option>
-          <option name="startBrowserSettings">
-            <browser url="http://127.0.0.1" />
-          </option>
+          <option name="commandLineOptions" value="" />
         </settings>
       </deployment>
       <method v="2" />

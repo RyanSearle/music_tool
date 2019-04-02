@@ -10,25 +10,25 @@ const minorSpacing = ['W', 'H', 'W', 'W', 'H', 'W', 'W'];
 const locrianSpacing = ['H', 'W', 'W', 'H', 'W', 'W', 'W'];
 const harmonicMinorSpacing =  ['W', 'H', 'W', 'W', 'H', 3, 'H'];
 const melodicMinorSpacing =  ['W', 'H', 'W', 'W', 'W', 'W', 'H'];
-const bluesSpacing =  [3, 'H', 'H', 'H', 'H', 3, 'W'];
+//const bluesSpacing =  [3, 'H', 'H', 'H', 'H', 3, 'W'];
 const lydianFlat7Spacing = ['W', 'W', 'W', 'H', 'W', 'H', 'W'];
 
 const Scales = {
     // Diatonic scales
-    major: new ScaleTemplate('Diatonic', majorSpacing),
-    dorian: new ScaleTemplate('Diatonic', dorianSpacing),
-    phrygian: new ScaleTemplate('Diatonic', phrygianSpacing),
-    lydian: new ScaleTemplate('Diatonic', lydianSpacing),
-    mixolydian: new ScaleTemplate('Diatonic', mixolydianSpacing),
-    minor: new ScaleTemplate('Diatonic', minorSpacing),
-    locrian: new ScaleTemplate('Diatonic', locrianSpacing),
+    major: new ScaleTemplate('Natural', majorSpacing),
+    dorian: new ScaleTemplate('Natural', dorianSpacing),
+    phrygian: new ScaleTemplate('Natural', phrygianSpacing),
+    lydian: new ScaleTemplate('Natural', lydianSpacing),
+    mixolydian: new ScaleTemplate('Natural', mixolydianSpacing),
+    minor: new ScaleTemplate('Natural', minorSpacing),
+    locrian: new ScaleTemplate('Natural', locrianSpacing),
     // Pentatonic scales
     minorPentatonic: new ScaleTemplate('Pentatonic', minorSpacing, [2, 6]),
     majorPentatonic: new ScaleTemplate('Pentatonic', majorSpacing, [4, 7]),
     // Other
     harmonicMinor: new ScaleTemplate('Harmonic', harmonicMinorSpacing),
     melodicMinor: new ScaleTemplate('Melodic', melodicMinorSpacing),
-    blues: new ScaleTemplate('Diatonic', bluesSpacing),
+    //blues: new ScaleTemplate('Diatonic', bluesSpacing),
     lydianFlat7: new ScaleTemplate('Flat 7', lydianFlat7Spacing),
 }
 

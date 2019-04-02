@@ -1,6 +1,6 @@
 import { Scale } from "./scale.model";
 import { keys } from "../configs/music/key.config";
-import { ScaleResolver } from "./key.model";
+import { Key } from "./key.model";
 import { Tone } from "./tone.model";
 
 export const ScaleTemplate = (function() {
@@ -19,10 +19,6 @@ export const ScaleTemplate = (function() {
         this.distances = distances;
         this.gaps = gaps;
     }
-    
-    const getComplexityValue = (prev, next) => {
-        return prev + Math.abs(next.modifier);
-    };
 
     const getLetters = function(startLetter) {
         const rationalScale = ['A','B','C','D','E','F','G'];
@@ -32,22 +28,11 @@ export const ScaleTemplate = (function() {
         return initialLetters.concat(rationalScale.slice(0, startIndex));
     }
 
-    const getKeys = function(rootKey, tones, letters) {
-        const sharpScale = tones.map((tone, index) => {
+    const getKeys = function(tones, letters) {
+        return tones.map((tone, index) => {
             const letter = letters[index];
-            return tone.getKey(letter, ScaleResolver.SHARPEN);
+            return new Key(tone, letter);
         })
-        const flatScale = tones.map((tone, index) => {
-            const letter = letters[index];
-            return tone.getKey(letter, ScaleResolver.FLATTEN);
-        })
-
-        if(rootKey.modifier !== 0) {
-            return rootKey.modifier > 0 ? sharpScale : flatScale;
-        }
-
-        return sharpScale.reduce(getComplexityValue, 0) <= flatScale.reduce(getComplexityValue, 0)
-         ? sharpScale : flatScale;
     }
 
     const getTones = function(tone, distances) {
@@ -76,7 +61,7 @@ export const ScaleTemplate = (function() {
         const scale = potentialKeys.reduce((acc, nextKey) => {
 
             const letters = getLetters(nextKey.letter);
-            const keys = getKeys(nextKey, tones, letters);
+            const keys = getKeys(tones, letters);
             const scale = new Scale(this.name, keys, this.gaps);            
 
             return scale.complexity <= acc.complexity ? {scale: scale, complexity: scale.complexity} : acc;

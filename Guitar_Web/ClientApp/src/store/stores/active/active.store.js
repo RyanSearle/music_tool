@@ -47,6 +47,5 @@ export const reducer = (state, action) => {
         newState.instrument.selected = action.instrument;
     }
 
-    console.log('Active Store:', newState);
     return newState;
 };
