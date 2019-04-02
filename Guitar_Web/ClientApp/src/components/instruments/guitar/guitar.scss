@@ -57,13 +57,12 @@
                 position: relative;
                 display: inline-block;
                 text-align: center;
-                background: #8a6d3b;
+                background-color: #8a6d3b;
                 color: #1D222E;
-                transition: background-color 300ms;
-                transition: color 300ms;
+                transition: background-color 250ms ease-out, color 250ms ease-out;
 
                 &.in-scale {
-                    background: #8a6d3ac4;
+                    background-color: #8a6d3ac4;
                     color: #fff;
 
                     .fret-shadow {
